@@ -1,38 +1,396 @@
+@font-face {
+  font-family: 'Saar SP Demo';
+  src: url('./fonst/SaarSPDemo.otf') 
+
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonst/Inter-Regular.ttf') 
+
+}
+
+@font-face {
+  font-family: 'Righteous';
+  src: url('./fonst/Righteous-Regular.ttf') 
+
+}
+
 .App {
-  text-align: center;
+  background: #060606;
+  /* text-align: center; */
+  width: 100%;
+ 
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app2{
+  background-size: 100% 100%; /* Растягиваем изображение на 100% по ширине и высоте контейнера */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-image: url('./components/back.png');
+}
+.app1{
+  max-width: 1400px;
+ 
+  margin: 0 auto;
+  padding: 16px; /* пример отступа, можно настроить по вашему усмотрению */
+  box-sizing: border-box;
+}
+.nav_container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 90px;
+  padding-top: 40px;
+  gap: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav_logo{
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-list{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.nav-list_el{
+  color: #FFF;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.2px; 
+}
+
+.nav_contact{
+  display: flex;
+  width: 217px;
+height: 70px;
+  border-radius: 54px;
+  background: #C6DA4B;
+  justify-content: center;
+align-items: center;
+}
+
+.nav_txt{
+
+
+justify-content: center;
+align-items: center;
+
+flex-shrink: 0;
+}
+
+.info{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 623px;
+  height: 274px;
+  gap: 21px;
+  padding-bottom: 120px;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.info_title{
+  color: #FFF;
+  display: flex;
+text-align: left;
+
+  font-family: Saar SP Demo;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info_subtit{
+  color: #E3E3E3;
+max-width: 572px;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: 115%; /* 28.75px */
+letter-spacing: -1px;
+text-align: left;
+}
+
+.moreinfo_btn{
+  border-radius: 54px;
+background: #C6DA4B;
+display: flex;
+width: 572px;
+height: 70px;
+
+justify-content: center;
+align-items: center;
+
+flex-shrink: 0;
+}
+
+.moreifo_txt{
+  color: #060606;
+
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.2px;
+}
+
+.products{
+  background: #060606;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.second_title{
+  color: #FFF;
+
+font-family: Saar SP Demo;
+font-size: 55px;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 49.5px */
+letter-spacing: -1.1px;
+text-transform: uppercase;
+padding-bottom: 75px;
+}
+
+.products_context{
+  display: flex;
+  flex-direction: row;
+}
+
+.products_context_left{
+  display: flex;
+  flex-direction: column;
+  padding-right: 220px;
+}
+
+.products_menu{
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.menu_item{
+color: #D3D3D3;
+text-align: start;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 115%; /* 23px */
+letter-spacing: -0.8px;
+text-transform: uppercase;
+}
+
+.products_img{
+  
+}
+
+.products_title{
+
+  color: #FFF;
+display: flex;
+align-items: flex-start;
+font-family: Inter;
+font-size: 30px;
+padding-bottom: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 36px */
+letter-spacing: -0.3px;
+text-transform: uppercase;
+}
+
+.products_content{
+  width: 624.766px;
+height: 351.508px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #F0F0F0;
+margin-bottom: 20px;
+}
+
+.products_text{
+  display: flex;
+  color: #D3D3D3;
+align-items: flex-start;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.8px;
+padding-bottom: 25px;
+}
+
+.products_btn{
+  display: flex;
+
+
+padding: 24px 46px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+
+border-radius: 54px;
+border: 1px solid #000;
+
+background: #C6DA4B;
+}
+
+.products_context_rigth{
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.custom-css-for-case2-img{
+  margin-top: 140px;
+}
+.custom-css-for-case3-img{
+  margin-top: 120px;
+}
+
+.custom-css-for-case4-img {
+  margin-top: -265px; /* или другой отрицательный/положительный отступ, который вам нужен */
+  height: 800px;
+  pointer-events: none; /* Это свойство позволяет "проходить" событиям мыши через элемент */
+}
+
+.products{
+  padding-bottom: 120px;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+}
+
+.about_title{
+  color: #FFF;
+align-items: flex-start;
+font-family: Saar SP Demo;
+font-size: 55px;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 49.5px */
+letter-spacing: -1.1px;
+text-transform: uppercase;
+padding-bottom: 71px;
+}
+
+.cons_section{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.con{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.con_title{
+
+color: #C6DA4B;
+
+font-family: Righteous;
+font-size: 114.861px;
+font-style: normal;
+font-weight: 400;
+line-height: 80%; /* 91.889px */
+letter-spacing: -2.297px;
+text-transform: uppercase;
+padding-bottom: 20px;
+}
+
+.con_subtitle{
+  color: #D1D1D1;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.6px;
+}
+
+.vertical-line {
+  flex-grow: 1;
+  border-right: 1px solid #fff; /* Цвет и стиль линии */
+
+}
+
+.con_li{
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+.bar_png{
+  align-items: flex-start;
+  height: 280px;
+  padding-right:5px ;
+}
+
+.const_list{
+  display: flex;
+  flex-direction: column;
+}
+
+.const_txt{
+  color: #D1D1D1;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.6px;
+padding-bottom: 5px;
+}
+
+.about_btn{
+  margin-top: 80px;
+  border-radius: 54px;
+border: 1px solid #000;
+display: flex;
+
+padding: 24px 46px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+background: #C6DA4B;
+}
+
+.aboutbtn_txt{
+  
+color: #060606;
+
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.2px;
 }
