@@ -3,10 +3,12 @@ import React, { useState } from 'react'
 
 const SecondSection = () => {
 
-    const [selectedMenuItem, setSelectedMenuItem] = useState(null);
+    const [selectedMenuItem, setSelectedMenuItem] = useState('1');
+    const [prevMenuItem, setPrevMenuItem] = useState('1');
 
     const handleMenuItemClick = (menuItem) => {
       setSelectedMenuItem(menuItem);
+      setPrevMenuItem(selectedMenuItem);
     };
  
 
@@ -14,7 +16,7 @@ const SecondSection = () => {
         switch (selectedMenuItem) {
           case '1':
             return (
-              <div>
+              <div className='lol1'>
                 <span className="products_title">PROFIT PRIME GLOBAL</span>
                 <div className="products_content"></div>
                 <div className="products_text">Уникальный продукт, который перевернёт ваше представление об автоматизированной торговле. <br/><br/>
@@ -26,7 +28,7 @@ const SecondSection = () => {
             );
           case '2':
             return (
-              <div>
+              <div className='lol1'>
                 <span className="products_title">PROFIT PRIME Forex</span>
                 <div className="products_content"></div>
                 <div className="products_text">profit prime forex объединяет в себе такие технологии, как опережение по скорости котировок, расчет цен активов на основании исторических показателей, арбитраж между счетами и предотвращение проскальзывания. <br/><br/>
@@ -38,7 +40,7 @@ const SecondSection = () => {
             );
             case '3':
                 return (
-                  <div>
+                  <div className='lol1'>
                     <span className="products_title">PROFIT PRIME AI</span>
                     <div className="products_content"></div>
                     <div className="products_text">PROFIT PRIME AI - это апогей автоматизированной торговли на финансовых рынках. искусственный интеллект за долю секунды способен провести детальный анализ рынка и найти лучшую точку входа в сделку, на что у профессионального трейдера ушел бы не один час работы.<br/><br/>
@@ -50,7 +52,7 @@ PROFIT PRIME AI - ваш личный трейдер и финансовый а�
                 );
                 case '4':
                     return (
-                      <div>
+                      <div className='lol1'>
                         <span className="products_title">Profit Prime binary</span>
                         <div className="products_content"></div>
                         <div className="products_text">Суть в том, что система Binary проверяет, насколько раньше брокера вы узнаете о цене актива. Сделки всегда открываются в момент опережения.<br/><br/>
@@ -60,7 +62,17 @@ PROFIT PRIME AI - ваш личный трейдер и финансовый а�
                     );
           
           default:
-            return null;
+            return (
+              <div className='lol1'>
+                <span className="products_title">PROFIT PRIME GLOBAL</span>
+                <div className="products_content"></div>
+                <div className="products_text">Уникальный продукт, который перевернёт ваше представление об автоматизированной торговле. <br/><br/>
+Обычно трейдеры стараются подбирать мелких брокеров, которые ещё не установили искусственную задержку при открытии сделок. Они вынуждены терять огромную прибыль и рисковать при выводе средств из-за бессилия перед несправедливыми ограничениями.<br/><br/>
+Алгоритм системы Global устраняет задержки и снижает проскальзывание при открытии ордеров практически до нуля, что значительно расширяет список крупных брокеров, доступных для торговли. <br/><br/>
+Забудьте навсегда об ограничениях и работайте по-крупному вместе с PROFIT PRIME gLOBAL.</div>
+                <div className="products_btn">Получить бесплатный ключ на 24 часа </div>
+              </div>
+            );
         }
       };
 
@@ -96,17 +108,19 @@ PROFIT PRIME AI - ваш личный трейдер и финансовый а�
 
 
   return (
-    <section className='products'>
+    <section id="products"className='products'>
         <span className='second_title'>О продуктах PROFIT PRIME</span>
         <div className="products_context">
             <div className="products_context_left">
                 <div className="products_menu">
-                <div className="menu_item" onClick={() => handleMenuItemClick('1')}>PROFIT PRIME GLOBAL</div>
-            <div className="menu_item" onClick={() => handleMenuItemClick('2')}>PROFIT PRIME FOREX</div>
-            <div className="menu_item" onClick={() => handleMenuItemClick('3')}>PROFIT PRIME AI</div>
-            <div className="menu_item" onClick={() => handleMenuItemClick('4')}>PROFIT PRIME BINARY</div>
+                <div className={`menu_item ${selectedMenuItem === '1' ? 'selected' : ''}`} onClick={() => handleMenuItemClick('1')}>PROFIT PRIME GLOBAL</div>
+            <div className={`menu_item ${selectedMenuItem === '2' ? 'selected' : ''}`} onClick={() => handleMenuItemClick('2')}>PROFIT PRIME FOREX</div>
+            <div className={`menu_item ${selectedMenuItem === '3' ? 'selected' : ''}`} onClick={() => handleMenuItemClick('3')}>PROFIT PRIME AI</div>
+            <div className={`menu_item ${selectedMenuItem === '4' ? 'selected' : ''}`} onClick={() => handleMenuItemClick('4')}>PROFIT PRIME BINARY</div>
                 </div>
-                <img src={getImagePath()} className={`products_img ${getCustomCssClassForImg()}`}  />
+                <img src={getImagePath()} 
+            
+                className={`products_img ${getCustomCssClassForImg()}`}  />
 
 
             </div>

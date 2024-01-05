@@ -19,8 +19,12 @@
   background: #060606;
   /* text-align: center; */
   width: 100%;
- 
+  height: 100%;
   
+}
+
+.main{
+  padding-bottom: 120px;
 }
 
 .app2{
@@ -34,7 +38,7 @@
   max-width: 1400px;
  
   margin: 0 auto;
-  padding: 16px; /* пример отступа, можно настроить по вашему усмотрению */
+ 
   box-sizing: border-box;
 }
 .nav_container{
@@ -57,13 +61,20 @@
 }
 .nav-list_el{
   color: #FFF;
+  transition: all 0.3s ease; /* Добавляем переход ко всем свойствам с продолжительностью 0.3 секунды и функцией ускорения */
 
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
 font-weight: 400;
-line-height: 115%; /* 23px */
+line-height: 100%; /* 23px */
 letter-spacing: -0.2px; 
+}
+
+.nav-list_el:hover{
+  cursor: pointer;
+  filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
+  transform: translateY(-10px); /* Поднятие элемента на 10 пикселей при наведении */
 }
 
 .nav_contact{
@@ -74,6 +85,13 @@ height: 70px;
   background: #C6DA4B;
   justify-content: center;
 align-items: center;
+transition: all 0.3s ease;
+
+}
+
+.nav_contact:hover{
+  cursor: pointer;
+  filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
 }
 
 .nav_txt{
@@ -131,8 +149,13 @@ height: 70px;
 
 justify-content: center;
 align-items: center;
-
+transition: all 0.3s ease;
 flex-shrink: 0;
+}
+
+.moreinfo_btn:hover{
+  cursor: pointer;
+  filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
 }
 
 .moreifo_txt{
@@ -152,7 +175,7 @@ letter-spacing: -0.2px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
+  padding-top: 100px;
 }
 
 .second_title{
@@ -195,10 +218,18 @@ font-weight: 700;
 line-height: 115%; /* 23px */
 letter-spacing: -0.8px;
 text-transform: uppercase;
+transition:  0.5s ease-in-out;
+}
+
+.menu_item:not(.selected):hover {
+  cursor: pointer;
+  filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
+  transform: translateX(10px); /* Поднятие элемента на 10 пикселей при наведении */
 }
 
 .products_img{
-  
+  opacity: 1;
+ transition: 0.5s ease-in;
 }
 
 .products_title{
@@ -269,8 +300,8 @@ background: #C6DA4B;
 }
 
 .custom-css-for-case4-img {
-  margin-top: -265px; /* или другой отрицательный/положительный отступ, который вам нужен */
-  height: 800px;
+  margin-top: -345px; /* или другой отрицательный/положительный отступ, который вам нужен */
+  height: 880px;
   pointer-events: none; /* Это свойство позволяет "проходить" событиям мыши через элемент */
 }
 
@@ -394,3 +425,657 @@ font-weight: 400;
 line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 }
+
+.traders{
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.trade_titile{
+  align-items: flex-start;
+  color: #FFF;
+font-family: Saar SP Demo;
+font-size: 55px;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 49.5px */
+text-transform: uppercase;
+}
+
+.trade_subtitle{
+  padding-top: 10px;
+  color: #D3D3D3;
+align-items: flex-start;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.6px;
+padding-bottom: 45px;
+}
+
+.box{
+  border-radius: 11px;
+border: 2px solid #C6DA4B;
+padding: 10px 20px 15px;
+
+}
+
+.box_header{
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+
+}
+
+.box_img{
+  border-radius: 13.097px;
+  width: 79px;
+height: 79px;
+padding-bottom: 12px;
+padding-right: 14px;
+
+}
+
+
+.dop_css{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.box_title{
+  color: #FFF;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 24px */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+}
+
+.box_sub{
+  color: #014AB9;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 115%; /* 18.4px */
+letter-spacing: -0.16px;
+}
+
+.box_subt{
+  color: #D1D1D1;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.4px;
+}
+
+.company{
+  padding-top: 59px;
+  padding-bottom: 74px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+
+.abcomp_title{
+  color: #FFF;
+  font-family: Saar SP Demo;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 49.5px */
+  text-transform: uppercase;
+  align-items: flex-start;
+  padding-bottom: 70px;
+}
+
+.abcomp_group{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.abcomp_chunk{
+  display: flex;
+  flex-direction: column;
+}
+
+.abcomp_box1{
+  padding-left: 21px;
+  overflow: hidden;
+  padding-right: 27px;
+  height: 383px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+background: #F0F0F0;
+}
+
+.box1_title{
+  padding-top: 36px;
+  padding-bottom: 15px;
+  color: #060606;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 24px */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+align-items: flex-start;
+}
+
+.box3_title{
+
+  padding-bottom: 15px;
+  color: #060606;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 24px */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+align-items: flex-start;
+}
+
+.box1_subtitle{
+  color: #605F5F;
+font-family: Inter;
+font-size: 19px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.6px;
+align-items: flex-start;
+}
+
+.box1_num{
+  color: #1DC7D5;
+font-family: Righteous;
+font-size: 570.186px;
+font-style: normal;
+font-weight: 400;
+line-height: 80%; /* 456.149px */
+letter-spacing: -11.404px;
+text-transform: uppercase;
+display: flex;
+
+}
+
+.box1_group{
+  display: flex;
+  flex-direction: column;
+}
+
+.abcomp_img{
+display: flex;
+
+  border-radius: 10px;
+}
+
+.abcomp_box3{
+  padding: 24px 8px  0px 24px;
+
+  border-radius: 10px;
+background: #F0F0F0;
+}
+
+.abcomp_box4{
+  padding-top: 24px;
+  padding-right: 24px;
+  overflow: hidden;
+  height: 329px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+background: #F0F0F0;
+}
+
+.box_img2{
+  width: 381px;
+  height: 338px;
+}
+
+.app3{
+
+    background-size: 100% 100%; /* Растягиваем изображение на 100% по ширине и высоте контейнера */
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    background-image: url('./components/assets//back2.png');
+
+}
+
+.abcomp_chunk{
+  display: flex;
+  gap: 20px;
+} 
+
+.abc_gr{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sample-slider{
+  background: #060606;
+}
+
+.trade_group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: flex-start;
+}
+
+.vector_group{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+  gap: 17px;
+  align-items: flex-start;
+}
+
+.custom-next.disabled {
+  /* Стили для отключенной стрелки "Next" */
+  filter: grayscale(100%);
+  cursor: not-allowed;
+}
+
+.custom-prev.disabled {
+  /* Стили для отключенной стрелки "Prev" */
+  filter: grayscale(100%);
+  cursor: not-allowed;
+}
+
+.custom-next1.disabled {
+  /* Стили для отключенной стрелки "Next" */
+  filter: grayscale(100%);
+  cursor: not-allowed;
+}
+
+.custom-prev1.disabled {
+  /* Стили для отключенной стрелки "Prev" */
+  filter: grayscale(100%);
+  cursor: not-allowed;
+}
+
+.menu_item.selected {
+ padding-left: 20px; /* Specify your desired color for the selected item */
+  color:#C6DA4B; /* Specify your desired text color for the selected item */
+  /* Add any other styles for the selected item */
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.lol1{
+  transition: 0.5s step-end ;
+}
+
+.team_title{
+  color: #FFF;
+
+font-family: Saar SP Demo;
+font-size: 55px;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 49.5px */
+text-transform: uppercase;
+padding-top: 208px;
+display: flex;
+align-items: flex-start;
+padding-bottom: 7px;
+}
+
+.team_rg{
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  
+}
+
+.rg{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.team_name{
+  color: #FFF;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 24px */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+padding-bottom: 8px;
+}
+
+.team_el{
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.team_img{
+  width: 335px;
+  height: 343px;
+  padding-bottom: 10px;
+}
+
+.team_sub{
+  color: #909090;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 24px */
+letter-spacing: -0.6px;
+}
+
+.faq{
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.faq_title{
+  color: #FFF;
+font-family: Saar SP Demo;
+font-size: 55px;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 49.5px */
+text-transform: uppercase;
+align-items: flex-start;
+padding-bottom: 70px;
+}
+
+
+.question {
+  display: flex;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 36px */
+  letter-spacing: -0.3px;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+
+.qwe_tzt{
+
+}
+
+.horizontal-line {
+  margin-bottom: 20px;
+  width: 100%;
+ 
+  border: 1px solid #393939; 
+  /* Цвет и стиль линии (можете настроить под свой дизайн) */
+}
+
+.answer{
+  color: #C5C5C5;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 24px */
+letter-spacing: -0.6px;
+padding-bottom: 20px;
+}
+
+.expanded{
+  border-color: #C6DA4B;
+}
+
+.qwes{
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.num{
+  color: #FFF;
+
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 36px */
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+  margin-right: 79px;
+}
+
+.question-text{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.accordion-item{
+  
+}
+
+.faq_item{
+  display:flex;
+  flex-direction: column;
+  
+}
+
+.fdq_item_gr{
+  display: flex;
+
+  justify-content: space-between;
+}
+
+
+.icon{
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.horizontal_gr{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.contacts{
+  padding-top: 67px;
+  padding-left: 60px;
+  padding-right: 118px;
+  padding-bottom: 67px;
+  margin-top: 70px;
+  border-radius: 10px;
+  background: #0C0C0C;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.contact_inf{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_title{
+  color: #FFF;
+font-family: Saar SP Demo;
+font-size: 49.123px;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 44.211px */
+letter-spacing: -0.982px;
+text-transform: uppercase;
+align-items: flex-start;
+padding-bottom: 5px;
+}
+
+.contact_sub{
+  color: #C5C5C5;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.6px;
+  padding-bottom: 10px;
+}
+
+.contact_email{
+  color: #C5C5C5;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 24px */
+letter-spacing: -0.6px;
+align-items: flex-start;
+}
+
+.contact_form{
+  display: flex;
+  flex-direction: column;
+}
+.contact_name{
+  width: 454px;
+height: 58px;
+  border-radius: 54px;
+background: #FFF;
+margin-bottom: 5px;
+}
+
+.contact_number{
+  width: 454px;
+height: 58px;
+  border-radius: 54px;
+background: #FFF;
+margin-bottom: 20px;
+}
+
+.contact_btn_group{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.contact_btn{
+  width: 335px;
+  border-radius: 44.76px;
+background: #C6DA4B;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.contact_tg{
+  
+  border-radius: 44.76px;
+background: #1DC7D5;
+padding: 19.893px 38.129px;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+
+.contact_btn_txt{
+  color: #060606;
+
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 20.7px */
+letter-spacing: -0.18px;
+}
+
+.footer{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer_txt{
+  color: #444;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+align-items: flex-start;
+}
+
+.footer_el_gr{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-left: 15px;
+  margin-right:121px ;
+}
+.footer_el_gr2{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  margin-right:592px ;
+}
+
+.footer_el{
+  color: #444;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.2px;
+align-items: flex-start;
+}
+
+
+
