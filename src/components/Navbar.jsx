@@ -21,7 +21,7 @@ const Navbar = () => {
       className="nav-list_el">Отзывы</div>
       <div 
       onClick={() => scrollToSection('company')}
-      className="nav-list_el">О компании</div>
+      className="nav-list_el ww">О компании</div>
       <div 
       onClick={() => scrollToSection('contacts')}
       className="nav-list_el">Контакты</div>

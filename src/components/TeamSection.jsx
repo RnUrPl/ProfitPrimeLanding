@@ -44,12 +44,25 @@ const TeamSection = () => {
         <Swiper
           ref={swiperRef}
          modules={[Navigation]}
+   
         spaceBetween={10} // расстояние между слайдами
-        slidesPerView={4} // количество видимых слайдов
+        slidesPerView={1} // количество видимых слайдов
         navigation={{
           nextEl: '.nxt1',
           prevEl: '.prv1',
         }}
+        breakpoints={{
+          1400:{
+              slidesPerView:4,
+              
+          }, 1200:{
+            slidesPerView:3,
+            
+        },
+        700:{
+          slidesPerView:2
+        }
+      }}
         // pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
         >

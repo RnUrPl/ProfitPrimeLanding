@@ -7,7 +7,7 @@ const AccordionMenu = () => {
   const menuItems = [
     {
         num: '01',
-      question: 'Есть ли гарантия возврата средств, если я не смогу заработать?',
+      question: 'Есть ли гарантия возврата средств',
       sub: 'если я не смогу заработать?',
       answer: 'Если в течение месяца у вас не будет торговой прибыли, мы гарантированно вернём вам средства. ',
     },
@@ -60,30 +60,39 @@ const AccordionMenu = () => {
         <div className="accordion-menu">
             <div className="horizontal-line"/>
             {menuItems.map((item, index) => (
-                <div key={index} className={`faq_item ${expandedItem === index ? 'expanded' : ''}`}>
+               <div className="qqq">
+                       <div key={index} className={`faq_item ${expandedItem === index ? 'expanded' : ''}`}>
                     <div className="horizontal_gr">
                         <div className="num">{item.num}</div>
                         <div className="fdq_item_gr">
-                            <div className="question" onClick={() => handleToggle(index)}>
+                          <div className="fqwe">
+                          <div className="question" onClick={() => handleToggle(index)}>
                                 {item.question}<br/>{item.sub}
                             </div>
-                            <div>
-                            <img src={require('./assets/pol1.png')} 
-                            onClick={() => handleToggle(index)}className={`icon ${expandedItem === index ? 'expanded' : ''}`}/>
-                            </div>
-                        </div>
-                    </div>
-                        
+                          </div>
+                    
                             
-                     <div className="vertical_gr">
+                            <div className="vertical_gr">
                         {expandedItem === index && (
                         <div className="answer">{item.answer}</div>   
                         )}
-                        <div className={`horizontal-line ${expandedItem === index ? 'expanded' : ''}`}></div>
+                       
                     </div>   
+                        </div>
+                    </div>
                     
+                            
+                    <div>
+                            <img src={require('./assets/pol1.png')} 
+                            onClick={() => handleToggle(index)}className={`icon ${expandedItem === index ? 'expanded' : ''}`}/>
+                            </div>
+                   
                 </div>
+                <div className={`horizontal-line ${expandedItem === index ? 'expanded' : ''}`}></div>
+               </div>
+           
             ))}
+             
         </div>
     </section>
   );

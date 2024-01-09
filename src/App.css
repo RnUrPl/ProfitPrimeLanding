@@ -42,6 +42,7 @@
   box-sizing: border-box;
 }
 .nav_container{
+  justify-content: space-between;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -49,15 +50,26 @@
   padding-top: 40px;
   gap: 150px;
 }
+.logo{
+  transition: 0.5s ease;
+}
 
 .nav_logo{
 
 }
 
+.ww{
+  min-width: 114.52px;
+}
+
 .nav-list{
   display: flex;
+  min-width: 495px;
   flex-direction: row;
   gap: 20px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
 }
 .nav-list_el{
   color: #FFF;
@@ -80,12 +92,13 @@ letter-spacing: -0.2px;
 .nav_contact{
   display: flex;
   width: 217px;
+  min-width: 156px;
 height: 70px;
   border-radius: 54px;
   background: #C6DA4B;
   justify-content: center;
 align-items: center;
-transition: all 0.3s ease;
+
 
 }
 
@@ -176,6 +189,7 @@ letter-spacing: -0.2px;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 100px;
+  
 }
 
 .second_title{
@@ -194,12 +208,14 @@ padding-bottom: 75px;
 .products_context{
   display: flex;
   flex-direction: row;
+ 
 }
 
 .products_context_left{
   display: flex;
   flex-direction: column;
   padding-right: 220px;
+  transition: padding-right 0.5s ease;
 }
 
 .products_menu{
@@ -226,14 +242,34 @@ transition:  0.5s ease-in-out;
   filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
   transform: translateX(10px); /* Поднятие элемента на 10 пикселей при наведении */
 }
-
-.products_img{
-  opacity: 1;
- transition: 0.5s ease-in;
+.products_img {
+  /* Ваши обычные стили изображения */
+  transition:  0.5s ease-in-out;
 }
 
-.products_title{
+.fade {
+  opacity: 0 !important;
+}
 
+.custom-css-for-case1-img.fade {
+  opacity: 1 !important;
+}
+
+.custom-css-for-case2-img.fade {
+  opacity: 1 !important;
+}
+
+.custom-css-for-case3-img.fade {
+  opacity: 1 !important;
+}
+
+.custom-css-for-case4-img.fade {
+  opacity: 1 !important;
+}
+
+
+.products_title{
+  margin-bottom: -60px;
   color: #FFF;
 display: flex;
 align-items: flex-start;
@@ -248,11 +284,10 @@ text-transform: uppercase;
 }
 
 .products_content{
-  width: 624.766px;
-height: 351.508px;
+
 flex-shrink: 0;
-border-radius: 10px;
-background: #F0F0F0;
+border-radius: 13px;
+
 margin-bottom: 20px;
 }
 
@@ -267,6 +302,7 @@ font-weight: 400;
 line-height: 115%; /* 23px */
 letter-spacing: -0.8px;
 padding-bottom: 25px;
+
 }
 
 .products_btn{
@@ -288,18 +324,34 @@ background: #C6DA4B;
 .products_context_rigth{
   display: flex;
   flex-direction: column;
+  transition: opacity 0.5s ease;
+  opacity: 1; /* Set the initial opacity to 1 */
   
 
 }
+.transition-effect {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+/* Add a class for the active state */
+.products-context-right-active {
+  opacity: 1;
+}
 
 .custom-css-for-case2-img{
-  margin-top: 140px;
+  transition:  0.5s ease-in-out;
+
+
+  margin-top: 100px;
 }
 .custom-css-for-case3-img{
-  margin-top: 120px;
+
+  margin-top: 90px;
 }
 
 .custom-css-for-case4-img {
+
   margin-top: -345px; /* или другой отрицательный/положительный отступ, который вам нужен */
   height: 880px;
   pointer-events: none; /* Это свойство позволяет "проходить" событиям мыши через элемент */
@@ -315,8 +367,10 @@ background: #C6DA4B;
 }
 
 .about_title{
+  display: flex;
   color: #FFF;
 align-items: flex-start;
+justify-content: flex-start;
 font-family: Saar SP Demo;
 font-size: 55px;
 font-style: normal;
@@ -325,18 +379,21 @@ line-height: 90%; /* 49.5px */
 letter-spacing: -1.1px;
 text-transform: uppercase;
 padding-bottom: 71px;
+
 }
 
 .cons_section{
+  
   display: flex;
   flex-direction: row;
   gap: 20px;
+
 }
 
 .con{
   display: flex;
   flex-direction: column;
-  
+  min-width: 311.06px;
 }
 
 .con_title{
@@ -397,6 +454,7 @@ font-weight: 400;
 line-height: 115%; /* 23px */
 letter-spacing: -0.6px;
 padding-bottom: 5px;
+white-space: nowrap;
 }
 
 .about_btn{
@@ -435,6 +493,7 @@ letter-spacing: -0.2px;
 
 .trade_titile{
   align-items: flex-start;
+  display: flex;
   color: #FFF;
 font-family: Saar SP Demo;
 font-size: 55px;
@@ -461,7 +520,7 @@ padding-bottom: 45px;
   border-radius: 11px;
 border: 2px solid #C6DA4B;
 padding: 10px 20px 15px;
-
+max-width: 453px;
 }
 
 .box_header{
@@ -485,6 +544,7 @@ padding-right: 14px;
   display: flex;
   flex-direction: row;
   gap: 20px;
+
 }
 
 .box_title{
@@ -509,6 +569,11 @@ line-height: 115%; /* 18.4px */
 letter-spacing: -0.16px;
 }
 
+.video_mp{
+  max-width: 624.766px;
+max-height: 351.508px;
+}
+
 .box_subt{
   color: #D1D1D1;
 font-family: Inter;
@@ -517,6 +582,29 @@ font-style: normal;
 font-weight: 400;
 line-height: 115%; /* 23px */
 letter-spacing: -0.4px;
+padding-right: 14px
+
+
+}
+.custom-scroll {
+  overflow-y: auto; /* Включить вертикальный скролл */
+  max-height: 185px; /* Установить максимальную высоту, чтобы появлялся скролл, если контент слишком длинный */
+  /* Добавьте другие стили по вашему желанию */
+
+}
+
+.custom-scroll::-webkit-scrollbar {
+  height: 200px;
+  width: 6px; /* ширина скроллбара */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #C6DA4B; /* цвет ползунка скроллбара */
+  border-radius: 6px; /* закругление углов ползунка */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background-color:#181818; /* цвет трека (фона) скроллбара */
 }
 
 .company{
@@ -539,6 +627,8 @@ letter-spacing: -0.4px;
   padding-bottom: 70px;
 }
 
+
+
 .abcomp_group{
   display: flex;
   flex-direction: row;
@@ -546,6 +636,8 @@ letter-spacing: -0.4px;
 }
 
 .abcomp_chunk{
+    gap: 20px;
+
   display: flex;
   flex-direction: column;
 }
@@ -561,10 +653,37 @@ letter-spacing: -0.4px;
 background: #F0F0F0;
 }
 
+
+.abcomp_box2{
+  padding-left: 21px;
+  overflow: hidden;
+  padding-right: 27px;
+  height: 383px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 13px;
+background: #F0F0F0;
+background-image: url('./components/assets/fram1.png');
+}
+
 .box1_title{
   padding-top: 36px;
   padding-bottom: 15px;
   color: #060606;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 24px */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+align-items: flex-start;
+}
+
+.box2_title{
+  padding-top: 36px;
+  padding-bottom: 15px;
+  color: #FFF;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
@@ -595,10 +714,37 @@ font-family: Inter;
 font-size: 19px;
 font-style: normal;
 font-weight: 400;
+max-width: 430px;
 line-height: 115%; /* 23px */
 letter-spacing: -0.6px;
 align-items: flex-start;
 }
+
+.box3_subtitle{
+  color: #605F5F;
+font-family: Inter;
+font-size: 19px;
+font-style: normal;
+font-weight: 400;
+max-width: 542px;
+line-height: 115%; /* 23px */
+letter-spacing: -0.6px;
+align-items: flex-start;
+}
+
+.box2_subtitle{
+  color: #B9B9B9;
+font-family: Inter;
+font-size: 19px;
+font-style: normal;
+font-weight: 400;
+max-width: 453px;
+line-height: 115%; /* 23px */
+letter-spacing: -0.6px;
+align-items: flex-start;
+}
+
+
 
 .box1_num{
   color: #1DC7D5;
@@ -620,12 +766,12 @@ display: flex;
 
 .abcomp_img{
 display: flex;
-
+max-width: 570px;
   border-radius: 10px;
 }
 
 .abcomp_box3{
-  padding: 24px 8px  0px 24px;
+  padding: 24px 8px  10px 24px;
 
   border-radius: 10px;
 background: #F0F0F0;
@@ -657,10 +803,7 @@ background: #F0F0F0;
 
 }
 
-.abcomp_chunk{
-  display: flex;
-  gap: 20px;
-} 
+
 
 .abc_gr{
   display: flex;
@@ -737,6 +880,7 @@ background: #F0F0F0;
 }
 
 .lol1{
+  max-width: 624.766px;
   transition: 0.5s step-end ;
 }
 
@@ -825,9 +969,11 @@ padding-bottom: 70px;
 
 
 .question {
+
   display: flex;
   color: #FFF;
   font-family: Inter;
+
   font-size: 30px;
   font-style: normal;
   font-weight: 600;
@@ -895,16 +1041,39 @@ padding-bottom: 20px;
 
 .faq_item{
   display:flex;
-  flex-direction: column;
-  
-}
-
-.fdq_item_gr{
-  display: flex;
-
+  flex-direction: row;
   justify-content: space-between;
 }
 
+
+.qqq{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.fdq_item_gr {
+  display: flex;
+  flex-direction: column;
+
+ 
+}
+.line {
+  height: 1px;
+  background-color: #000; /* Цвет линии */
+  width: 100%; /* Растянуть линию на всю ширину родительского контейнера */
+  margin: 10px 0; /* Отступы, если необходимо */
+}
+
+.team_slider{
+  background: #060606;
+}
+
+.fqwe{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .icon{
   display: flex;
@@ -959,6 +1128,44 @@ padding-bottom: 5px;
   line-height: 120%; /* 24px */
   letter-spacing: -0.6px;
   padding-bottom: 10px;
+}
+
+.plaq{
+  position: relative;
+  left: 70%;
+  top: 60px;
+}
+
+.plaq_txt{
+  color: #060606;
+
+text-align: center;
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 800;
+line-height: 120%; /* 26.4px */
+letter-spacing: -0.22px;
+text-transform: uppercase;
+  position: relative;
+  left: 60.5%;
+  top: 25px;
+}
+
+.plaq_txt1{
+  color: #060606;
+
+text-align: center;
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 800;
+line-height: 120%; /* 26.4px */
+letter-spacing: -0.22px;
+text-transform: uppercase;
+  position: relative;
+  left: 61.5%;
+  top: 25px;
 }
 
 .contact_email{
@@ -1050,6 +1257,14 @@ text-transform: uppercase;
 align-items: flex-start;
 }
 
+.accordion-menu{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+
+  margin-left: 10%;
+}
+
 .footer_el_gr{
   display: flex;
   flex-direction: column;
@@ -1076,6 +1291,233 @@ line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 align-items: flex-start;
 }
+
+@media only screen and (max-width: 1400px) {
+
+  .abcomp_group{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .abcomp_box3{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .abcomp_chunk{
+
+
+  }
+
+  .abcomp_img{
+    display: none;
+  }
+
+  
+
+
+ .nav_container{
+  gap: 0;
+  transition: gap 0.5s ease; /* анимация для свойства gap */
+  display: flex;
+ 
+ }
+ .products_context_left {
+  padding-right: 0px;
+
+}
+.about
+{
+  align-items: center;
+
+}
+
+.cons_section{
+  flex-direction: column;
+}
+
+
+}
+@media only screen and (max-width: 1150px) {
+
+  .products{
+    align-items: center;
+  }
+
+
+
+
+
+  .products_context_right{
+    margin-top: 50px;
+  }
+
+  .q{
+    display: none;
+  }
+  .products_context{
+    flex-direction: column;
+  }
+ 
+ 
+ }
+
+@media only screen and (max-width: 990px) {
+
+  .contacts{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .team_title {
+    justify-content: center;
+  }
+
+  .rg{
+    justify-content: center;
+  }
+
+ 
+  .nav-list {
+    opacity: 0;
+    visibility: hidden;
+
+  }
+.trade_titile{
+  justify-content: center;
+}
+
+
+   .q{
+    display: none;
+   }
+
+ }
+ @media only screen and (max-width: 930px) {
+  .nav-list {
+
+    display: none;
+    
+  }}
+
+  @media only screen and (max-width: 840px) {
+    .box1_num{
+      display: none;
+    }
+    .box_img2{
+      display: none;
+    }
+
+    .abcomp_box3{
+      padding-bottom: 24px;
+      max-width: 450px;
+    }
+    
+
+    .abcomp_box4{
+      padding-left: 24px;
+    }
+
+  
+    .question{
+      font-size: 24px;
+    }
+
+    .answer{
+      font-size: 15px;
+    }
+  
+    }
+
+  @media only screen and (max-width: 700px) {
+  .team_slider{
+    margin-left: 10%;
+    /* margin-right: 10%; */
+  }
+
+  .question{
+    font-size: 20px;
+  }
+
+
+
+  }
+
+
+  @media only screen and (max-width: 613px) {
+
+
+  .video_mp {
+    max-width: 480px;
+    max-height: 320px;
+}
+
+    .answer{
+      font-size: 12px;
+    }
+
+  
+    .question{
+      font-size: 16px;
+    }
+  
+    }
+
+
+
+@media only screen and (max-width: 450px) {
+
+  .video_mp {
+    max-width: 360px;
+    max-height: 220px;
+}
+
+  
+
+  .abcomp_box4{
+    padding-left: 24px;
+  }
+
+  .abcomp_box2{
+    background-image: none;
+    background: #060606;;
+  }
+
+
+  .abcomp_img{
+    display: none;
+  }
+
+
+  .trade_subtitle{
+    display: none;
+  }
+
+  .abcomp_box1{
+    padding-bottom: 24px;
+  }
+
+  .trade_group{
+    justify-content: center;
+  }
+
+
+ 
+   .logo{
+     width: 50%;
+   }
+ }
+
+ @media only screen and (max-width: 420) {
+  .team_slider{
+    margin-left: 10%;
+    /* margin-right: 10%; */
+  }
+  }
+
 
 
 
