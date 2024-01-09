@@ -10,15 +10,20 @@ const SecondSection = () => {
     const [selectedMenuItem, setSelectedMenuItem] = useState('1');
     const [prevMenuItem, setPrevMenuItem] = useState('1');
     
-
+    const [transitioning, setTransitioning] = useState(false);  
     const handleMenuItemClick = (menuItem) => {
-      setSelectedMenuItem(menuItem);
-      setPrevMenuItem(selectedMenuItem);
-
-      const videoElement = document.querySelector('.video_mp');
-      if (videoElement && videoElement.tagName.toLowerCase() === 'video') {
-        videoElement.load();
-      }
+      setTransitioning(true);
+    
+      setTimeout(() => {
+        setSelectedMenuItem(menuItem);
+        setPrevMenuItem(selectedMenuItem);
+        setTransitioning(false);
+    
+        const videoElement = document.querySelector('.video_mp');
+        if (videoElement && videoElement.tagName.toLowerCase() === 'video') {
+          videoElement.load();
+        }
+      }, 1000); // Adjust the delay as needed
     };
  
 
@@ -169,17 +174,17 @@ PROFIT PRIME AI - ваш личный трейдер и финансовый а�
             <div className={`menu_item ${selectedMenuItem === '3' ? 'selected' : ''}`} onClick={() => handleMenuItemClick('3')}>PROFIT PRIME AI</div>
             <div className={`menu_item ${selectedMenuItem === '4' ? 'selected' : ''}`} onClick={() => handleMenuItemClick('4')}>PROFIT PRIME BINARY</div>
                 </div>
-                <div className="q">
+                <div className={`q ${transitioning ? 'transitioning' : ''}`}>
                 <img src={getImagePath()} 
             
-            className={`products_img ${getCustomCssClassForImg()} fade`}
+            className={`products_img ${getCustomCssClassForImg()} `}
             />
             </div>
 
             </div>
-            <div className="products_context_right">
-          {getContentForMenuItem()}
-        </div>
+            <div className={`products_context_right ${transitioning ? 'transitioning' : ''}`}>
+  {getContentForMenuItem()}
+</div>
         </div>
     </section>
   )
