@@ -11,12 +11,12 @@ const ContacsSection = () => {
             <div className="contact_email">suppoert@profitprime.pro</div>
         </div>
         <div className="contact_form">
-            <div className="contact_name">
-                <input className='contact_input'></input>
-            </div>
-            <div className="contact_number">
-                <input className='contact_input'></input>
-            </div>
+          
+                <input placeholder='Имя' className='contact_input'></input>
+         
+           
+                <input placeholder='Телефон' className='contact_input'></input>
+            
             <div className="contact_btn_group">
                 <div className="contact_btn">
                     <span className='contact_btn_txt'>получить консультацию</span>

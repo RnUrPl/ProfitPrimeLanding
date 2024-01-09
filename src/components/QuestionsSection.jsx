@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 const AccordionMenu = () => {
   const [expandedItem, setExpandedItem] = useState(null);
+  const [iconFlipped, setIconFlipped] = useState(false);
 
   const menuItems = [
     {
@@ -18,7 +19,7 @@ const AccordionMenu = () => {
       answer: 'Мы предлагаем круглосуточную поддержку и регулярные обновления, чтобы обеспечить безупречную работу систем.',
     },
     {
-        num: '03',
+        num: '03',  
         question: 'Смогу ли я зарабатывать без',
         sub: 'подписки на Profit prime academy?',
         answer: 'Да, конечно, торговой системы и руководства пользователя достаточно, чтобы начать зарабатывать. Академия даёт доступ к закрытой информации о подборе брокеров и разработке собственной стратегии, а также к закрытому чату трейдеров из нашей команды.',
@@ -52,6 +53,7 @@ const AccordionMenu = () => {
 
   const handleToggle = (index) => {
     setExpandedItem((prevIndex) => (prevIndex === index ? null : index));
+    setIconFlipped((prevIndex) => (prevIndex === index ? null : index));
   };
   return (
     <section id='faq' className='faq'>
@@ -83,8 +85,12 @@ const AccordionMenu = () => {
                     
                             
                     <div>
-                            <img src={require('./assets/pol1.png')} 
-                            onClick={() => handleToggle(index)}className={`icon ${expandedItem === index ? 'expanded' : ''}`}/>
+                    <img
+                  src={require('./assets/pol1.png')}
+                  onClick={() => handleToggle(index)}
+                  className={`icon ${iconFlipped === index ? 'flipped' : ''} `}
+                  alt="Toggle Icon"
+                />
                             </div>
                    
                 </div>

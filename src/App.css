@@ -1101,6 +1101,31 @@ padding-bottom: 20px;
 
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.contact_input{
+  width: 432px;
+  height: 58px;
+  border-radius: 54px;
+  background: #FFF;
+  margin-bottom: 5px;
+border: none;
+color: #060606;;
+
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 20.7px */
+letter-spacing: -0.18px;
+padding-inline-start: 22px;
+
+}
+
 .contact_inf{
   display: flex;
   flex-direction: column;
@@ -1207,6 +1232,7 @@ margin-bottom: 20px;
 
 .contact_btn{
   width: 335px;
+  height: 57px;
   border-radius: 44.76px;
 background: #C6DA4B;
 display: flex;
@@ -1257,6 +1283,19 @@ text-transform: uppercase;
 align-items: flex-start;
 }
 
+.footer_txt2{
+  color: #444;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.2px;
+text-transform: uppercase;
+align-items: flex-start;
+}
+
 .accordion-menu{
   display: flex;
   flex-direction: column;
@@ -1280,6 +1319,11 @@ align-items: flex-start;
   margin-right:592px ;
 }
 
+.icon.flipped {
+  transform: rotate(180deg);
+  filter: brightness(0) invert(1);
+}
+
 .footer_el{
   color: #444;
 
@@ -1293,6 +1337,14 @@ align-items: flex-start;
 }
 
 @media only screen and (max-width: 1400px) {
+
+  .footer_el_gr2{
+    margin-right: 0px;
+  }
+
+  .footer_txt2{
+    display: none;
+  }
 
   .abcomp_group{
     flex-direction: column;
@@ -1413,6 +1465,7 @@ align-items: flex-start;
 
     .abcomp_box3{
       padding-bottom: 24px;
+      width: auto;
       max-width: 450px;
     }
     
@@ -1448,8 +1501,17 @@ align-items: flex-start;
 
 
   @media only screen and (max-width: 613px) {
+  
+    .contact_input{
+      width: 320px;
+      margin-bottom:10px ;
+    }
 
-
+    .contact_btn_group{
+      flex-direction: column;
+      gap: 10px;
+    }
+ 
   .video_mp {
     max-width: 480px;
     max-height: 320px;
@@ -1463,7 +1525,22 @@ align-items: flex-start;
     .question{
       font-size: 16px;
     }
+
+    .footer_el_gr2{
+      display: none;
+    }
   
+    }
+
+    @media only screen and (max-width: 490px) {
+
+      .footer{
+        justify-content: center;
+      }
+      .footer_el_gr{
+        display: none;
+      }
+
     }
 
 
@@ -1473,6 +1550,10 @@ align-items: flex-start;
   .video_mp {
     max-width: 360px;
     max-height: 220px;
+}
+
+.contact_form{
+  padding-left: 50px;
 }
 
   
@@ -1511,9 +1592,9 @@ align-items: flex-start;
    }
  }
 
- @media only screen and (max-width: 420) {
+ @media only screen and (max-width: 420px) {
   .team_slider{
-    margin-left: 10%;
+    margin-left: 5%;
     /* margin-right: 10%; */
   }
   }

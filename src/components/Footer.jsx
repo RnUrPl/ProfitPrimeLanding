@@ -14,7 +14,7 @@ const Footer = () => {
            <div className="footer_el">Отзывы</div>
            <div className="footer_el">FAQ</div>
        </div>
-       <span className='footer_txt'>Public offer contract <br/>
+       <span className='footer_txt2'>Public offer contract <br/>
 Privacy Policy</span>
     </section>
   )
