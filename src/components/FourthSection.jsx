@@ -3,11 +3,20 @@ import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 
-
-
-
+import { useState } from 'react';
 
 const FourthSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const vv = require('./assets/messi.mp4')
+
+    const handleCoinsClick = () => {
+        setModalOpen(true);
+      };
+    
+      const handleCloseModal = () => {
+        setModalOpen(false);
+      };
+    
 
     const swiperRef = useRef(null);
 
@@ -80,20 +89,36 @@ const FourthSection = () => {
                     <div className="box_header">
                         <img src={require('./assets/trader1.png')}className='box_img' alt='MOXCEH'/>
                         <div className="box_title_g">
-                            <div className="box_title">Мохсен Азади</div>
+                            <div className="box_title">
+                                <div className="box_name">Роберт мэсси</div>
+                                <img className='coins' src={require('./assets/coin.png')} onClick={handleCoinsClick} />
+                            </div>
                             <div className="box_sub">Forex + Аcademy</div>
                             <img src={require('./assets/stars1.png')} className="box-starts" alt='5 stars'></img>
                         </div>
                     </div>
                     <div className="box_subt custom-scroll">На старте покупал только систему для торговли на Forex. С инструкцией разобрался, попробовал сам выставить настройки для работы. Получалось делать 20% в день, но хотелось больше. Решил уточнить у ребят, как можно повысить профит. Вступил в академию, сразу изучил гайд по подбору брокеров и настройке торговых пар. Повезло, в чате даже нашел парня, который занимается аккаунтами. Конечно, мне есть куда расти, но и сейчас всё неплохо. Сделки с одного из аккаунтов на видео. Всем удачи! </div>
                 </div>
+                {modalOpen && (
+                    <div className="modal">
+                    <video className='video_mp' controls>
+                            <source src={vv} type="video/mp4" />
+                              
+                            </video>
+                    <button onClick={handleCloseModal}>Закрыть</button>
+                    </div>
+                    
+                )}
             </SwiperSlide>
             <SwiperSlide>
                 <div className="box">
                     <div className="box_header">
                     <img src={require('./assets/trader2.png')}className='box_img' alt='MAKSIM'/>
                         <div className="box_title_g">
-                            <div className="box_title">Максим Александров</div>
+                        <div className="box_title">
+                                <div className="box_name">Максим Александров</div>
+                                <img className='coins' src={require('./assets/coin.png')} onClick={handleCoinsClick} />
+                            </div>
                             <div className="box_sub">Binary + Global + Аcademy </div>
                             <img src={require('./assets/stars2.png')} className="box-starts" alt='4.5 stars'></img>
                         </div>
@@ -106,7 +131,10 @@ const FourthSection = () => {
                     <div className="box_header">
                     <img src={require('./assets/trader3.png')}className='box_img' alt='ARTEM'/>
                         <div className="box_title_g">
-                            <div className="box_title">Артем Воронцов</div>
+                        <div className="box_title">
+                                <div className="box_name">АРТЕМ ВОРОНЦОВ</div>
+                                <img className='coins' src={require('./assets/coin.png')} onClick={handleCoinsClick} />
+                            </div>
                             <div className="box_sub">Binary + Global </div>
                             <img src={require('./assets/stars3.png')} className="box-starts" alt='4 stars'></img>
                         </div>
@@ -119,8 +147,10 @@ const FourthSection = () => {
                     <div className="box_header">
                     <img src={require('./assets/trader4.png')}className='box_img' alt='ARTEM'/>
                         <div className="box_title_g">
-                            <div className="box_title">Виталий Савин
-</div>
+                        <div className="box_title">
+                                <div className="box_name">Виталий Савин</div>
+                                <img className='coins' src={require('./assets/coin.png')} onClick={handleCoinsClick} />
+                            </div>
                             <div className="box_sub">Binary + Global + Аcademy  </div>
                             <img src={require('./assets/stars4.png')} className="box-starts" alt='4 stars'></img>
                         </div>
@@ -133,7 +163,10 @@ const FourthSection = () => {
                     <div className="box_header">
                     <img src={require('./assets/trader5.png')}className='box_img' alt='ARTEM'/>
                         <div className="box_title_g">
-                            <div className="box_title">Максим Козлов </div>
+                        <div className="box_title">
+                                <div className="box_name">Максим Козлов</div>
+                                <img className='coins' src={require('./assets/coin.png')} onClick={handleCoinsClick} />
+                            </div>
                             <div className="box_sub">Forex + Аcademy </div>
                             <img src={require('./assets/stars5.png')} className="box-starts" alt='4 stars'></img>
                         </div>
@@ -146,7 +179,10 @@ const FourthSection = () => {
                     <div className="box_header">
                     <img src={require('./assets/trader6.png')}className='box_img' alt='ARTEM'/>
                         <div className="box_title_g">
-                            <div className="box_title">Руслан Ткачев</div>
+                        <div className="box_title">
+                                <div className="box_name">Руслан Ткачев</div>
+                                <img className='coins' src={require('./assets/coin.png')} onClick={handleCoinsClick} />
+                            </div>
                             <div className="box_sub">Forex + Аcademy  </div>
                             <img src={require('./assets/stars6.png')} className="box-starts" alt='4 stars'></img>
                         </div>
@@ -159,7 +195,10 @@ const FourthSection = () => {
                     <div className="box_header">
                     <img src={require('./assets/trader7.png')}className='box_img' alt='ARTEM'/>
                         <div className="box_title_g">
-                            <div className="box_title">Злата Белоусова</div>
+                        <div className="box_title">
+                                <div className="box_name">Злата Белоусова</div>
+                                <img className='coins' src={require('./assets/coin.png')} onClick={handleCoinsClick} />
+                            </div>
                             <div className="box_sub">Binary </div>
                             <img src={require('./assets/stars7.png')} className="box-starts" alt='4 stars'></img>
                         </div>
@@ -172,7 +211,10 @@ const FourthSection = () => {
                     <div className="box_header">
                     <img src={require('./assets/trader8.png')}className='box_img' alt='ARTEM'/>
                         <div className="box_title_g">
-                            <div className="box_title">Константин Абрамов</div>
+                        <div className="box_title">
+                                <div className="box_name">Константин Абрамов</div>
+                                <img className='coins' src={require('./assets/coin.png')} onClick={handleCoinsClick} />
+                            </div>
                             <div className="box_sub">Binary + Global + Аcademy </div>
                             <img src={require('./assets/stars3.png')} className="box-starts" alt='4 stars'></img>
                         </div>
@@ -185,7 +227,10 @@ const FourthSection = () => {
                     <div className="box_header">
                     <img src={require('./assets/trader3.png')}className='box_img' alt='ARTEM'/>
                         <div className="box_title_g">
-                            <div className="box_title">Роман Воробьёв</div>
+                        <div className="box_title">
+                                <div className="box_name">Роман Воробьев</div>
+                                <img className='coins' src={require('./assets/coin.png')} onClick={handleCoinsClick} />
+                            </div>
                             <div className="box_sub">Binary + Global + Аcademy</div>
                             <img src={require('./assets/stars3.png')} className="box-starts" alt='4 stars'></img>
                         </div>

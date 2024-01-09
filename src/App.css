@@ -548,6 +548,14 @@ padding-right: 14px;
 }
 
 .box_title{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+gap: 20px;
+}
+
+.box_name{
   color: #FFF;
 
 font-family: Inter;
@@ -557,6 +565,10 @@ font-weight: 600;
 line-height: 120%; /* 24px */
 letter-spacing: -0.2px;
 text-transform: uppercase;
+}
+.coins {
+  /* Дополнительные стили для изображения монет */
+  margin-left: auto; /* Переместить элемент в конец строки */
 }
 
 .box_sub{
@@ -1336,6 +1348,70 @@ letter-spacing: -0.2px;
 align-items: flex-start;
 }
 
+.videotube-modal-overlay {
+		color: #fff;
+		display: none;
+		z-index: 995;
+		opacity: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		position: fixed;
+		background: #000;
+		text-align: center;
+}
+
+#videotube-modal-container {
+		z-index: 998;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+
+#videotube-modal {
+		text-align: center;
+		box-shadow: 0 0 40px #333;
+}
+
+#videotube-modal-loading {
+		position: fixed;
+		z-index: 997;
+		font-size: 1.5em;
+		top: 49%;
+		width: 5%;
+		text-align: center;
+		left: 45%;
+}
+
+#videotube-modal-close {
+		position: fixed;
+		right: 15px;
+		top: 15px;
+		padding: 3px 13px;
+		z-index: 999;
+		font-size: 25px;
+		text-shadow: 0 0 10px #fff;
+		border-radius: 3px;
+		cursor: pointer;
+		-webkit-transition-duration: 0.1s;
+		-o-transition-duration: 0.1s;
+		-moz-transition-duration: 0.1s;
+		transition-duration: 0.1s;
+}
+
+#videotube-modal-close:hover {
+		background: #333;
+}
+
+
+
 @media only screen and (max-width: 1400px) {
 
   .footer_el_gr2{
@@ -1534,6 +1610,10 @@ align-items: flex-start;
 
     @media only screen and (max-width: 490px) {
 
+      .box_title{
+        gap:60px
+      }
+
       .footer{
         justify-content: center;
       }
@@ -1593,6 +1673,10 @@ align-items: flex-start;
  }
 
  @media only screen and (max-width: 420px) {
+
+  .box_title{
+    gap: 10px;
+  }
   .team_slider{
     margin-left: 5%;
     /* margin-right: 10%; */
