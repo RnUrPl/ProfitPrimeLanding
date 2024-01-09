@@ -3,13 +3,13 @@ import './App.css';
 import CompanySection from './components/CompanySection';
 import ContacsSection from './components/ContacsSection';
 import Footer from './components/Footer';
-import FourthSection from './components/FourthSection';
 import MainSection from './components/MainSection';
 import Navbar from './components/Navbar';
 import AccordionMenu from './components/QuestionsSection';
-import SecondSection from './components/SecondSection';
+import ProductsSection from './components/ProductsSection';
 import TeamSection from './components/TeamSection';
-import ThirdSection from './components/ThirdSection';
+import ConsSection from './components/ConsSection';
+import TradersSection from './components/TradersSection';
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
         </div>
       </div>
       <div className='app1'>
-        <SecondSection/>
-        <ThirdSection/>
-        <FourthSection/>
+        <ProductsSection/>
+        <ConsSection/>
+        <TradersSection/>
       </div>
       <div className="app3">
         <div className="app1">

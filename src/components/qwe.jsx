@@ -8,7 +8,7 @@ const plq = require('./assets/qwe.png')
 const SecondSection = () => {
 
     const [selectedMenuItem, setSelectedMenuItem] = useState('1');
-    const [prevMenuItem, setPrevMenuItem] = useState('1');
+
     
     const [transitioning, setTransitioning] = useState(false);  
     const handleMenuItemClick = (menuItem) => {
