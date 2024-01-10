@@ -1413,6 +1413,10 @@ align-items: flex-start;
 		background: #333;
 }
 
+.swiper-wrapper{
+  max-width: 1400px;
+}
+
 
 
 @media only screen and (max-width: 1400px) {

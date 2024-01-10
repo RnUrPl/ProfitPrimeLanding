@@ -45,9 +45,11 @@ const Section = ({ children }) => {
   }, [isVisible, set]);
 
   return (
-    <animated.div ref={ref} style={props}>
-      {children}
-    </animated.div>
+<div className="container" style={{ overflow: 'hidden' }}>
+      <animated.div ref={ref} style={props}>
+        {children}
+      </animated.div>
+    </div>
   );
 };
 

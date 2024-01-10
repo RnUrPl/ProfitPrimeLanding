@@ -26,9 +26,9 @@ function App() {
       <div className='app2'>
         <div className='app1'>
           <Navbar/>
-         
+          <Section>
           <MainSection/>
-        
+          </Section>
         </div>
       </div>
       <div className='app1'>
