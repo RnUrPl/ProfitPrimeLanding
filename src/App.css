@@ -23,10 +23,18 @@
   
 }
 
+.canvas{
+  height: 300px;
+}
+
 .earth{
 
   min-width: 320px;
-  min-height: 200px;
+  min-height: 320px;
+}
+
+.canvas{
+  min-height: 300px;
 }
 
 .main{

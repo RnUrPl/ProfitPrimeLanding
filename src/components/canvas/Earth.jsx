@@ -8,13 +8,21 @@ const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
 
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <primitive  object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
   );
 };
 
 const EarthCanvas = () => {
+
+    // const canvasStyle = {
+    //     // minWidth: "300px", // Задайте минимальную ширину, которую вы хотите использовать
+       
+    //   };
   return (
-    <Canvas
+    // <div style={canvasStyle}>
+    <Canvas  
+    style={{height:"400px"}}
+        className="earth"
       shadows
       frameloop='demand'
       dpr={[1, 2]}
@@ -33,11 +41,14 @@ const EarthCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Earth />
+        <Earth 
+       
+        />
 
         <Preload all />
       </Suspense>
     </Canvas>
+    // </div>
   );
 };
 
