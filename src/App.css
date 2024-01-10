@@ -23,8 +23,27 @@
   
 }
 
+.earth{
+
+  min-width: 320px;
+  min-height: 200px;
+}
+
 .main{
   padding-bottom: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.StarsCanvas {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.srt{
+  position: absolute;
 }
 
 .app2{
@@ -1584,6 +1603,12 @@ align-items: flex-start;
 }
 
 @media only screen and (max-width: 990px) {
+
+  .main{
+
+    flex-direction: column;
+  
+  }
 
   .contacts{
     flex-direction: column;

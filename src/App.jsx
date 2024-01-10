@@ -13,6 +13,7 @@ import TradersSection from './components/TradersSection';
 import { animated, useSpring } from '@react-spring/web'
 import Section from './components/Section';
 import Animation from './components/Anmation';
+import StarsCanvas from './components/canvas/Stars';
 
 
 
@@ -25,10 +26,13 @@ function App() {
     <div className="App">
       <div className='app2'>
         <div className='app1'>
-          <Navbar/>
+ 
           <Section>
+          <Navbar/>
           <MainSection/>
+          <StarsCanvas/>
           </Section>
+       
         </div>
       </div>
       <div className='app1'>
