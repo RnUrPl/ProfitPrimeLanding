@@ -10,31 +10,60 @@ import ProductsSection from './components/ProductsSection';
 import TeamSection from './components/TeamSection';
 import ConsSection from './components/ConsSection';
 import TradersSection from './components/TradersSection';
+import { animated, useSpring } from '@react-spring/web'
+import Section from './components/Section';
+import Animation from './components/Anmation';
+
+
+
+
 
 function App() {
+
+
   return (
     <div className="App">
       <div className='app2'>
         <div className='app1'>
           <Navbar/>
+          <Section>
           <MainSection/>
+          </Section>
         </div>
       </div>
       <div className='app1'>
-        <ProductsSection/>
-        <ConsSection/>
-        <TradersSection/>
+        <Animation>
+         <ProductsSection/>
+        </Animation>
+        <Section>
+            <ConsSection />
+            </Section>
+            <Animation>
+            <TradersSection />
+            </Animation>
+      
+         
       </div>
       <div className="app3">
         <div className="app1">
+          <Section>
             <CompanySection/>
+            </Section>
         </div>
       </div>
       <div className="app1">
-        <TeamSection/>
+        <Section>
+          <TeamSection/>
+        </Section>
+        <Section>
         <AccordionMenu/>
+        </Section>
+        <Section>
         <ContacsSection/>
+        </Section>
+        <Animation>
         <Footer/>
+        </Animation>
       </div>
 
      

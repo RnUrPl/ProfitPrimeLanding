@@ -69,14 +69,15 @@ const TradersSection = () => {
             prevEl: '.prv',    
           }}
           breakpoints={{
-              1400:{
+
+              1060:{
                   slidesPerView:3,
                   centeredSlides: false,
               },
-              990:{
-                  slidesPerView:2,
-                  centeredSlides: false,
-              },
+              715:{
+                slidesPerView:2,
+                centeredSlides: false,
+            },
               0:{
               slidesPerView:1,
               centeredSlides:true,
