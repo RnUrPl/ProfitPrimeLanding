@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-import case1mg from './assets/case1.png'
-import case2mg from './assets/case2.png'
-import case3mg from './assets/case3.png'
-import case4mg from './assets/case4.png'
 
 const VIDEO_TYPE = 'video/mp4';
 
@@ -10,7 +6,6 @@ var videoPathGlobal = require('./assets/global.mp4');
 var videoPathBinary = require('./assets/binary.mp4');
 var plq = require('./assets/qwe.png');
 var aipng = require('./assets/ai.png')
-
 
 const ProductsSection = () => {
   var [selectedMenuItem, setSelectedMenuItem] = useState('1');
@@ -21,15 +16,9 @@ const ProductsSection = () => {
 
     setTimeout(() => {
       setSelectedMenuItem(menuItem);
-
-
-    }, 1000);
-
-    setTimeout(() => {
-
       setTransitioning(false);
 
-    }, 1500);
+    }, 1000);
   };
 
   
@@ -133,15 +122,15 @@ PROFIT PRIME AI - ваш личный трейдер и финансовый а�
   var getImageAndCssPath = () => {
     switch (selectedMenuItem) {
       case '1':
-        return { imgPath: case1mg, cssClass: 'custom-css-for-case1-img' };
+        return { imgPath: require('./assets/case1.png'), cssClass: 'custom-css-for-case1-img' };
       case '2':
-        return { imgPath: case2mg, cssClass: 'custom-css-for-case2-img' };
+        return { imgPath: require('./assets/case2.png'), cssClass: 'custom-css-for-case2-img' };
       case '3':
-        return { imgPath: case3mg, cssClass: 'custom-css-for-case3-img' };
+        return { imgPath: require('./assets/case3.png'), cssClass: 'custom-css-for-case3-img' };
       case '4':
-        return { imgPath: case4mg, cssClass: 'custom-css-for-case4-img' };
+        return { imgPath: require('./assets/case4.png'), cssClass: 'custom-css-for-case4-img' };
       default:
-        return { imgPath:case1mg, cssClass: 'custom-css-for-case1-img' };
+        return { imgPath: require('./assets/case1.png'), cssClass: 'custom-css-for-case1-img' };
     }
   };
 
