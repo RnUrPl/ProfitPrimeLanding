@@ -33,12 +33,16 @@ const ProductsSection = () => {
     }, 1500);
   };
 
-var resetImg = () => {
-  var imgEl = document.querySelector('.products_img');
-  if (imgEl && imgEl.tagName.toLowerCase() === 'img') {
-    imgEl.load();
-  }
-};
+  var resetImg = () => {
+    var imgEl = document.querySelector('.products_img');
+    if (imgEl) {
+      imgEl.onload = function() {
+        // Image has loaded
+      };
+      // Trigger the onload event (this may not be necessary, depending on your use case)
+      imgEl.src = imgEl.src;
+    }
+  };
 
   var getContentForMenuItem = () => {
     switch (selectedMenuItem) {
