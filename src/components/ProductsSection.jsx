@@ -22,15 +22,15 @@ const ProductsSection = () => {
     setTimeout(() => {
       resetImg()
       setSelectedMenuItem(menuItem);
-
+      setTransitioning(false);
 
     }, 500);
 
-    setTimeout(() => {
+    // setTimeout(() => {
 
-      setTransitioning(false);
 
-    }, 1500);
+
+    // }, 1500);
   };
   var resetImg = () => {
     var imgEl = document.querySelector('.products_img');
