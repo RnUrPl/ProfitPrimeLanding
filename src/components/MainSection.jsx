@@ -17,13 +17,16 @@ const MainSection = () => {
           профессиональных трейдеров, чтобы подобрать
           наиболее подходящий продукт для ваших целей
         </div>
+        <div className="qwer">
         <div className="moreinfo_btn"><span className='moreifo_txt'>Узнать подробности</span></div>
+        </div>
+       
       </div>
       <div className="earth">
       <EarthCanvas/>
 
       </div>
-      
+
     </section>
     
   )

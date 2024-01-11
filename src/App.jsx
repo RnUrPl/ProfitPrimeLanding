@@ -43,7 +43,7 @@ function App() {
             <ConsSection />
             </Section>
             <Animation>
-            <TradersSection />
+            <TradersSection />https://www.binance.com/en
             </Animation>
       
          

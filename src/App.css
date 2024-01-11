@@ -98,6 +98,13 @@
   visibility: visible;
   transition: opacity 0.5s ease;
 }
+
+.main_slider_box{
+  display: flex;
+  width: 300px;
+  height: 200px;
+  background-color: #B9B9B9;
+}
 .nav-list_el{
   color: #FFF;
   transition: all 0.3s ease; /* Добавляем переход ко всем свойствам с продолжительностью 0.3 секунды и функцией ускорения */
@@ -119,12 +126,13 @@ letter-spacing: -0.2px;
 .nav_contact{
   display: flex;
   width: 217px;
-  min-width: 156px;
+
 height: 70px;
   border-radius: 54px;
   background: #C6DA4B;
   justify-content: center;
 align-items: center;
+transition: all 0.3s ease;
 
 
 }
@@ -136,11 +144,15 @@ align-items: center;
 
 .nav_txt{
 
+  color: #060606;
 
-justify-content: center;
-align-items: center;
-
-flex-shrink: 0;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%; /* 23px */
+  letter-spacing: -0.2px;
 }
 
 .info{
@@ -322,8 +334,31 @@ flex-shrink: 0;
 
 border-radius: 54px;
 border: 1px solid #000;
-
+transition:  0.3s ease;
 background: #C6DA4B;
+}
+
+.products_btn_txt{
+  color: #060606;
+
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.2px;
+
+}
+
+
+
+.products_btn:hover{
+
+    cursor: pointer;
+    filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
+   
+
 }
 
 .products_context_rigth{
@@ -465,12 +500,18 @@ white-space: nowrap;
 border: 1px solid #000;
 display: flex;
 
-padding: 24px 46px;
+padding: 24px ;
 justify-content: center;
 align-items: center;
 gap: 10px;
 flex-shrink: 0;
 background: #C6DA4B;
+transition: 0.3s ease;
+}
+
+.about_btn:hover{
+  cursor: pointer;
+  filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
 }
 
 .aboutbtn_txt{
@@ -677,8 +718,11 @@ background: #F0F0F0;
   display: flex;
   flex-direction: column;
   border-radius: 13px;
-background: #F0F0F0;
+
 background-image: url('./components/assets/fram1.png');
+background-size: cover; /* или contain, в зависимости от вашего предпочтения */
+background-position: center;
+background-repeat: no-repeat;
 }
 
 .box1_title{
@@ -1280,7 +1324,13 @@ background: #C6DA4B;
 display: flex;
 align-items: center;
 justify-content: center;
+transition: 0.3s ease;
 
+}
+
+.contact_btn:hover{
+  cursor: pointer;
+  filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
 }
 
 .contact_tg{
@@ -1291,6 +1341,12 @@ padding: 19.893px 38.129px;
 justify-content: center;
 align-items: center;
 display: flex;
+transition: 0.3s ease;
+}
+
+.contact_tg:hover{
+  cursor: pointer;
+  filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
 }
 
 .contact_btn_txt{
@@ -1324,7 +1380,11 @@ letter-spacing: -0.2px;
 text-transform: uppercase;
 align-items: flex-start;
 }
-
+.cons_hor_gr{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 .footer_txt2{
   color: #444;
 
@@ -1448,6 +1508,21 @@ align-items: flex-start;
 
 @media only screen and (max-width: 1400px) {
 
+  .cons_hor_gr{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 20px;
+  }
+  section{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .nav_container{
+    margin-right: 10px;
+  }
+
   .box_name{
     font-size: 12px;
   }
@@ -1465,10 +1540,10 @@ align-items: flex-start;
 
 
   .custom-scroll{
-    max-height: 140px;
+    max-height: 120px;
   }
   .box{
-    max-width: 300px;
+
 
   }
 
@@ -1492,13 +1567,13 @@ align-items: flex-start;
   .abcomp_box3{
     width: 800px;
     display: flex;
-    justify-content: center;
+
     align-items: center;
   }
 
   .abcomp_chunk{
 
-
+    min-width: 832px
   }
 
   .abcomp_img{
@@ -1604,13 +1679,17 @@ align-items: flex-start;
 
  @media only screen and (max-width: 1050px) {
 .swiper-wrapper{
-  margin-left: 10%;
+
   margin-right:10% ;
 }
 
 }
 
 @media only screen and (max-width: 990px) {
+
+  .custom-scroll{
+    max-height: 103px;
+  }
 
   .main{
 
@@ -1650,12 +1729,8 @@ align-items: flex-start;
  }
  @media only screen and (max-width: 930px) {
 
-  .box1_num{
-    display: none;
-  }
-  .box_img2{
-    display: none;
-  }
+
+
 
   .nav-list {
 
@@ -1669,6 +1744,25 @@ align-items: flex-start;
 }
 
   @media only screen and (max-width: 840px) {
+
+
+  .cons_hor_gr{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 0px;
+  }
+    .box_img2{
+      display: none;
+    }
+    .box1_num{
+      display: none;
+    }
+
+    .abcomp_chunk{
+      max-width: 482px;
+      min-width: 0px;
+    }
 
     .accordion-menu{
       margin-left: 0;
@@ -1709,6 +1803,10 @@ align-items: flex-start;
   }
 
   @media only screen and (max-width: 640px) {
+
+    .aboutbtn_txt{
+      font-size: 16px;
+    }
  .info_title{
 
   font-size: 50px;
@@ -1724,6 +1822,10 @@ align-items: flex-start;
 
 
   @media only screen and (max-width: 613px) {
+
+    .nav_txt{
+      font-size: 15px;
+    }
 
     .about_btn{
       margin-left: 10%;
@@ -1795,6 +1897,14 @@ align-items: flex-start;
 
   @media only screen and (max-width: 530px) {
 
+    .custom-scroll{
+      max-height: 140px;
+    }
+
+    .aboutbtn_txt{
+      font-size: 13px;
+    }
+
     .box_subt{
       font-size: 18px;
     }
@@ -1831,6 +1941,22 @@ align-items: flex-start;
 
   @media only screen and (max-width: 510px) {
 
+
+
+    .nav_container{
+      margin-right: 10px;
+    }
+    .nav_contact{
+      height: 50px;
+    }
+
+    .moreinfo_btn{
+      width: 350px;
+      justify-content: center;
+      height: 60px;
+   
+    }
+
 .num{
   margin-right: 20px;
 
@@ -1844,6 +1970,24 @@ align-items: flex-start;
    
 
     @media only screen and (max-width: 490px) {
+
+      .products_btn_txt{
+        font-size: 14px;
+      }
+    
+      .products_btn{
+        height: 50px;
+      }
+    
+      .video_mp {
+        max-width: 360px;
+        max-height: 220px;
+    }
+    
+    .products_text {
+      font-size: 14px;
+      max-width: 360px;
+    }
 
       .contact_sub {
     font-size: 13px;
@@ -1880,6 +2024,13 @@ align-items: flex-start;
       .footer_el_gr{
         display: none;
       }
+      .plaq_txt{
+        left: 53.5%;
+      }
+    
+      .plaq_txt1{
+        left: 55%;
+      }
 
     }
 
@@ -1887,22 +2038,38 @@ align-items: flex-start;
 
 @media only screen and (max-width: 450px) {
 
+  .aboutbtn_txt{
+    font-size: 13px;
+  }
+
+
+  .qwer{
+    display: flex;
+    justify-content: center;
+  }
+
+  .moreifo_txt{
+    font-size: 18px;
+  }
+
+  .moreinfo_btn{
+    width: 300px;
+    justify-content: center;
+    height: 55px;
+
+  }
+
+
   .contact_sub {
     font-size: 10px;
 }
 
   .swiper-wrapper{
-    margin-left: 10%;
+
     margin-right: 5%;
   }
 
-  .plaq_txt{
-    left: 53.5%;
-  }
 
-  .plaq_txt1{
-    left: 55%;
-  }
 
   .question{
     font-size: 13px;
@@ -1910,15 +2077,7 @@ align-items: flex-start;
 
  
 
-  .video_mp {
-    max-width: 360px;
-    max-height: 220px;
-}
 
-.products_text {
-  font-size: 14px;
-  max-width: 360px;
-}
 
 .contact_form{
   padding-left: 50px;
@@ -1932,11 +2091,6 @@ align-items: flex-start;
 
   .abcomp_box4{
     padding-left: 24px;
-  }
-
-  .abcomp_box2{
-    background-image: none;
-    background: #060606;;
   }
 
 
@@ -1959,15 +2113,31 @@ align-items: flex-start;
 
 
  
-   .logo{
+   /* .logo{
      width: 50%;
-   }
+   } */
  }
 
  @media only screen and (max-width: 420px) {
 
+  .moreifo_txt{
+    font-size: 16px;
+  }
+
+  .moreinfo_btn{
+    width: 280px;
+    justify-content: center;
+    height: 55px;
+
+  }
+
+
+  .nav_txt{
+    font-size: 12px;
+  }
+
   .swiper-wrapper{
-    margin-left: 5%;
+
     margin-right: 2%;
   }
   .faq_title{
