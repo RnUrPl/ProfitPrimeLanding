@@ -22,26 +22,23 @@ const ProductsSection = () => {
     setTimeout(() => {
       resetImg()
       setSelectedMenuItem(menuItem);
-      setTransitioning(false);
+
 
     }, 500);
 
-    // setTimeout(() => {
+    setTimeout(() => {
 
+      setTransitioning(false);
 
-
-    // }, 1500);
+    }, 1500);
   };
-  var resetImg = () => {
-    var imgEl = document.querySelector('.products_img');
-    if (imgEl) {
-      imgEl.onload = function() {
-        // Image has loaded
-      };
-      // Trigger the onload event (this may not be necessary, depending on your use case)
-      imgEl.src = imgEl.src;
-    }
-  };
+
+var resetImg = () => {
+  var imgEl = document.querySelector('.products_img');
+  if (imgEl && imgEl.tagName.toLowerCase() === 'img') {
+    imgEl.load();
+  }
+};
 
   var getContentForMenuItem = () => {
     switch (selectedMenuItem) {
