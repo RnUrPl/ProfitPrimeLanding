@@ -36,13 +36,13 @@ const ConsSection = () => {
                 <div className="con">
                 
                     <div className="con_title">03</div>
-                    <div className="con_subtitle">Академия Profit prime - это <br/> больше, чем просто сильное  <br/>комьюнити. это полноценный  <br/>инструмент, основанный на  <br/>огромном опыте сотен  <br/>трейдеров и разработчиков из <br/> 12 стран мира. </div>
+                    <div className="con_subtitle">Академия <span className='bold'>Profit Prime</span> - это <br/> больше, чем просто сильное  <br/>комьюнити. это полноценный  <br/>инструмент, основанный на  <br/>огромном опыте сотен  <br/>трейдеров и разработчиков из <br/> 12 стран мира. </div>
                 </div>
                 <div className="vertical-line"></div>
                 <div className="con">
         
                     <div className="con_title">04</div>
-                    <div className="con_subtitle">Вам не нужно тратить время на <br/> анализ и ошибки, если вы  <br/>можете задать вопрос в чате <br/> тому, кто уже проходил через  <br/>эти трудности. В этом и  <br/>заключается главная ценность  <br/>PROFIT PRIME ACADEMY.</div>
+                    <div className="con_subtitle">Вам не нужно тратить время на <br/> анализ и ошибки, если вы  <br/>можете задать вопрос в чате <br/> тому, кто уже проходил через  <br/>эти трудности. В этом и  <br/>заключается главная ценность  <br/><span className='bold'>PROFIT PRIME ACADEMY</span>.</div>
                 </div>
             </div>
             

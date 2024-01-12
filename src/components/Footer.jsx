@@ -10,7 +10,8 @@ const Footer = () => {
   };
   return (
     <section className='footer'>
-         <span className='footer_txt'>ALL RIGHTS RESERVED<br/>© 2024, PROFIT PRIME.</span>
+      <div className="clasq">
+      <span className='footer_txt'>ALL RIGHTS RESERVED<br/>© 2024, PROFIT PRIME.</span>
         <div className="footer_el_gr">
            
             <div 
@@ -29,6 +30,8 @@ const Footer = () => {
               onClick={() => scrollToSection('faq')}
            className="footer_el">FAQ</div>
        </div>
+      </div>
+         
        <span className='footer_txt2'>Public offer contract <br/>
 Privacy Policy</span>
     </section>
