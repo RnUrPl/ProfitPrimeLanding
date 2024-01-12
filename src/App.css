@@ -981,9 +981,14 @@ letter-spacing: -0.2px;
 text-transform: uppercase;
 padding-bottom: 8px;
 }
+.text_group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .team_el{
-
+align-items: center;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -998,7 +1003,7 @@ padding-bottom: 8px;
 .team_sub{
   color: #909090;
 font-family: Inter;
-font-size: 18px;
+font-size: 17px;
 font-style: normal;
 font-weight: 400;
 line-height: 120%; /* 24px */
@@ -1607,6 +1612,10 @@ align-items: flex-start;
 }
 @media only screen and (max-width: 1150px) {
 
+  .team_sub{
+    font-size: 14px;
+  }
+
   .contact_btn{
     width: 220px;
   }
@@ -1729,6 +1738,11 @@ align-items: flex-start;
  }
  @media only screen and (max-width: 930px) {
 
+  .team_img {
+    max-width: 260px;
+    max-height: 280px;
+}
+
 
 
 
@@ -1744,6 +1758,20 @@ align-items: flex-start;
 }
 
   @media only screen and (max-width: 840px) {
+
+    .team_img {
+      max-width: 208px;
+      max-height: 220px;
+  }
+
+  .team_name{
+    font-size: 16px;
+  }
+
+  .team_sub{
+    font-size: 12px;
+  }
+  
 
 
   .cons_hor_gr{
@@ -1791,8 +1819,13 @@ align-items: flex-start;
     }
 
   @media only screen and (max-width: 700px) {
+
+    .team_img {
+      max-width: 190px;
+      max-height: 200px;
+  }
   .team_slider{
-    margin-left: 10%;
+    /* margin-left: 10%; */
     /* margin-right: 10%; */
   }
 
@@ -1803,6 +1836,21 @@ align-items: flex-start;
   }
 
   @media only screen and (max-width: 640px) {
+
+
+    .team_img {
+      max-width: 182px;
+      max-height: 190px;
+  }
+
+  .team_name{
+    font-size: 14px;
+  }
+
+  .team_sub{
+    font-size: 11px;
+  }
+  
 
     .aboutbtn_txt{
       font-size: 16px;
@@ -1822,6 +1870,19 @@ align-items: flex-start;
 
 
   @media only screen and (max-width: 613px) {
+
+    .team_img {
+      max-width: 165px;
+      max-height: 180px;
+  }
+
+  .team_name{
+    font-size: 14px;
+  }
+
+  .team_sub{
+    font-size: 9px;
+  }
 
     .nav_txt{
       font-size: 15px;
@@ -1941,6 +2002,18 @@ align-items: flex-start;
 
   @media only screen and (max-width: 510px) {
 
+    .team_img {
+      max-width: 140px;
+      max-height: 150px;
+  }
+
+  .team_name{
+    font-size: 13px;
+  }
+
+  .team_sub{
+    font-size: 7px;
+  }
 
 
     .nav_container{
@@ -2038,6 +2111,12 @@ align-items: flex-start;
 
 @media only screen and (max-width: 450px) {
 
+  .team_img {
+    max-width: 130px;
+    max-height: 140px;
+}
+
+
   .aboutbtn_txt{
     font-size: 13px;
   }
@@ -2120,6 +2199,15 @@ align-items: flex-start;
 
  @media only screen and (max-width: 420px) {
 
+  .team_name{
+    font-size: 11px;
+  }
+
+  .team_img {
+    max-width: 110px;
+    max-height: 120px;
+}
+
   .moreifo_txt{
     font-size: 16px;
   }
@@ -2171,7 +2259,7 @@ align-items: flex-start;
     gap: 10px;
   }
   .team_slider{
-    margin-left: 5%;
+    /* margin-left: 5%; */
     /* margin-right: 10%; */
   }
   }

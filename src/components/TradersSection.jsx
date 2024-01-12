@@ -74,10 +74,12 @@ const TradersSection = () => {
               990:{
                   slidesPerView:3,
                   centeredSlides: false,
+                  slidesPerGroup:3
               },
               530:{
                 slidesPerView:2,
                 centeredSlides: false,
+                slidesPerGroup:2
             },
               0:{
               slidesPerView:1,

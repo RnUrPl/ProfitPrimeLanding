@@ -61,18 +61,22 @@ const TeamSection = () => {
           ref={swiperRef}
           modules={[Navigation]}
           spaceBetween={10}
+          slidesPerGroup={3}
           slidesPerView={2}
           navigation={{ nextEl: '.nxt1', prevEl: '.prv1' }}
           breakpoints={{
             1400: { slidesPerView: 4 },
 
-            700: { slidesPerView:3 },
+            360: { slidesPerView:3 },
           }}
         >
           {teamData.map((teamMember, index) => (
             <SwiperSlide key={index}>
               <div className="team_el">
+                
+               
                 <img src={teamImages[index]} className='team_img' alt={teamMember.name} />
+      
                 <span className='team_name'>{teamMember.name}</span>
                 <span className='team_sub'>{teamMember.role}</span>
               </div>
