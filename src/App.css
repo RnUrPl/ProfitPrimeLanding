@@ -5,6 +5,12 @@
 }
 
 @font-face {
+  font-family: 'Alata';
+  src: url('./fonst/Alata.ttf') 
+
+}
+
+@font-face {
   font-family: 'Saar SP Demo';
   src: url('./fonst/SaarSPDemo.otf') 
 
