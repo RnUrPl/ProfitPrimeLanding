@@ -85,33 +85,33 @@ const MainSection = () => {
   }
 
   // Функция для анимации кругов
-  function animateCircles() {
-    const centerX = 320; // центр окна по горизонтали
-    const centerY = 260; // центр окна по вертикали
-    const width = 380; // ширина овала
-    const height = 140; // высота овала
-    let angle = 20; // начальный угол
+function animateCircles() {
+  const centerX = 320;
+  const centerY = 260;
+  const width = 380;
+  const height = 140;
+  let angle = 20;
 
-    // Получаем все круги
-    const circles = document.querySelectorAll('.circle');
+  const circles = document.querySelectorAll('.circle');
 
-    // Запускаем анимацию
-    function animate() {
-      // Каждый круг будет двигаться по овальной траектории с разными углами
-      circles.forEach((circle, index) => {
-        const { x, y } = calculatePosition(angle + index * (Math.PI / 2), width, height, centerX, centerY);
-        circle.style.left = `${x}px`;
-        circle.style.top = `${y}px`;
-      });
+  function animate() {
+    circles.forEach((circle, index) => {
+      const { x, y } = calculatePosition(angle + index * (Math.PI / 2), width, height, centerX, centerY);
+      circle.style.left = `${x}px`;
+      circle.style.top = `${y}px`;
+    });
 
-      angle += 0.01; // увеличиваем угол для следующего кадра
+    angle += 0.01;
 
-      requestAnimationFrame(animate);
-    }
-
-    // Запускаем анимацию
-    animate();
+    requestAnimationFrame(animate);
   }
+
+  animate(); // Запуск анимации
+}
+
+useEffect(() => {
+  animateCircles();
+}, []);
 
   useEffect(() => {
     // Вызываем функцию после монтирования компонента
