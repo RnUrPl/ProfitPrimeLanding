@@ -27,58 +27,59 @@ const Sphere = ({ position, scale = [0.2, 0.2, 0.3] }) => {
   };
   
 
-const EarthCanvas = () => {
-    const ringPosition = [0, 0, 0]; // Установите текущую позицию кольца
-  const ringRotation = [0, 0, 0]; // Установите текущую ориентацию кольца
-
-    // const canvasStyle = {
-    //     // minWidth: "300px", // Задайте минимальную ширину, которую вы хотите использовать
-       
-    //   };
-  return (
-    // <div style={canvasStyle}>
-    <Canvas  
-    style={{height:"400px"}}
+  const EarthCanvas = () => {
+    const ringPosition = [0, 0, 0];
+  
+    return (
+      <Canvas
+        style={{ height: "400px" }}
         className="earth"
-      shadows
-      frameloop='demand'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-      camera={{
-        fov: 45,
-        near: 0.1,
-        far: 200,
-        position: [-4, 3, 6],
-      }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          autoRotate
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Earth 
-       
-        />
- 
-        <Ring/>
-        {[...Array(3)].map((_, index) => (
-        <Sphere
-          key={index}
-          position={[
-            ringPosition[0] + Math.cos((index / 3) * Math.PI * 2) * 5, // Расстояние от центра кольца до шара
-            ringPosition[1] + Math.sin((index / 3) * Math.PI * 2) * 5,
-            ringPosition[2], // Мы хотим разместить шары в плоскости XY
-          ]}
-        />
-      ))}
-
-        <Preload all />
-      </Suspense>   
-    </Canvas>
-    // </div>
-  );
-};
-
-export default EarthCanvas;
+        shadows
+        frameloop="demand"
+        dpr={[1, 2]}
+        gl={{ preserveDrawingBuffer: true }}
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 200,
+          position: [-4, 3, 6],
+        }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+  
+          {/* Back part of the ring */}
+          <Ring position={ringPosition} depthWrite={false} depthTest={false} />
+  
+          {/* HTML content */}
+          <Html position={[
+                ringPosition[0] + Math.cos((0 / 3) * Math.PI * 2) * 5,
+         
+              ]}>
+  <div className="qwert"></div>
+          </Html>
+  
+          {/* Front part of the ring */}
+          <Ring />
+  
+          {[...Array(3)].map((_, index) => (
+            <Sphere
+              key={index}
+              position={[
+                ringPosition[0] + Math.cos((index / 3) * Math.PI * 2) * 5,
+                ringPosition[1] + Math.sin((index / 3) * Math.PI * 2) * 5,
+                ringPosition[2],
+              ]}
+            />
+          ))}
+          <Preload all />
+        </Suspense>
+      </Canvas>
+    );
+  };
+  
+  export default EarthCanvas;

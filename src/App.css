@@ -1,4 +1,10 @@
 @font-face {
+  font-family: 'Montserrat';
+  src: url('./fonst/Montserrat.ttf') 
+
+}
+
+@font-face {
   font-family: 'Saar SP Demo';
   src: url('./fonst/SaarSPDemo.otf') 
 
@@ -38,6 +44,7 @@
 }
 
 .main{
+  margin-top: 89px;
   padding-bottom: 120px;
   display: flex;
   flex-direction: row;
@@ -209,6 +216,10 @@ flex-shrink: 0;
   cursor: pointer;
   filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
 }
+.greneed {
+
+ background-color: #C6DA4B !important;
+}
 
 .moreifo_txt{
   color: #060606;
@@ -280,6 +291,76 @@ transition:  0.5s ease-in-out;
   cursor: pointer;
   filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
   transform: translateX(10px); /* Поднятие элемента на 10 пикселей при наведении */
+}
+
+.elipse{
+position: relative;
+}
+
+.circle_gr {
+  position: relative;
+
+}
+
+
+
+.circle {
+  transition:  0.5s ease;
+  position: absolute;
+  width: 100PX;
+  height: 100PX;
+  border-radius: 50%;
+  background-color: #3498db;
+}
+
+
+
+.qwert{
+  box-shadow: 0 0 20px #1DC7D5;
+  z-index: 2; 
+    top: 23%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  width: 400px;
+  height: 353px;
+  background: white;
+  position: absolute;
+  border-radius: 20px;
+  transition: opacity 0.5s ease;
+  
+}
+
+.qwertInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.qwert_title{
+  color: #161718;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 24px */
+letter-spacing: -0.4px;
+}
+
+.qwert_subtitile{
+  color: #2F2B2B;
+  font-family: Inter;
+  font-size: 18px;
+  max-width: 380px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%; /* 20.7px */
+  letter-spacing: -0.18px;
 }
 
 
@@ -710,6 +791,10 @@ max-width: 416px;
 
   display: flex;
   flex-direction: column;
+}
+
+.info_title{
+
 }
 
 .abcomp_box1{
@@ -1533,9 +1618,88 @@ align-items: flex-start;
   max-width: 1400px;
 }
 
+.circle_txt1{
+  color: #FFF;
+display: flex;
+margin-top: 10px;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: Inter;
+font-size: 60.489px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.circle_txt2{
+  margin-top: 10px;
+  color: #FFF;
+display: flex;
+margin-top: 35px;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: Inter;
+
+font-family: Inter;
+font-size: 21.776px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.circle_txt3{
+  margin-top: 10px;
+  color: #FFF;
+display: flex;
+margin-top: 35px;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: Inter;
+
+font-family: Inter;
+font-size: 21.776px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.circle_txt4{
+  margin-top: 10px;
+  color: #FFF;
+display: flex;
+margin-top: 35px;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: Inter;
+
+font-family: Inter;
+font-size: 21.776px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
 
 
 @media only screen and (max-width: 1400px) {
+
+  .earth{
+    display: flex;
+    justify-content: center;
+  }
+
+  .info{
+    margin-bottom: 130px;
+  }
+
+  .main{
+    flex-direction: column;
+  }
 
   .cons_hor_gr{
     display: flex;
@@ -1737,7 +1901,7 @@ align-items: flex-start;
   }
 
   .main{
-
+    
     flex-direction: column;
   
   }
@@ -1794,6 +1958,10 @@ align-items: flex-start;
 }
 
   @media only screen and (max-width: 840px) {
+
+    .earth{
+  display: none;
+    }
     .footer_el_gr{
       margin-right: 20px;
     }
