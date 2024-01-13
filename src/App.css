@@ -1558,6 +1558,10 @@ letter-spacing: -0.2px;
 align-items: flex-start;
 }
 
+.close-button{
+  margin-bottom: 10px;
+}
+
 .videotube-modal-overlay {
 		color: #fff;
 		display: none;
@@ -1573,61 +1577,44 @@ align-items: flex-start;
 		text-align: center;
 }
 
-#videotube-modal-container {
-		z-index: 998;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+.Nmodal{
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 600px;
+  position: relative;
+  z-index: 9999;
+  transition: 0.5s ease;
 }
 
-#videotube-modal {
-		text-align: center;
-		box-shadow: 0 0 40px #333;
+.newModal_txt{
+  text-transform: uppercase;
+  max-width: 841px;
 }
 
-#videotube-modal-loading {
-		position: fixed;
-		z-index: 997;
-		font-size: 1.5em;
-		top: 49%;
-		width: 5%;
-		text-align: center;
-		left: 45%;
-}
-
-#videotube-modal-close {
-		position: fixed;
-		right: 15px;
-		top: 15px;
-		padding: 3px 13px;
-		z-index: 999;
-		font-size: 25px;
-		text-shadow: 0 0 10px #fff;
-		border-radius: 3px;
-		cursor: pointer;
-		-webkit-transition-duration: 0.1s;
-		-o-transition-duration: 0.1s;
-		-moz-transition-duration: 0.1s;
-		transition-duration: 0.1s;
-}
-
-#videotube-modal-close:hover {
-		background: #333;
-}
 
 .swiper-wrapper{
   max-width: 1400px;
 }
 
+.dop_text{
+  color: #FFF;
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 115%; /* 23px */
+letter-spacing: -0.6px;
+text-decoration-line: underline;
+margin-bottom: 10px;
+justify-content: start;
+}
+
 .circle_txt1{
   color: #FFF;
 display: flex;
-margin-top: 10px;
+
 justify-content: center;
 align-items: center;
 text-align: center;
@@ -1637,6 +1624,40 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Make sure it's on top of everything */
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+
+  position: relative;
+  z-index: 9999;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
 
 .circle_txt2{
   margin-top: 10px;
@@ -1672,6 +1693,10 @@ font-weight: 400;
 line-height: normal;
 }
 
+.trader_modal_img{
+  width: 100%;
+  max-height: 700px;
+}
 
 .circle_txt4{
   margin-top: 10px;
@@ -2278,6 +2303,10 @@ line-height: normal;
    
 
     @media only screen and (max-width: 490px) {
+
+      .dop_text{
+        font-size: 14px;
+      }
 
       .footer_el{
         font-size: 10px;

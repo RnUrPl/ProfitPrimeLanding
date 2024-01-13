@@ -3,6 +3,9 @@ import case1mg from './assets/case1.png'
 import case2mg from './assets/case2.png'
 import case3mg from './assets/case3.png'
 import case4mg from './assets/case4.png'
+import Modal from './Modal';
+import NewModal from './NewModal';
+import New1Modal from './New1Modal';
 
 const VIDEO_TYPE = 'video/mp4';
 
@@ -13,6 +16,7 @@ var aipng = require('./assets/ai.png')
 
 
 const ProductsSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   var [selectedMenuItem, setSelectedMenuItem] = useState('1');
   var [transitioning, setTransitioning] = useState(false);
 
@@ -62,8 +66,12 @@ const ProductsSection = () => {
 Обычно трейдеры стараются подбирать мелких брокеров, которые ещё не установили искусственную задержку при открытии сделок. Они вынуждены терять огромную прибыль и рисковать при выводе средств из-за бессилия перед несправедливыми ограничениями.<br/><br/>
 Алгоритм системы Global устраняет задержки и снижает проскальзывание при открытии ордеров практически до нуля, что значительно расширяет список крупных брокеров, доступных для торговли. <br/><br/>
 Забудьте навсегда об ограничениях и работайте по-крупному вместе с <span className='bold'>PROFIT PRIME GLOBAL</span>.</div>
+        
+            
             <div className="products_btn"><span className='products_btn_txt'>Получить бесплатный ключ на 24 часа</span> </div>
+           
           </div>
+          
         );
       case '3':
         return (
@@ -80,6 +88,8 @@ const ProductsSection = () => {
 Все самые продвинутые технологии теперь адаптированы для торговли на крупнейшем рынке планеты - международном рынке forex. <br/><br/>
 Валютные пары, криптовалюты, акции, индексы, металлы ­ — вам доступен любой существующий на торговых площадках актив. профессиональные трейдеры используют эту систему для прохождения проп экзаменов.<br/><br/>
 Торговать с помощью <span className='bold'>PROFIT PRIME FOREX</span> - это как играть в шахматы с множеством фигур, управляя ими так, чтобы соперник даже не догадался о вашем следующем ходе. </div>
+<div className="kek"><div className="dop_text" onClick={() => {  setIsModalOpen(true);}}>Ключевые особенности продукта</div>  </div>
+            {isModalOpen && <New1Modal  closeModal={() => setIsModalOpen(false)} />}
 <div className="products_btn"><span className='products_btn_txt'>Получить бесплатный ключ на 24 часа</span> </div>
           </div>
         );
@@ -99,7 +109,10 @@ const ProductsSection = () => {
 Cистема специально обучена для анализа финансовых рынков. Она изучает всё: от мелких изменений в ценах и тенденциях до глобальных геополитических событий, влияющих на движение рынка.<br/><br/>
 Алгоритм мгновенно реагирует, Как только появляются новости о корпоративных отчетах, стихийных бедствиях или важных политических решениях, определяя, как это повлияет на рынок. Он быстро адаптируется к изменениям, чтобы минимизировать риски и использовать уникальные возможности, возникающие в таких ситуациях.<br/><br/>
 <span className='bold'>PROFIT PRIME AI</span> - ваш личный трейдер и финансовый аналитик, который круглосуточно работает, чтобы заработать для вас максимальную прибыль.</div>
+<div className="kek"><div className="dop_text" onClick={() => {  setIsModalOpen(true);}}>Ключевые особенности продукта</div>  </div>
+            {isModalOpen && <New1Modal  closeModal={() => setIsModalOpen(false)} />}
 <div className="products_btn"><span className='products_btn_txt'>ОФОРМИТЬ ПРЕДЗАКАЗ</span> </div>
+
               </div>
             );
             case '1':
@@ -116,7 +129,10 @@ Cистема специально обучена для анализа фина
                     </div>
                     <div className="products_text">Суть в том, что система <span className='bold'>Binary</span> проверяет, насколько раньше брокера вы узнаете о цене актива. Сделки всегда открываются в момент опережения.<br/><br/>
 Через 1-2 секунды брокер увидит актуальную цену, и заплатит вам за верный прогноз. чистое превосходство алгоритмов над человеком и никакой магии.</div>
+<div className="kek"><div className="dop_text" onClick={() => {  setIsModalOpen(true);}}>Ключевые особенности продукта</div>  </div>
+{isModalOpen && <NewModal  closeModal={() => setIsModalOpen(false)} />}
 <div className="products_btn"><span className='products_btn_txt'>Получить бесплатный ключ на 24 часа</span> </div>
+
                   </div>
                 );
       
@@ -183,6 +199,7 @@ Cистема специально обучена для анализа фина
           {getContentForMenuItem()}
         </div>
       </div>
+
     </section>
   );
 };

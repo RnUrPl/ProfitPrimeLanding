@@ -6,7 +6,7 @@ import elipse from './assets/ELIPSE.png'
 const MainSection = () => {
   const [qwertContent, setQwertContent] = useState("1"); 
   var [transitioning, setTransitioning] = useState(false);
-  const [selectedCircle, setSelectedCircle] = useState(null);
+  const [selectedCircle, setSelectedCircle] = useState('1');
 
   var handleCircleClick = (value) => {
     setTransitioning(true);
