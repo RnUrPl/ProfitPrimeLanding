@@ -113,11 +113,6 @@ useEffect(() => {
   animateCircles();
 }, []);
 
-  useEffect(() => {
-    // Вызываем функцию после монтирования компонента
-    animateCircles();
-  }, []); // Пустой массив завершает useEffect после монтирования
-
 
   return (
     <section className='main' >
