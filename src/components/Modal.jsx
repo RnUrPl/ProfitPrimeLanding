@@ -7,7 +7,7 @@ const Modal = ({ trader, closeModal }) => {
     <div className="modal-overlay">
       <div className="modal">
         <button className="close-button" onClick={closeModal}>
-          Close
+        ✖
         </button>
         <h2>{trader.name}</h2>
         

@@ -21,9 +21,9 @@ const ContacsSection = () => {
                 <div className="contact_btn">
                     <span className='contact_btn_txt'>получить консультацию</span>
                 </div>
-                <div className="contact_tg">
+                <a href='https://t.me/LossRecoveryProfitPrime' className="contact_tg" target="_blank">
                     <img src={require('./assets/tg.png')}/>
-                </div>
+                </a>
             </div>
         </div>
     </section>

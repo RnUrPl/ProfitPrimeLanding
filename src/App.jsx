@@ -26,12 +26,11 @@ function App() {
     <div className="App">
       <div className='app2'>
         <div className='app1'>
- 
-          <Section>
+
           <Navbar/>
           <MainSection/>
           <StarsCanvas/>
-          </Section>
+        
        
         </div>
       </div>
@@ -43,7 +42,7 @@ function App() {
             <ConsSection />
             </Section>
             <Animation>
-            <TradersSection />https://www.binance.com/en
+            <TradersSection />
             </Animation>
       
          

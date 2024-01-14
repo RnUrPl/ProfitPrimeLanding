@@ -44,7 +44,7 @@ const MainSection = () => {
           return (
             <div className="qwertInfo">
                         <div className="qwert_title">PROFIT PRIME FOREX</div>
-                        <div className="qwert_subtitile">Продвинутое решение, объединяющее в себе различные стратегии для полностью автоматизированной торговли не только на FOrex брокерах, но и на крипто биржах.<br/><br/>
+                        <div className="qwert_subtitile">Продвинутое решение, объединяющее в себе различные стратегии для полностью автоматизированной торговли не только на Forex брокерах, но и на крипто биржах.<br/><br/>
 Революционные алгоритмы ипользуют задержки в передаче данных между брокером и поставщиком котировок, проводят арбитраж между несколькими счетами, а также анализируют исторические корреляции без вашего участия.<br/><br/>
 </div>
             </div>
@@ -83,36 +83,64 @@ const MainSection = () => {
     const y = centerY + height * Math.sin(angle);
     return { x, y };
   }
+  
+  function animateCircles() {
+    let centerX, centerY, width, height;
+    function updateValues() {
+    
+      if (window.innerWidth > 840) {
+      
+        centerX = 320;
+        centerY = 260;
+        width = 380;
+        height = 140;
+      } else if(window.innerWidth > 660 && window.innerWidth < 840){
+        centerX = 250;
+        centerY = 200;
+        width = 300;
+        height = 110;
+      }else{
+        centerX = 150;
+        centerY = 120;
+        width = 180;
+        height = 60;
+      }
+    }
+  
+    updateValues();
 
-  // Функция для анимации кругов
-function animateCircles() {
-  const centerX = 320;
-  const centerY = 260;
-  const width = 380;
-  const height = 140;
+
   let angle = 20;
+  
+    const circles = document.querySelectorAll('.circle');
+    const numCircles = circles.length;
+    const angleIncrement = (2 * Math.PI) / numCircles;
+  
+    function animate() {
+      circles.forEach((circle, index) => {
+        const currentAngle = angle + index * angleIncrement;
+        const { x, y } = calculatePosition(currentAngle, width, height, centerX, centerY);
+        circle.style.transform = `translate(${x}px, ${y}px)`;
+      });
+  
+      angle += 0.01;
+  
+      requestAnimationFrame(animate);
+    }
+  
+    animate();
 
-  const circles = document.querySelectorAll('.circle');
-
-  function animate() {
-    circles.forEach((circle, index) => {
-      const { x, y } = calculatePosition(angle + index * (Math.PI / 2), width, height, centerX, centerY);
-      circle.style.left = `${x}px`;
-      circle.style.top = `${y}px`;
+    window.addEventListener('resize', () => {
+      updateValues(); // Обновляем значения при изменении размера окна
     });
-
-    angle += 0.01;
-
-    requestAnimationFrame(animate);
   }
 
-  animate(); // Запуск анимации
-}
 
-useEffect(() => {
-  animateCircles();
-}, []);
-
+  
+  useEffect(() => {
+    animateCircles();
+  }, []);
+  
 
   return (
     <section className='main' >
@@ -144,17 +172,17 @@ useEffect(() => {
           <span className='circle_txt1'>AI</span>
         </div>
             <div className={`circle ${selectedCircle === '2' ? 'greneed' : ''}`} id="circle2" onClick={() => handleCircleClick('2')}>
-            <span className='circle_txt2'>GLOBAL</span>
+            <span className='circle_txt'>GLOBAL</span>
             </div>
             <div className={`circle ${selectedCircle === '3' ? 'greneed' : ''}`} id="circle3" onClick={() => handleCircleClick('3')}>
-            <span className='circle_txt3'>FOREX</span>
+            <span className='circle_txt'>FOREX</span>
             </div>
             <div className={`circle ${selectedCircle === '4' ? 'greneed' : ''}`} id="circle4" onClick={() => handleCircleClick('4')}>
-            <span className='circle_txt4'>BINARY</span>
+            <span className='circle_txt'>BINARY</span>
             </div>
       </div>
 
-        <img src={elipse}/>
+        <img src={elipse} className='elipseImg'/>
 
 
       </div>

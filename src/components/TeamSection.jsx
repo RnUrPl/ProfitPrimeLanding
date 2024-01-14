@@ -61,13 +61,13 @@ const TeamSection = () => {
           ref={swiperRef}
           modules={[Navigation]}
           spaceBetween={10}
-          slidesPerGroup={3}
+          slidesPerGroup={2}
           slidesPerView={2}
           navigation={{ nextEl: '.nxt1', prevEl: '.prv1' }}
           breakpoints={{
-            1400: { slidesPerView: 4 },
+            1400: { slidesPerView: 4 ,slidesPerGroup:4},
 
-            360: { slidesPerView:3 },
+            530: { slidesPerView:3,slidesPerGroup:3 },
           }}
         >
           {teamData.map((teamMember, index) => (

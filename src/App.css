@@ -140,7 +140,7 @@ letter-spacing: -0.2px;
   display: flex;
   width: 217px;
 
-height: 70px;
+height: 60px;
   border-radius: 54px;
   background: #C6DA4B;
   justify-content: center;
@@ -1584,10 +1584,22 @@ align-items: flex-start;
   max-width: 600px;
   position: relative;
   z-index: 9999;
+  max-height: 1100px;
   transition: 0.5s ease;
 }
-
+.elipseImg{
+  width: 782px;
+}
 .newModal_txt{
+  color: #000;
+font-weight: 500px;
+font-family: Inter;
+max-height: 1000px;
+font-style: normal;
+
+
+letter-spacing: -0.24px;
+text-transform: uppercase;
   text-transform: uppercase;
   max-width: 841px;
 }
@@ -1659,7 +1671,7 @@ line-height: normal;
 }
 
 
-.circle_txt2{
+.circle_txt{
   margin-top: 10px;
   color: #FFF;
 display: flex;
@@ -1676,7 +1688,7 @@ font-weight: 400;
 line-height: normal;
 }
 
-.circle_txt3{
+.circle_txt{
   margin-top: 10px;
   color: #FFF;
 display: flex;
@@ -1698,7 +1710,7 @@ line-height: normal;
   max-height: 700px;
 }
 
-.circle_txt4{
+.circle_txt{
   margin-top: 10px;
   color: #FFF;
 display: flex;
@@ -1718,6 +1730,11 @@ line-height: normal;
 
 
 @media only screen and (max-width: 1400px) {
+  .main{
+
+    align-items: center;
+   
+  }
 
   .earth{
     display: flex;
@@ -1990,9 +2007,36 @@ line-height: normal;
 
   @media only screen and (max-width: 840px) {
 
-    .earth{
-  display: none;
-    }
+  .circle_txt{
+    margin-top: 20px;
+    font-size: 14px 
+  }
+
+  .circle_txt1{
+    margin-top:5px;
+    font-size: 30px 
+  }
+
+.elipseImg{
+ width: 600px;
+} 
+.qwert{
+  width: 300px;
+  height: 253px;
+}
+
+.qwert_subtitile{
+  font-size: 14px;
+}
+
+.circle{
+  width: 60px;
+  height: 60px;
+}
+
+/* .circle_gr{
+  width: 840px;
+} */
     .footer_el_gr{
       margin-right: 20px;
     }
@@ -2078,6 +2122,15 @@ line-height: normal;
 
   @media only screen and (max-width: 700px) {
 
+    .footer{
+      padding-bottom: 50px;
+    }
+    
+
+    .newModal_txt{
+      font-size: 13px;
+    }
+
     .team_img {
       max-width: 190px;
       max-height: 200px;
@@ -2093,7 +2146,46 @@ line-height: normal;
 
   }
 
+
+  @media only screen and (max-width: 660px) {
+
+    .elipseImg{
+      width: 340px;
+     } 
+     .qwert{
+      top: 1%;
+
+       width: 200px;
+       height: 200px;
+     }
+     
+     .qwert_subtitile{
+       font-size: 10px;
+     }
+
+     .qwert_title{
+      font-size: 14px;
+    }
+     
+     .circle{
+       width: 30px;
+       height: 30px;
+     }
+
+
+  }
+
   @media only screen and (max-width: 640px) {
+
+    .circle_txt{
+      margin-top: 30px;
+      font-size: 14px 
+    }
+  
+    .circle_txt1{
+      margin-top:25px;
+      font-size: 20px 
+    }
 
 
     .team_img {
@@ -2212,6 +2304,10 @@ line-height: normal;
 
 
   @media only screen and (max-width: 530px) {
+
+    .team_sub{
+      font-size: 10px;
+    }
     .footer_txt2{
       font-size: 12px;
     }
@@ -2262,18 +2358,9 @@ line-height: normal;
 
   @media only screen and (max-width: 510px) {
 
-    .team_img {
-      max-width: 140px;
-      max-height: 150px;
-  }
 
-  .team_name{
-    font-size: 13px;
-  }
 
-  .team_sub{
-    font-size: 7px;
-  }
+
 
 
     .nav_container{
@@ -2399,10 +2486,7 @@ line-height: normal;
 
 @media only screen and (max-width: 450px) {
 
-  .team_img {
-    max-width: 130px;
-    max-height: 140px;
-}
+
 
 
   .aboutbtn_txt{
@@ -2488,6 +2572,10 @@ line-height: normal;
 
  @media only screen and (max-width: 420px) {
 
+  .newModal_txt {
+    font-size: 12px;
+}
+
   .footer_el{
     font-size: 8px;
   }
@@ -2499,13 +2587,11 @@ line-height: normal;
   }
 
 
-  .team_name{
-    font-size: 11px;
-  }
+ 
 
   .team_img {
-    max-width: 110px;
-    max-height: 120px;
+    max-width: 140px;
+    max-height: 150px;
 }
 
   .moreifo_txt{
@@ -2564,6 +2650,12 @@ line-height: normal;
   }
   }
 
+  @media only screen and (max-width: 360px) {
 
+    .newModal_txt {
+      font-size: 10px;
+  }
+
+}
 
 
