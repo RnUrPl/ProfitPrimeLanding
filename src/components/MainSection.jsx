@@ -128,10 +128,10 @@ const MainSection = () => {
         circle.style.transform = `translate(${x}px, ${y}px)`;
       });
       if(isMac){
-        angle += 0.01;
+        angle += 0.005;
       }
       else{
-        angle += 0.05;
+        angle += 0.005;
       }
   
       requestAnimationFrame(animate);
