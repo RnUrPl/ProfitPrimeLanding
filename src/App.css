@@ -305,7 +305,7 @@ position: relative;
 
 .circle_gr {
   position: relative;
-  width: 782px;
+
 }
 
 
@@ -1591,9 +1591,7 @@ align-items: flex-start;
   width: 782px;
 }
 
-.elipse{
-  width: 782px;
-}
+
 .newModal_txt{
   color: #000;
 font-weight: 500px;

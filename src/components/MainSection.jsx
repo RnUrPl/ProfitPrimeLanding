@@ -107,17 +107,17 @@ const MainSection = () => {
       }else if(window.innerWidth > 840 ){
         centerX = 320;
         centerY = 260;
-        width = 465;
+        width = 445;
         height = 140;
       } else if(window.innerWidth > 660 && window.innerWidth < 840){
         centerX = 250;
         centerY = 200;
-        width = 395;
+        width = 375;
         height = 110;
       }else{
         centerX = 140;
         centerY = 120;
-        width = 275;
+        width = 255;
         height = 60;
       }
     }
