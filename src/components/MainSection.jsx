@@ -91,7 +91,7 @@ const MainSection = () => {
       if (window.innerWidth > 840 && isMac) {
       
         centerX = 320;
-        centerY = 260;
+        centerY = 250;
         width = 380;
         height = 140;
       } else if(window.innerWidth > 660 && window.innerWidth < 840 && isMac){
@@ -116,7 +116,7 @@ const MainSection = () => {
         height = 110;
       }else{
         centerX = 140;
-        centerY = 120;
+        centerY = 130;
         width = 165;
         height = 60;
       }
