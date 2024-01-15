@@ -1590,6 +1590,10 @@ align-items: flex-start;
 .elipseImg{
   width: 782px;
 }
+
+.elipse{
+  width: 782px;
+}
 .newModal_txt{
   color: #000;
 font-weight: 500px;
