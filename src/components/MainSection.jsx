@@ -130,8 +130,10 @@ const MainSection = () => {
       if(isMac){
         angle += 0.01;
       }
-
-      angle += 0.05;
+      else{
+        angle += 0.05;
+      }
+  
       requestAnimationFrame(animate);
     }
   
