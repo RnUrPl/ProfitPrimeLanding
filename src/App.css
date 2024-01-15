@@ -305,7 +305,7 @@ position: relative;
 
 .circle_gr {
   position: relative;
-
+  width: 782px;
 }
 
 
@@ -2150,7 +2150,7 @@ line-height: normal;
   @media only screen and (max-width: 660px) {
 
     .main{
-      padding-bottom: 0px;
+      padding-bottom: 0;
     }
 
     .elipseImg{

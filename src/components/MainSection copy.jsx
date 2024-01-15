@@ -4,21 +4,36 @@ import StarsCanvas from './canvas/Stars'
 import elipse from './assets/ELIPSE.png'
 
 const MainSection = () => {
-  const [qwertContent, setQwertContent] = useState("1"); 
-  var [transitioning, setTransitioning] = useState(false);
+  const [qwertContent, setQwertContent] = useState("1");
+  const [transitioning, setTransitioning] = useState(false);
   const [selectedCircle, setSelectedCircle] = useState('1');
+  const [shouldStartAnimation, setShouldStartAnimation] = useState(false);
+  const animationRef = useRef(null);
 
-  var handleCircleClick = (value) => {
+  const handleCircleClick = (value) => {
     setTransitioning(true);
 
     setTimeout(() => {
-      setQwertContent(value)
-      setSelectedCircle(value)
+      setQwertContent(value);
+      setSelectedCircle(value);
       setTransitioning(false);
 
-    }, 500);
+      // Get the index of the target circle
+      const targetIndex = parseInt(value, 10) - 1;
 
-  }
+      // Calculate the target angle for the selected circle
+      const targetAngle = targetIndex * (2 * Math.PI) / 4;
+
+      // Stop the animation
+      cancelAnimationFrame(animationRef.current);
+
+      // Start rotating the circles and move the selected circle to the target angle
+      animateCircles(targetAngle);
+    }, 500);
+  };
+
+  
+  
 
   var getContextForQwert = () => {
     switch (qwertContent) {
@@ -44,7 +59,7 @@ const MainSection = () => {
           return (
             <div className="qwertInfo">
                         <div className="qwert_title">PROFIT PRIME FOREX</div>
-                        <div className="qwert_subtitile">Продвинутое решение, объединяющее в себе различные стратегии для полностью автоматизированной торговли не только на Forex брокерах, но и на крипто биржах.<br/><br/>
+                        <div className="qwert_subtitile">Продвинутое решение, объединяющее в себе различные стратегии для полностью автоматизированной торговли не только на FOrex брокерах, но и на крипто биржах.<br/><br/>
 Революционные алгоритмы ипользуют задержки в передаче данных между брокером и поставщиком котировок, проводят арбитраж между несколькими счетами, а также анализируют исторические корреляции без вашего участия.<br/><br/>
 </div>
             </div>
@@ -75,16 +90,17 @@ const MainSection = () => {
   };
 
 
-
+  var x;
+  var y;
 
 
   function calculatePosition(angle, width, height, centerX, centerY) {
-    const x = centerX + width * Math.cos(angle);
-    const y = centerY + height * Math.sin(angle);
+     x = centerX + width * Math.cos(angle);
+    y = centerY + height * Math.sin(angle);
     return { x, y };
   }
   
-  function animateCircles() {
+  function animateCircles(targetAngle) {
     let centerX, centerY, width, height;
     function updateValues() {
     
@@ -100,7 +116,7 @@ const MainSection = () => {
         width = 300;
         height = 110;
       }else{
-        centerX = 150;
+        centerX = 140;
         centerY = 120;
         width = 180;
         height = 60;
@@ -109,38 +125,60 @@ const MainSection = () => {
   
     updateValues();
 
-
-  let angle = 20;
-  
     const circles = document.querySelectorAll('.circle');
     const numCircles = circles.length;
     const angleIncrement = (2 * Math.PI) / numCircles;
-  
-    function animate() {
+
+    let angle = 0;
+
+    const animate = () => {
       circles.forEach((circle, index) => {
         const currentAngle = angle + index * angleIncrement;
         const { x, y } = calculatePosition(currentAngle, width, height, centerX, centerY);
         circle.style.transform = `translate(${x}px, ${y}px)`;
       });
-  
-     
-  
-      requestAnimationFrame(animate);
-    }
-  
+
+      // Move the selected circle to the target angle
+      if (angle < targetAngle) {
+        angle += 0.01;
+      }
+
+      if (angle >= targetAngle) {
+        angle = targetAngle; // Set the angle to the target angle to prevent returning to initial positions
+      }
+
+      if (Math.abs(angle - targetAngle) > 0.01) {
+        // Continue animation only if not reached the target angle
+        animationRef.current = requestAnimationFrame(animate);
+      }
+    };
+
     animate();
 
     window.addEventListener('resize', () => {
-      updateValues(); // Обновляем значения при изменении размера окна
+      updateValues();
     });
-  }
+  };
 
+  const startInitialAnimation = () => {
+    animateCircles(0);
+  };
 
-  
   useEffect(() => {
-    animateCircles();
+    // Start initial animation only if shouldStartAnimation is true
+    if (shouldStartAnimation) {
+      startInitialAnimation();
+    }
+
+    // Cleanup function to cancel animation frame on component unmount
+    return () => cancelAnimationFrame(animationRef.current);
+  }, [shouldStartAnimation]);
+
+  useEffect(() => {
+    // Set shouldStartAnimation to true after component has mounted
+    setShouldStartAnimation(false);
   }, []);
-  
+
 
   return (
     <section className='main' >
