@@ -87,8 +87,8 @@ const MainSection = () => {
   function animateCircles() {
     let centerX, centerY, width, height;
     function updateValues() {
-    
-      if (window.innerWidth > 840) {
+      let isMac = /Mac/.test(navigator.userAgent);
+      if (window.innerWidth > 840 && isMac) {
       
         centerX = 320;
         centerY = 260;
@@ -99,11 +99,16 @@ const MainSection = () => {
         centerY = 200;
         width = 300;
         height = 110;
-      }else{
+      }else if(window.innerWidth < 660 && isMac){
         centerX = 140;
         centerY = 120;
         width = 180;
         height = 60;
+      }else{
+        centerX = 320;
+        centerY = 260;
+        width = 440;
+        height = 140;
       }
     }
   
