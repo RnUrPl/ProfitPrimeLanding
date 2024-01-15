@@ -2149,6 +2149,10 @@ line-height: normal;
 
   @media only screen and (max-width: 660px) {
 
+    .main{
+      padding-bottom: 0px;
+    }
+
     .elipseImg{
       width: 340px;
      } 

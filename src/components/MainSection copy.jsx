@@ -44,7 +44,7 @@ const MainSection = () => {
           return (
             <div className="qwertInfo">
                         <div className="qwert_title">PROFIT PRIME FOREX</div>
-                        <div className="qwert_subtitile">Продвинутое решение, объединяющее в себе различные стратегии для полностью автоматизированной торговли не только на FOrex брокерах, но и на крипто биржах.<br/><br/>
+                        <div className="qwert_subtitile">Продвинутое решение, объединяющее в себе различные стратегии для полностью автоматизированной торговли не только на Forex брокерах, но и на крипто биржах.<br/><br/>
 Революционные алгоритмы ипользуют задержки в передаче данных между брокером и поставщиком котировок, проводят арбитраж между несколькими счетами, а также анализируют исторические корреляции без вашего участия.<br/><br/>
 </div>
             </div>
@@ -100,7 +100,7 @@ const MainSection = () => {
         width = 300;
         height = 110;
       }else{
-        centerX = 140;
+        centerX = 150;
         centerY = 120;
         width = 180;
         height = 60;
@@ -123,7 +123,7 @@ const MainSection = () => {
         circle.style.transform = `translate(${x}px, ${y}px)`;
       });
   
-      angle += 0.01;
+     
   
       requestAnimationFrame(animate);
     }
