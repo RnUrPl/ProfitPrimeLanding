@@ -7,7 +7,7 @@ const MainSection = () => {
   const [qwertContent, setQwertContent] = useState("1"); 
   var [transitioning, setTransitioning] = useState(false);
   const [selectedCircle, setSelectedCircle] = useState('1');
-
+  let isMac = /Mac/.test(navigator.userAgent);
   var handleCircleClick = (value) => {
     setTransitioning(true);
 
@@ -87,7 +87,7 @@ const MainSection = () => {
   function animateCircles() {
     let centerX, centerY, width, height;
     function updateValues() {
-      let isMac = /Mac/.test(navigator.userAgent);
+      
       if (window.innerWidth > 840 && isMac) {
       
         centerX = 320;
@@ -107,7 +107,7 @@ const MainSection = () => {
       }else{
         centerX = 320;
         centerY = 260;
-        width = 440;
+        width = 480;
         height = 140;
       }
     }
@@ -115,7 +115,7 @@ const MainSection = () => {
     updateValues();
 
 
-  let angle = 20;
+  let angle = 0;
   
     const circles = document.querySelectorAll('.circle');
     const numCircles = circles.length;
@@ -127,9 +127,11 @@ const MainSection = () => {
         const { x, y } = calculatePosition(currentAngle, width, height, centerX, centerY);
         circle.style.transform = `translate(${x}px, ${y}px)`;
       });
-  
-      angle += 0.01;
-  
+      if(isMac){
+        angle += 0.01;
+      }
+
+      angle += 0.05;
       requestAnimationFrame(animate);
     }
   
