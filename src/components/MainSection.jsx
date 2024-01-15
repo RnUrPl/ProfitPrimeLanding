@@ -94,7 +94,7 @@ const MainSection = () => {
         centerY = 260;
         width = 380;
         height = 140;
-      } else if(window.innerWidth > 660 && window.innerWidth < 840){
+      } else if(window.innerWidth > 660 && window.innerWidth < 840 && isMac){
         centerX = 250;
         centerY = 200;
         width = 300;
@@ -104,11 +104,21 @@ const MainSection = () => {
         centerY = 120;
         width = 180;
         height = 60;
-      }else{
+      }else if(window.innerWidth > 840 ){
         centerX = 320;
         centerY = 260;
-        width = 480;
+        width = 465;
         height = 140;
+      } else if(window.innerWidth > 660 && window.innerWidth < 840){
+        centerX = 250;
+        centerY = 200;
+        width = 395;
+        height = 110;
+      }else{
+        centerX = 140;
+        centerY = 120;
+        width = 275;
+        height = 60;
       }
     }
   
@@ -127,12 +137,10 @@ const MainSection = () => {
         const { x, y } = calculatePosition(currentAngle, width, height, centerX, centerY);
         circle.style.transform = `translate(${x}px, ${y}px)`;
       });
-      if(isMac){
-        angle += 0.005;
-      }
-      else{
-        angle += 0.005;
-      }
+   
+        angle += 0.003;
+
+
   
       requestAnimationFrame(animate);
     }
