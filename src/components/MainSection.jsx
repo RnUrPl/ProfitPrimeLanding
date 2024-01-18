@@ -157,7 +157,7 @@ const MainSection = () => {
         circle.style.transform = `translate(${x}px, ${y}px)`;
       });
    
-        angle += 0.002;
+        angle += 0.003;
 
 
   
