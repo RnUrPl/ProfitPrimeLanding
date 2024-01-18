@@ -134,9 +134,9 @@ const MainSection = () => {
         width = 285;
         height = 110;
       }else{
-        centerX = 145;
+        centerX = 165;
         centerY = 120;
-        width = 160;
+        width = 140;
         height = 60;
       }
     }
