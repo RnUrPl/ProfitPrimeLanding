@@ -2236,7 +2236,7 @@ line-height: normal;
   @media only screen and (max-width: 660px) {
 
     .info{
-      margin-bottom: 30px;
+      margin-bottom: 50px;
     }
     .info_title {
       font-size: 40px;
