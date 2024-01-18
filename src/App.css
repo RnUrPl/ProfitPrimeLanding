@@ -209,7 +209,7 @@ text-align: left;
   border-radius: 54px;
 background: #C6DA4B;
 display: flex;
-max-width: 572px;
+width: 572px;
 height: 70px;
 
 justify-content: center;
@@ -219,6 +219,11 @@ flex-shrink: 0;
 }
 
 .moreinfo_btn:hover{
+  cursor: pointer;
+  filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
+}
+
+.circle:hover{
   cursor: pointer;
   filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
 }
@@ -419,8 +424,12 @@ padding-bottom: 25px;
 
 .coins {
   animation: shimmer 5s infinite linear; /* Измените 5s на желаемую продолжительность анимации */
+  transition: transform 1s ease;
 }
 
+.coins:hover {
+  transform: rotate(360deg);
+}
 
 
 .products_btn{
@@ -750,6 +759,10 @@ max-width: 416px;
 
 }
 
+.custom-scroll{
+
+}
+
 .custom-scroll::-webkit-scrollbar {
   height: 200px;
   width: 6px; /* ширина скроллбара */
@@ -758,7 +771,15 @@ max-width: 416px;
 .custom-scroll::-webkit-scrollbar-thumb {
   background-color: #C6DA4B; /* цвет ползунка скроллбара */
   border-radius: 6px; /* закругление углов ползунка */
+  transition: background-color 0.3s ease;
 }
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background-color:#a1a697;
+}
+
+
 
 .custom-scroll::-webkit-scrollbar-track {
   background-color:#181818; /* цвет трека (фона) скроллбара */
@@ -1148,6 +1169,12 @@ padding-bottom: 70px;
   letter-spacing: -0.3px;
   align-items: flex-start;
   padding-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+.question:hover{
+  cursor: pointer;
+  filter: brightness(0.8);
 }
 
 .qwe_tzt{
@@ -1167,7 +1194,7 @@ padding-bottom: 70px;
 .horizontal-line {
   margin-bottom: 20px;
   width: 100%;
- 
+ transition: 0.3s ease;
   border: 1px solid #393939; 
   /* Цвет и стиль линии (можете настроить под свой дизайн) */
 }
@@ -1183,8 +1210,19 @@ font-weight: 400;
 line-height: 120%; /* 24px */
 letter-spacing: -0.6px;
 padding-bottom: 20px;
+
 }
 
+.icon:hover{
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+
+.dop_text:hover{
+  cursor: pointer;
+  filter: brightness(0.8);
+}
 .expanded{
   border-color: #C6DA4B;
 }
@@ -1193,6 +1231,13 @@ padding-bottom: 20px;
   display: flex;
   flex-direction: row;
  
+}
+
+.nxt {
+  cursor: pointer;
+}
+.prv{
+  cursor: pointer;
 }
 
 .num{
@@ -1259,6 +1304,7 @@ padding-bottom: 20px;
 .icon{
   display: flex;
   align-items: flex-start;
+  transition: 0.3s ease;
 }
 
 
@@ -1502,7 +1548,7 @@ align-items: flex-start;
 }
 .footer_txt2{
   color: #444;
-
+cursor: pointer;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
@@ -1511,6 +1557,11 @@ line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 text-transform: uppercase;
 align-items: flex-start;
+transition: 0.3s ease;
+}
+
+.footer_txt2:hover{
+  filter: brightness(0.8);
 }
 
 .clasq{
@@ -1548,7 +1599,7 @@ align-items: flex-start;
 
 .footer_el{
   color: #444;
-
+cursor: pointer;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
@@ -1556,6 +1607,11 @@ font-weight: 400;
 line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 align-items: flex-start;
+transition: 0.3s ease;
+}
+
+.footer_el:hover{
+ filter: brightness(0.8);
 }
 
 .close-button{
@@ -1732,10 +1788,29 @@ line-height: normal;
 
 
 @media only screen and (max-width: 1400px) {
-  .main{
 
+  .info_subtit{
+    text-align: center;
+  }
+
+  .info{
+    align-items: center;
+  }
+  
+  .info_title{
+    text-align: center;
+  }
+
+
+  .main{
+    margin-top: 30px;
     align-items: center;
    
+  }
+
+
+  .qwert {
+    left: 50%;
   }
 
   .earth{
@@ -1943,7 +2018,7 @@ line-height: normal;
     padding: 15px;
   }
   .contact_btn_txt{
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .custom-scroll{
@@ -2008,6 +2083,14 @@ line-height: normal;
 }
 
   @media only screen and (max-width: 840px) {
+
+
+    .abcomp_box4{
+      background-size: 50% 40%;
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-image: url('./components/assets/box4_img.png') ;
+    }
 
   .circle_txt{
     margin-top: 20px;
@@ -2150,6 +2233,17 @@ line-height: normal;
 
 
   @media only screen and (max-width: 660px) {
+    .info_title {
+      font-size: 40px;
+  }
+  .info_subtit {
+    font-size: 19.5px;
+}
+.moreinfo_btn {
+  width: 350px;
+  justify-content: center;
+  height: 60px;
+}
 
     .main{
       padding-bottom: 0;
@@ -2211,14 +2305,8 @@ line-height: normal;
     .aboutbtn_txt{
       font-size: 16px;
     }
- .info_title{
-
-  font-size: 50px;
- }
- .info_subtit{
-  font-size: 22px;
-}
-
+ 
+ 
   
   
   
@@ -2244,10 +2332,7 @@ line-height: normal;
       font-size: 15px;
     }
 
-    .about_btn{
-      margin-left: 10%;
-      margin-right: 10%;
-    }
+
 
     .trade_subtitle{
    display: none;
@@ -2325,7 +2410,7 @@ line-height: normal;
     }
 
     .aboutbtn_txt{
-      font-size: 13px;
+      font-size: 15px;
     }
 
     .box_subt{
@@ -2397,6 +2482,10 @@ line-height: normal;
 
     @media only screen and (max-width: 490px) {
 
+      .abcomp_box4{
+        background-image: none;
+      }
+
       .dop_text{
         font-size: 14px;
       }
@@ -2416,9 +2505,7 @@ line-height: normal;
       }
 
 
-  .contact_btn_txt{
-    font-size: 10px;
-  }
+
 
 
       .contact_input{
@@ -2495,9 +2582,6 @@ line-height: normal;
 
 
 
-  .aboutbtn_txt{
-    font-size: 13px;
-  }
 
 
   .qwer{

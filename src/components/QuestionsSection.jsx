@@ -76,7 +76,7 @@ const AccordionMenu = () => {
                             
                             <div className="vertical_gr">
                         {expandedItem === index && (
-                        <div className="answer">{item.answer}</div>   
+                      <div className="answer" style={{ opacity: 1 }}>{item.answer}</div>      
                         )}
                        
                     </div>   

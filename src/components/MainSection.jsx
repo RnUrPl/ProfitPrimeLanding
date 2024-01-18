@@ -92,7 +92,7 @@ const MainSection = () => {
       
         centerX = 320;
         centerY = 250;
-        width = 380;
+        width = 350;
         height = 140;
       } else if(window.innerWidth > 660 && window.innerWidth < 840 && isMac){
         centerX = 250;
@@ -138,7 +138,7 @@ const MainSection = () => {
         circle.style.transform = `translate(${x}px, ${y}px)`;
       });
    
-        angle += 0.003;
+        angle += 0.0015;
 
 
   
@@ -169,8 +169,7 @@ const MainSection = () => {
           торговых систем profit prime
         </div>
         <div className="info_subtit">
-          Воспользуйтесь бесплатной консультацией 
-          профессиональных трейдеров, чтобы подобрать
+          Воспользуйтесь бесплатной консультацией профессиональных трейдеров, чтобы подобрать
           наиболее подходящий продукт для ваших целей
         </div>
         <div className="qwer">
