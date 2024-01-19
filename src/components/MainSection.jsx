@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import EarthCanvas from './canvas/Earth'
-import StarsCanvas from './canvas/Stars'
 import elipse from './assets/ELIPSE.png'
 
 const MainSection = () => {
@@ -9,16 +7,14 @@ const MainSection = () => {
   const [selectedCircle, setSelectedCircle] = useState('1');
   const [isMobile, setIsMobile] = useState(window.innerWidth < 660);
   let isMac = /Mac/.test(navigator.userAgent);
+
   var handleCircleClick = (value) => {
     setTransitioning(true);
-
     setTimeout(() => {
       setQwertContent(value)
       setSelectedCircle(value)
       setTransitioning(false);
-
     }, 500);
-
   }
   
 
