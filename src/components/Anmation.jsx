@@ -2,17 +2,17 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useSpring, animated, config } from '@react-spring/web';
 
 const Section = ({ children }) => {
-  const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  var ref = useRef(null);
+  var [isVisible, setIsVisible] = useState(false);
 
-  const [props, set] = useSpring(() => ({
+  var [props, set] = useSpring(() => ({
     opacity: 0,
-    transform: 'translateY(50px)', // 
+    transform: 'translateY(50px)',  
     config: config.slow,
   }));
 
   useEffect(() => {
-    const onScroll = () => {
+    var onScroll = () => {
       if (ref.current) {
         const sectionPosition =
           window.innerHeight - (window.innerHeight - ref.current.getBoundingClientRect().top);

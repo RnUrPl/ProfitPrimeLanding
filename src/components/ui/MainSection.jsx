@@ -1,12 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import elipse from './assets/ELIPSE.png'
+import elipse from '../assets/ELIPSE.png'
 
 const MainSection = () => {
-  const [qwertContent, setQwertContent] = useState("1"); 
+  var [qwertContent, setQwertContent] = useState("1"); 
   var [transitioning, setTransitioning] = useState(false);
-  const [selectedCircle, setSelectedCircle] = useState('1');
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 660);
-  let isMac = /Mac/.test(navigator.userAgent);
+  var [selectedCircle, setSelectedCircle] = useState('1');
+  var [isMobile, setIsMobile] = useState(window.innerWidth < 660);
+  var isMac = /Mac/.test(navigator.userAgent);
+
+
+  
+  useEffect(() => {
+    animateCircles();
+
+    var handleResize = () => {
+      setIsMobile(window.innerWidth < 660);
+    };
+    
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+
+
+  }, []);
 
   var handleCircleClick = (value) => {
     setTransitioning(true);
@@ -94,13 +113,13 @@ const MainSection = () => {
 
 
   function calculatePosition(angle, width, height, centerX, centerY) {
-    const x = centerX + width * Math.cos(angle);
-    const y = centerY + height * Math.sin(angle);
+    var x = centerX + width * Math.cos(angle);
+    var y = centerY + height * Math.sin(angle);
     return { x, y };
   }
   
   function animateCircles() {
-    let centerX, centerY, width, height;
+    var centerX, centerY, width, height;
     function updateValues() {
       
       if (window.innerWidth > 840 && isMac) {
@@ -140,11 +159,11 @@ const MainSection = () => {
     updateValues();
 
 
-  let angle = 0;
+  var angle = 0;
   
-    const circles = document.querySelectorAll('.circle');
-    const numCircles = circles.length;
-    const angleIncrement = (2 * Math.PI) / numCircles;
+    var circles = document.querySelectorAll('.circle');
+    var numCircles = circles.length;
+    var angleIncrement = (2 * Math.PI) / numCircles;
   
     function animate() {
       circles.forEach((circle, index) => {
@@ -163,27 +182,11 @@ const MainSection = () => {
     animate();
 
     window.addEventListener('resize', () => {
-      updateValues(); // Обновляем значения при изменении размера окна
+      updateValues(); 
     });
   }
 
 
-  
-  useEffect(() => {
-    animateCircles();
-
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 660);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-
-
-  }, []);
   
 
   return (

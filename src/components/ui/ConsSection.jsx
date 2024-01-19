@@ -1,5 +1,5 @@
 import React from 'react'
-var barPng = require('./assets/bar.png')
+import barPng from '../assets/bar.png'
 
 const ConsSection = () => {
   return (

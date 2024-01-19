@@ -2,25 +2,22 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Navigation} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import coin from './assets/coin.png';
-import vector1 from './assets/vector1.png'
-import vector2 from './assets/vaector2.png'
-import Modal from './Modal';
+import coin from '../assets/coin.png';
+import vector1 from '../assets/vector1.png'
+import vector2 from '../assets/vaector2.png'
+import TradersModal from '../Modals/TradersModal';
+import MK from '../assets/MK.mp4'
+import RT from '../assets/RT.mp4'
+import MA from '../assets/MA.jpg'
+import AV from '../assets/AV.jpg'
+import VS from '../assets/VS.jpg'
+import RM from '../assets/1.mp4'
+import ZB from '../assets/ZB.jpg'
+import KA from '../assets/KA.jpg'
+import RV from '../assets/RV.jpg'
 
-import MK from './assets/MK.mp4'
-
-import RT from './assets/RT.mp4'
-import MA from './assets/MA.jpg'
-import AV from './assets/AV.jpg'
-import VS from './assets/VS.jpg'
-
-import RM from './assets/1.mp4'
-import ZB from './assets/ZB.jpg'
-import KA from './assets/KA.jpg'
-import RV from './assets/RV.jpg'
-
-var traderImages = Array.from({ length: 9 }, (_, index) => require(`./assets/trader${index + 1}.png`));
-var starImages = Array.from({ length: 9 }, (_, index) => require(`./assets/stars${index + 1}.png`));
+var traderImages = Array.from({ length: 9 }, (_, index) => require(`../assets/trader${index + 1}.png`));
+var starImages = Array.from({ length: 9 }, (_, index) => require(`../assets/stars${index + 1}.png`));
 
 
 const TradersSection = () => {
@@ -69,11 +66,11 @@ const TradersSection = () => {
         <div className="trade_group">
             <div className="trade_subtitle">Чтобы посмотреть сделки наших клиентов,<br/> нажмите на знак возле имени</div>
             <div className="vector_group">
-            <img src={vector1} className='prv custom-prev disabled'/>
-            <img src={vector2} className='nxt custom-next'/>
+            <img src={vector1} className='prv custom-prev disabled' alt='vecto1'/>
+            <img src={vector2} className='nxt custom-next' alt='vector2'/>
             </div>
         </div>
-        <div class="sample-slider">
+        <div className="sample-slider">
         <Swiper
           ref={swiperRef}
           modules={[Navigation]}
@@ -101,7 +98,7 @@ const TradersSection = () => {
               }
           }}
         >
-        <div class="dop_css">
+        <div className="dop_css">
         {tradersData.map((trader, index) => (
             <SwiperSlide key={index}>
               <div className="box">
@@ -110,7 +107,7 @@ const TradersSection = () => {
                   <div className="box_title_g">
                     <div className="box_title">
                       <div className="box_name">{trader.name}</div>
-                      <img className='coins' src={coin} onClick={() => { setSelectedTrader(trader); setIsModalOpen(true);}} />
+                      <img className='coins' src={coin} alt='coins' onClick={() => { setSelectedTrader(trader); setIsModalOpen(true);}} />
                     </div>
                     <div className="box_sub">{trader.sub}</div>
                     <img src={starImages[index]} className="box-starts" alt={trader.starsAlt} />
@@ -125,7 +122,7 @@ const TradersSection = () => {
         </div>
         </Swiper>
         </div>
-        {isModalOpen && <Modal trader={selectedTrader} closeModal={() => setIsModalOpen(false)} />}
+        {isModalOpen && <TradersModal trader={selectedTrader} closeModal={() => setIsModalOpen(false)} />}
     </section>
   )
 }

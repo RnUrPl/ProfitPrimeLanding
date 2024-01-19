@@ -2,11 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import { Navigation} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
+import vector1 from '../assets/vector1.png'
+import vector2 from '../assets/vaector2.png'
 
-import vector1 from './assets/vector1.png'
-import vector2 from './assets/vaector2.png'
-
-var teamImages = Array.from({ length: 12 }, (_, index) => require(`./assets/team${index + 1}.png`));
+var teamImages = Array.from({ length: 12 }, (_, index) => require(`../assets/team${index + 1}.png`));
 const TeamSection = () => {
   const swiperRef = useRef(null);
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import tg from '../assets/tg.png'
 
 const ContacsSection = () => {
   return (
@@ -22,7 +23,7 @@ const ContacsSection = () => {
                     <span className='contact_btn_txt'>Получить консультацию</span>
                 </div>
                 <a href='https://t.me/LossRecoveryProfitPrime' className="contact_tg" target="_blank">
-                    <img src={require('./assets/tg.png')}/>
+                    <img src={tg}/>
                 </a>
             </div>
         </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import abPng from '../assets/abcomp_img.png'
+import box4Img from '../assets/box4_img.png'
 
 const CompanySection = () => {
   return (
@@ -21,9 +23,8 @@ const CompanySection = () => {
                         <span className="box2_subtitle">Искусственная задержка перед открытием сделок, резкое расширение спреда и проскальзывание при открытии ордеров - всё это заставило нас сменить вектор развития компании.</span>
                     </div>
                 </div>
-                {/* <div className="abcomp_box2"></div> */}
             </div>
-            <img src={require('./assets/abcomp_img.png')} className='abcomp_img' alt='Traders'/>
+            <img src={abPng} className='abcomp_img' alt='Traders'/>
         </div>
         <div className="abcomp_group">
             <div className="abcomp_box3">
@@ -33,7 +34,7 @@ const CompanySection = () => {
             </div>
             </div>
             <div className="abcomp_box4">
-            <img src={require('./assets/box4_img.png')} className='box_img2'/>
+            <img src={box4Img} className='box_img2'/>
             <div className="box1_group">
                 <span className="box3_title">мы сопровождаем наших клиентов</span>
                 <span className="box1_subtitle">Мы не только проводим консультации с клиентами, чтобы подобрать наиболее подходящий продукт для комфортной торговли, но и сопровождаем их на всём пути совместной работы. это наш главный принцип, благодаря которому нас выбирают тысячи экспертов и новичков в трейдинге на протяжении уже 3-х лет.</span>

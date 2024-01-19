@@ -1,8 +1,7 @@
 import React, { Suspense } from 'react';
-import CanvasLoader from './Loader';
- // Create a separate CSS file for styling the modal
 
-const Modal = ({ trader, closeModal }) => {
+
+const TradersModal = ({ trader, closeModal }) => {
   return (
     <div className="modal-overlay">
       <div className="modal">
@@ -29,4 +28,4 @@ const Modal = ({ trader, closeModal }) => {
   );
 };
 
-export default Modal;
+export default TradersModal;

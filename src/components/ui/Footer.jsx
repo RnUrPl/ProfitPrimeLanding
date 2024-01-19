@@ -1,13 +1,9 @@
 import React from 'react'
+import ScrollToSection from '../ScrollToSection';
 
 const Footer = () => {
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  var scrollToSection = ScrollToSection();
   return (
     <section className='footer'>
       <div className="clasq">

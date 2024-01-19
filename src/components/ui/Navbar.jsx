@@ -1,17 +1,14 @@
 import React from 'react'
+import ScrollToSection from '../ScrollToSection'
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const scrollToSection = ScrollToSection();
   
   return (
    <div className="nav_container">
-    <img src={require('./assets/logo.png')} className="logo"></img>
+    <img src={logo} className="logo" alt='logo'></img>
     <div className="nav-list">
       <div 
       onClick={() => scrollToSection('products')}

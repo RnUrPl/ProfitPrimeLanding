@@ -1,19 +1,17 @@
 
-import './App.css';
-import CompanySection from './components/CompanySection';
-import ContacsSection from './components/ContacsSection';
-import Footer from './components/Footer';
-import MainSection from './components/MainSection';
-import Navbar from './components/Navbar';
-import AccordionMenu from './components/QuestionsSection';
-import ProductsSection from './components/ProductsSection';
-import TeamSection from './components/TeamSection';
-import ConsSection from './components/ConsSection';
-import TradersSection from './components/TradersSection';
-import { animated, useSpring } from '@react-spring/web'
-import Section from './components/Section';
-import Animation from './components/Anmation';
-import StarsCanvas from './components/canvas/Stars';
+import CompanySection from './CompanySection';
+import ContacsSection from './ContacsSection';
+import Footer from './Footer';
+import MainSection from './MainSection';
+import Navbar from './Navbar';
+import AccordionMenu from './QuestionsSection';
+import ProductsSection from './ProductsSection';
+import TeamSection from './TeamSection';
+import ConsSection from './ConsSection';
+import TradersSection from './TradersSection';
+import Section from '../Section';
+import Animation from '../Anmation';
+
 
 
 
@@ -44,8 +42,6 @@ function App() {
             <Animation>
             <TradersSection />
             </Animation>
-      
-         
       </div>
       <div className="app3">
         <div className="app1">

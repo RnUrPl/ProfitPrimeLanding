@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import pol1 from '../assets/pol1.png'
 
 
 const AccordionMenu = () => {
@@ -62,7 +63,7 @@ const AccordionMenu = () => {
         <div className="accordion-menu">
             <div className="horizontal-line"/>
             {menuItems.map((item, index) => (
-               <div className="qqq">
+               <div className="qqq" key={index}>
                        <div key={index} className={`faq_item ${expandedItem === index ? 'expanded' : ''}`}>
                     <div className="horizontal_gr">
                         <div className="num">{item.num}</div>
@@ -86,7 +87,7 @@ const AccordionMenu = () => {
                             
                     <div>
                     <img
-                  src={require('./assets/pol1.png')}
+                  src={pol1}
                   onClick={() => handleToggle(index)}
                   className={`icon ${iconFlipped === index ? 'flipped' : ''} `}
                   alt="Toggle Icon"

@@ -1,7 +1,7 @@
 import React from 'react';
- // Create a separate CSS file for styling the modal
 
-const NewModal = ({  closeModal }) => {
+
+const ForexModal = ({  closeModal }) => {
   return (
     <div className="modal-overlay">
       <div className="Nmodal" id='nm'>
@@ -41,4 +41,4 @@ const NewModal = ({  closeModal }) => {
   );
 };
 
-export default NewModal;
+export default ForexModal;

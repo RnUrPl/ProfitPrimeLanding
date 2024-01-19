@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import case1mg from './assets/case1.png'
-import case2mg from './assets/case2.png'
-import case3mg from './assets/case3.png'
-import case4mg from './assets/case4.png'
-
-import NewModal from './NewModal';
-import New1Modal from './New1Modal';
-
-
-var plq = require('./assets/qwe.png');
-var aipng = require('./assets/ai.png')
+import case1mg from '../assets/case1.png'
+import case2mg from '../assets/case2.png'
+import case3mg from '../assets/case3.png'
+import case4mg from '../assets/case4.png'
+import BinaryModal from '../Modals/BinaryModal';
+import ForexModal from '../Modals/ForexModal';
+import plq from '../assets/qwe.png';
+import aipng  from '../assets/ai.png'
+import ScrollToSection from '../ScrollToSection';
 
 
 const ProductsSection = () => {
@@ -40,22 +38,17 @@ const ProductsSection = () => {
     if (imgEl) {
       imgEl.onload = function() {
       };
-      imgEl.src = imgEl.src;
+      // imgEl.src = imgEl.src;
     }
   };
 
-  var scrollToSection = () => {
-    var section = document.getElementById('nm');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const scrollToSection = ScrollToSection();
 
   useEffect(() => {
     if (isModalOpen) {
       scrollToSection();
     }
-  }, [isModalOpen]);
+  }, [isModalOpen, scrollToSection]);
 
 
 
@@ -71,11 +64,11 @@ const ProductsSection = () => {
           <div className='lol1'>
             <span className="products_title">PROFIT PRIME GLOBAL</span>
             <div className="products_content">
-            <img src={plq} className='plaq'>
+            <img src={plq} className='plaq' alt='plaq'>
              
             </img>
             <span className='plaq_txt1'>67$</span>
-            <iframe className='video_mp' src="https://www.youtube.com/embed/HZY4A5HiFcc?si=rIj7j1yokfQktejW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe className='video_mp' src="https://www.youtube.com/embed/HZY4A5HiFcc?si=rIj7j1yokfQktejW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                        
             </div>
             <div className="products_text">Уникальный продукт, который перевернёт ваше представление об автоматизированной торговле. <br/><br/>
@@ -94,18 +87,18 @@ const ProductsSection = () => {
           <div className='lol1'>
             <span className="products_title">PROFIT PRIME Forex</span>
             <div className="products_content">
-            <img src={plq} className='plaq'>
+            <img src={plq} className='plaq' alt='plaq'>
              
              </img>
             <span className='plaq_txt'>887$</span>
-            <iframe className='video_mp' src="https://www.youtube.com/embed/HZY4A5HiFcc?si=rIj7j1yokfQktejW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe className='video_mp' src="https://www.youtube.com/embed/HZY4A5HiFcc?si=rIj7j1yokfQktejW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
             <div className="products_text"><span className='bold'>PROFIT PRIME FOREX</span> объединяет в себе такие технологии, как опережение по скорости котировок, расчет цен активов на основании исторических показателей, арбитраж между счетами и предотвращение проскальзывания. <br/><br/>
 Все самые продвинутые технологии теперь адаптированы для торговли на крупнейшем рынке планеты - международном рынке forex. <br/><br/>
 Валютные пары, криптовалюты, акции, индексы, металлы ­ — вам доступен любой существующий на торговых площадках актив. профессиональные трейдеры используют эту систему для прохождения проп экзаменов.<br/><br/>
 Торговать с помощью <span className='bold'>PROFIT PRIME FOREX</span> - это как играть в шахматы с множеством фигур, управляя ими так, чтобы соперник даже не догадался о вашем следующем ходе. </div>
 <div className="kek"><div className="dop_text" onClick={() => {  setIsModalOpen(true);}}>Ключевые особенности продукта</div>  </div>
-            {isModalOpen && <New1Modal  closeModal={() => setIsModalOpen(false)} /> }
+            {isModalOpen && <ForexModal  closeModal={() => setIsModalOpen(false)} /> }
 <div className="products_btn"><span className='products_btn_txt'>Получить бесплатный ключ на 24 часа</span> </div>
           </div>
         );
@@ -114,7 +107,7 @@ const ProductsSection = () => {
               <div className='lol1'>
                 <span className="products_title">PROFIT PRIME AI</span>
                 <div className="products_content">
-                <img src={plq} className='plaq'>
+                <img src={plq} className='plaq' alt='plaq'>
              
              </img>
             <span className='plaq_txt'>987$</span>
@@ -135,17 +128,17 @@ Cистема специально обучена для анализа фина
                   <div className='lol1'>
                     <span className="products_title">Profit Prime binary</span>
                     <div className="products_content">
-                    <img src={plq} className='plaq'>
+                    <img src={plq} className='plaq' alt='plaq'>
              
              </img>
             <span className='plaq_txt'>147$</span>
                       
-            <iframe className='video_mp' src="https://www.youtube.com/embed/6zOKG1uPRMs?si=8_RITCEijSUxaGfh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe className='video_mp' src="https://www.youtube.com/embed/6zOKG1uPRMs?si=8_RITCEijSUxaGfh" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
                     <div className="products_text">Суть в том, что система <span className='bold'>Binary</span> проверяет, насколько раньше брокера вы узнаете о цене актива. Сделки всегда открываются в момент опережения.<br/><br/>
 Через 1-2 секунды брокер увидит актуальную цену, и заплатит вам за верный прогноз. чистое превосходство алгоритмов над человеком и никакой магии.</div>
 <div className="kek"><div className="dop_text" onClick={openModal}>Ключевые особенности продукта</div>  </div>
-{isModalOpen && <NewModal  closeModal={() => setIsModalOpen(false)} />}
+{isModalOpen && <BinaryModal  closeModal={() => setIsModalOpen(false)} />}
 <div className="products_btn"><span className='products_btn_txt'>Получить бесплатный ключ на 24 часа</span> </div>
 
                   </div>
@@ -156,12 +149,12 @@ Cистема специально обучена для анализа фина
           <div className='lol1'>
           <span className="products_title">Profit Prime binary</span>
           <div className="products_content">
-          <img src={plq} className='plaq'>
+    <img src={plq} className='plaq' alt='plaq'>
    
    </img>
   <span className='plaq_txt'>147$</span>
             
-  <iframe className='video_mp' src="https://www.youtube.com/embed/6zOKG1uPRMs?si=8_RITCEijSUxaGfh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe className='video_mp' src="https://www.youtube.com/embed/6zOKG1uPRMs?si=8_RITCEijSUxaGfh" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </div>
           <div className="products_text">Суть в том, что система Binary проверяет, насколько раньше брокера вы узнаете о цене актива. Сделки всегда открываются в момент опережения.<br/><br/>
 Через 1-2 секунды брокер увидит актуальную цену, и заплатит вам за верный прогноз. чистое превосходство алгоритмов над человеком и никакой магии.</div>
