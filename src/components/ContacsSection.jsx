@@ -19,7 +19,7 @@ const ContacsSection = () => {
             
             <div className="contact_btn_group">
                 <div className="contact_btn">
-                    <span className='contact_btn_txt'>получить консультацию</span>
+                    <span className='contact_btn_txt'>Получить консультацию</span>
                 </div>
                 <a href='https://t.me/LossRecoveryProfitPrime' className="contact_tg" target="_blank">
                     <img src={require('./assets/tg.png')}/>
