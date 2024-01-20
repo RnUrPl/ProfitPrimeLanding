@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import tg from '../assets/tg.png'
-import emailjs, { sendForm } from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const ContacsSection = () => {
     var formRef = useRef();
@@ -57,6 +57,8 @@ const ContacsSection = () => {
       }
     
     }
+
+
   
   return (
     <section id ='contacts' className='contacts'>
@@ -79,10 +81,12 @@ const ContacsSection = () => {
                 ></input>
          
            
-                <input placeholder='Телефон' className='contact_input'
+                <input placeholder='Телефон' className='contact_input disabled_scroll'
                 type='number'
                               name='number'
                               value={form.number}
+                                min='0'
+                            
                               onChange={handleChange}
                 ></input>
             

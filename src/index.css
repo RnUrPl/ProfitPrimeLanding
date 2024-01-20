@@ -1654,6 +1654,23 @@ letter-spacing: -0.24px;
   max-width: 841px;
 }
 
+.disabled_scroll{
+  -moz-appearance: textfield;
+}
+.disabled_scroll::-webkit-inner-spin-button { 
+ display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 
 .swiper-wrapper{
   max-width: 1400px;
