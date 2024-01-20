@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 
 
 const TradersModal = ({ trader, closeModal }) => {
@@ -12,7 +12,7 @@ const TradersModal = ({ trader, closeModal }) => {
         
    
 {   trader.modal &&    (  <div className="trader_content">
-            <img src={trader.modal}className='trader_modal_img'/>
+            <img src={trader.modal}className='trader_modal_img' alt='trader_modal_img'/>
         </div>
       )}
         

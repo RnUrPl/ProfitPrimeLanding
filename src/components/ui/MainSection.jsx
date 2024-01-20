@@ -25,7 +25,7 @@ const MainSection = () => {
     };
 
 
-  }, []);
+  });
 
   var handleCircleClick = (value) => {
     setTransitioning(true);
@@ -203,7 +203,7 @@ const MainSection = () => {
           наиболее подходящий продукт для ваших целей
         </div>
         <div className="qwer">
-        <div className="moreinfo_btn"><span className='moreifo_txt'>Узнать подробности</span></div>
+        <a href='https://t.me/LossRecoveryProfitPrime' rel="noreferrer" className="moreinfo_btn" target="_blank"><span className='moreifo_txt' >Узнать подробности</span></a>
         </div>
        
       </div>
@@ -228,7 +228,7 @@ const MainSection = () => {
             </div>
       </div>
 
-        <img src={elipse} className='elipseImg'/>
+        <img src={elipse} className='elipseImg' alt='elipse'/>
 
 
       </div>

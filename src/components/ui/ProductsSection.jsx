@@ -77,7 +77,7 @@ const ProductsSection = () => {
 Забудьте навсегда об ограничениях и работайте по-крупному вместе с <span className='bold'>PROFIT PRIME GLOBAL</span>.</div>
         
             
-            <div className="products_btn"><span className='products_btn_txt'>Получить бесплатный ключ на 24 часа</span> </div>
+            <a href='https://t.me/Matvey_Polozkov'className="products_btn" target='_blank'rel="noreferrer"><span className='products_btn_txt'>Получить бесплатный тестовый ключ</span> </a>
            
           </div>
           
@@ -99,7 +99,7 @@ const ProductsSection = () => {
 Торговать с помощью <span className='bold'>PROFIT PRIME FOREX</span> - это как играть в шахматы с множеством фигур, управляя ими так, чтобы соперник даже не догадался о вашем следующем ходе. </div>
 <div className="kek"><div className="dop_text" onClick={() => {  setIsModalOpen(true);}}>Ключевые особенности продукта</div>  </div>
             {isModalOpen && <ForexModal  closeModal={() => setIsModalOpen(false)} /> }
-<div className="products_btn"><span className='products_btn_txt'>Получить бесплатный ключ на 24 часа</span> </div>
+<a href='https://t.me/Matvey_Polozkov' className="products_btn" target='_blank'rel="noreferrer"><span className='products_btn_txt'>Получить бесплатный тестовый ключ</span> </a>
           </div>
         );
         case '4':
@@ -119,7 +119,7 @@ Cистема специально обучена для анализа фина
 Алгоритм мгновенно реагирует, Как только появляются новости о корпоративных отчетах, стихийных бедствиях или важных политических решениях, определяя, как это повлияет на рынок. Он быстро адаптируется к изменениям, чтобы минимизировать риски и использовать уникальные возможности, возникающие в таких ситуациях.<br/><br/>
 <span className='bold'>PROFIT PRIME AI</span> - ваш личный трейдер и финансовый аналитик, который круглосуточно работает, чтобы заработать для вас максимальную прибыль.</div>
 
-<div className="products_btn"><span className='products_btn_txt'>ОФОРМИТЬ ПРЕДЗАКАЗ</span> </div>
+<a href='https://t.me/Matvey_Polozkov' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>Оформить предзаказ</span> </a>
 
               </div>
             );

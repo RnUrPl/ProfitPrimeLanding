@@ -26,7 +26,7 @@ const Navbar = () => {
       onClick={() => scrollToSection('faq')}
       className="nav-list_el">FAQ</div>
     </div>
-    <div className="nav_contact"><span className='nav_txt'>Связаться с нами</span></div>
+    <a href='https://t.me/Matvey_Polozkov'className="nav_contact" target="_blank" rel="noreferrer" ><span className='nav_txt'>Связаться с нами</span></a>
    </div>
   )
 }

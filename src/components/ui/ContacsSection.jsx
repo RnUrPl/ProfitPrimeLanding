@@ -1,7 +1,59 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import tg from '../assets/tg.png'
+import emailjs from "@emailjs/browser";
 
 const ContacsSection = () => {
+    var formRef = useRef();
+    var [form, setForm] = useState({
+      name: "",
+      number: "",
+    });
+
+    var handleChange = (e) => {
+        var { target } = e;
+        var { name, value } = target;
+    
+        setForm({
+          ...form,
+          [name]: value,
+        });
+      };
+      var handleSubmit = (e) => {
+        e.preventDefault();
+
+    
+
+    emailjs
+      .send(
+        'service_tj7u6fd',
+        'template_flm7myr',
+        {
+          from_name: form.name,
+          to_name: "ProfitPrime",
+          from_email: 'profitprimecontacs@gmail.com',
+          to_email: "support@profitprime.pro",
+          number: form.number,
+        },
+        'xtTggU33fjQZ1fSJA'
+      )
+      .then(
+        () => {
+          alert("Спасибо, мы скоро с вами свяжемся!");
+    
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+      
+
+          alert("Упс, что-то пошло не так..");
+        }
+      );
+    }
+  
   return (
     <section id ='contacts' className='contacts'>
         <div className="contact_inf">
@@ -11,22 +63,33 @@ const ContacsSection = () => {
             </div>
             <div className="contact_email">support@profitprime.pro</div>
         </div>
-        <div className="contact_form">
+        <form      
+           className="contact_form"
+           ref={formRef}
+          >
           
-                <input placeholder='Имя' className='contact_input'></input>
+                <input placeholder='Имя' className='contact_input'
+                              name='name'
+                              value={form.name}
+                              onChange={handleChange}
+                ></input>
          
            
-                <input placeholder='Телефон' className='contact_input'></input>
+                <input placeholder='Телефон' className='contact_input'
+                              name='number'
+                              value={form.number}
+                              onChange={handleChange}
+                ></input>
             
             <div className="contact_btn_group">
-                <div className="contact_btn">
+                <div className="contact_btn"type="submit"  onClick={handleSubmit}>
                     <span className='contact_btn_txt'>Получить консультацию</span>
                 </div>
-                <a href='https://t.me/LossRecoveryProfitPrime' className="contact_tg" target="_blank">
-                    <img src={tg}/>
+                <a href='https://t.me/LossRecoveryProfitPrime' className="contact_tg" rel="noreferrer" target="_blank">
+                    <img src={tg} alt='tg_png'/>
                 </a>
             </div>
-        </div>
+        </form>
     </section>
   )
 }

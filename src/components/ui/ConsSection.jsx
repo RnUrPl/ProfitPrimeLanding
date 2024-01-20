@@ -17,7 +17,7 @@ const ConsSection = () => {
                     <div className="con_title">02</div>
                     <div className="con_subtitle">Участники академии получают<br/> подробное обучение по таким <br/>важным темам, как: </div>
                     <div className="con_li">
-                        <img src={barPng} className='bar_png'/>
+                        <img src={barPng} className='bar_png' alt='barPng'/>
                         <div className="const_list">
                             <span className='const_txt'>Подбор брокеров для<br/> безопасной работы</span>
                             <span className='const_txt'>Анализ торговых пар</span>
@@ -47,7 +47,7 @@ const ConsSection = () => {
             </div>
             
         </div>
-        <div className="about_btn"><span className="aboutbtn_txt">Стать участником Profit Prime Academy</span></div>
+        <a href='https://t.me/Matvey_Polozkov'  target='_blank'rel="noreferrer" className="about_btn"><span className="aboutbtn_txt">Стать участником Profit Prime Academy</span></a>
     </section>
   )
 }

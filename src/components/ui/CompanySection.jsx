@@ -34,7 +34,7 @@ const CompanySection = () => {
             </div>
             </div>
             <div className="abcomp_box4">
-            <img src={box4Img} className='box_img2'/>
+            <img src={box4Img} className='box_img2' alt='box4img'/>
             <div className="box1_group">
                 <span className="box3_title">мы сопровождаем наших клиентов</span>
                 <span className="box1_subtitle">Мы не только проводим консультации с клиентами, чтобы подобрать наиболее подходящий продукт для комфортной торговли, но и сопровождаем их на всём пути совместной работы. это наш главный принцип, благодаря которому нас выбирают тысячи экспертов и новичков в трейдинге на протяжении уже 3-х лет.</span>
