@@ -8,6 +8,7 @@ import ForexModal from '../Modals/ForexModal';
 import plq from '../assets/qwe.png';
 import aipng  from '../assets/ai.png'
 import ScrollToSection from '../ScrollToSection';
+import forexImg from '../assets/products_forex.jpeg'
 
 
 const ProductsSection = () => {
@@ -90,14 +91,17 @@ const ProductsSection = () => {
              
              </img>
             <span className='plaq_txt'>887$</span>
-            <iframe className='video_mp' src="https://www.youtube.com/embed/HZY4A5HiFcc?si=rIj7j1yokfQktejW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <img src={forexImg} className='video_mp' alt="video/mp4" />
             </div>
-            <div className="products_text"><span className='bold'>PROFIT PRIME FOREX</span> объединяет в себе такие технологии, как опережение по скорости котировок, расчет цен активов на основании исторических показателей, арбитраж между счетами и предотвращение проскальзывания. <br/><br/>
-Все самые продвинутые технологии теперь адаптированы для торговли на крупнейшем рынке планеты - международном рынке forex. <br/><br/>
-Валютные пары, криптовалюты, акции, индексы, металлы ­ — вам доступен любой существующий на торговых площадках актив. профессиональные трейдеры используют эту систему для прохождения проп экзаменов.<br/><br/>
-Торговать с помощью <span className='bold'>PROFIT PRIME FOREX</span> - это как играть в шахматы с множеством фигур, управляя ими так, чтобы соперник даже не догадался о вашем следующем ходе. </div>
+            <div className="products_text"><span className='bold'>PROFIT PRIME FOREX </span> объединяет в себе такие технологии, как опережение по скорости котировок, расчет цен активов на основании исторических показателей, арбитраж между счетами и предотвращение проскальзывания.<br/><br/>
+
+Все самые продвинутые технологии теперь адаптированы для торговли на крупнейшем рынке планеты - международном рынке forex.<br/><br/>
+
+Валютные пары, криптовалюты, акции, индексы, металлы ­ — вам доступен любой существующий на торговых площадках актив. Профессиональные трейдеры используют эту систему для прохождения проп экзаменов.<br/><br/>
+
+Торговать с помощью <span className='bold'>PROFIT PRIME FOREX</span>  - это как играть в шахматы с множеством фигур, управляя ими так, чтобы соперник даже не догадался о вашем следующем ходе. </div>
 <div className="kek"><div className="dop_text" onClick={() => {  setIsModalOpen(true);}}>Ключевые особенности продукта</div>  </div>
-            {isModalOpen && <ForexModal  closeModal={() => setIsModalOpen(false)} /> }
+            {isModalOpen && <BinaryModal  closeModal={() => setIsModalOpen(false)} /> }
 <a href='https://t.me/Matvey_Polozkov' className="products_btn" target='_blank'rel="noreferrer"><span className='products_btn_txt'>Получить бесплатный тестовый ключ</span> </a>
           </div>
         );
@@ -113,10 +117,14 @@ const ProductsSection = () => {
                   <img src={aipng} className='video_mp' alt="video/mp4" />
                
                 </div>
-                <div className="products_text"><span className='bold'>PROFIT PRIME AI</span> - это апогей автоматизированной торговли на финансовых рынках. искусственный интеллект за долю секунды способен провести детальный анализ рынка и найти лучшую точку входа в сделку, на что у профессионального трейдера ушел бы не один час работы.<br/><br/>
-Cистема специально обучена для анализа финансовых рынков. Она изучает всё: от мелких изменений в ценах и тенденциях до глобальных геополитических событий, влияющих на движение рынка.<br/><br/>
-Алгоритм мгновенно реагирует, Как только появляются новости о корпоративных отчетах, стихийных бедствиях или важных политических решениях, определяя, как это повлияет на рынок. Он быстро адаптируется к изменениям, чтобы минимизировать риски и использовать уникальные возможности, возникающие в таких ситуациях.<br/><br/>
-<span className='bold'>PROFIT PRIME AI</span> - ваш личный трейдер и финансовый аналитик, который круглосуточно работает, чтобы заработать для вас максимальную прибыль.</div>
+                <div className="products_text"><span className='bold'>PROFIT PRIME AI</span> - это апогей автоматизированной торговли на финансовых рынках. Искусственный интеллект за долю секунды способен провести детальный анализ рынка и найти лучшую точку входа в сделку, на что у профессионального трейдера ушло бы не один час работы.<br/><br/>
+
+Система специально обучена для анализа финансовых рынков. Она изучает всё: от мелких изменений в ценах и тенденциях до глобальных геополитических событий, влияющих на движение рынка.<br/><br/>
+
+Алгоритм мгновенно реагирует, как только появляются новости о корпоративных отчетах, стихийных бедствиях или важных политических решениях, определяя, как это повлияет на рынок. Он быстро адаптируется к изменениям, чтобы минимизировать риски и использовать уникальные возможности, возникающие в таких ситуациях.<br/><br/>
+
+<span className='bold'>PROFIT PRIME AI</span> - ваш личный трейдер и финансовый аналитик, который круглосуточно работает, чтобы заработать для вас максимальную прибыль.
+</div>
 
 <a href='https://t.me/Matvey_Polozkov' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>Оформить предзаказ</span> </a>
 
@@ -134,11 +142,12 @@ Cистема специально обучена для анализа фина
                       
             <iframe className='video_mp' src="https://www.youtube.com/embed/6zOKG1uPRMs?si=8_RITCEijSUxaGfh" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
-                    <div className="products_text">Суть в том, что система <span className='bold'>Binary</span> проверяет, насколько раньше брокера вы узнаете о цене актива. Сделки всегда открываются в момент опережения.<br/><br/>
-Через 1-2 секунды брокер увидит актуальную цену, и заплатит вам за верный прогноз. чистое превосходство алгоритмов над человеком и никакой магии.</div>
+                    <div className="products_text">Суть в том, что система <span className='bold'>Binary</span>  проверяет, насколько раньше брокера вы узнаете о цене актива. Сделки всегда открываются в момент опережения.
+<br/><br/>
+Через 1-2 секунды брокер увидит актуальную цену, и заплатит вам за верный прогноз. Чистое превосходство алгоритмов над человеком и никакой магии.</div>
 <div className="kek"><div className="dop_text" onClick={openModal}>Ключевые особенности продукта</div>  </div>
-{isModalOpen && <BinaryModal  closeModal={() => setIsModalOpen(false)} />}
-<div className="products_btn"><span className='products_btn_txt'>Получить бесплатный тестовый ключ </span> </div>
+{isModalOpen && <ForexModal  closeModal={() => setIsModalOpen(false)} />}
+<a href='https://t.me/Matvey_Polozkov' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>Получить бесплатный тестовый ключ </span> </a>
 
                   </div>
                 );

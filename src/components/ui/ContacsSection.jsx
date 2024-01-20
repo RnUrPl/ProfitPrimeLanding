@@ -22,36 +22,40 @@ const ContacsSection = () => {
         e.preventDefault();
 
     
-
-    emailjs
-      .send(
-        'service_tj7u6fd',
-        'template_flm7myr',
-        {
-          from_name: form.name,
-          to_name: "ProfitPrime",
-          from_email: 'profitprimecontacs@gmail.com',
-          to_email: "support@profitprime.pro",
-          number: form.number,
-        },
-        'xtTggU33fjQZ1fSJA'
-      )
-      .then(
-        () => {
-          alert("Спасибо, мы скоро с вами свяжемся!");
-    
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
+    if(form.name !=='' && form.number !==''){
+        emailjs
+        .send(
+          'service_tj7u6fd',
+          'template_flm7myr',
+          {
+            from_name: form.name,
+            to_name: "ProfitPrime",
+            from_email: 'profitprimecontacs@gmail.com',
+            to_email: "support@profitprime.pro",
+            number: form.number,
+          },
+          'xtTggU33fjQZ1fSJA'
+        )
+        .then(
+          () => {
+            alert("Спасибо, мы скоро с вами свяжемся!");
       
-
-          alert("Упс, что-то пошло не так..");
-        }
-      );
+            setForm({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+        
+  
+            alert("Упс, что-то пошло не так..");
+          }
+        );
+    }else{
+        alert("Заполните пустые поля");
+      }
+    
     }
   
   return (

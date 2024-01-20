@@ -5,7 +5,7 @@ import 'swiper/swiper-bundle.css';
 import vector1 from '../assets/vector1.png'
 import vector2 from '../assets/vaector2.png'
 
-var teamImages = Array.from({ length: 12 }, (_, index) => require(`../assets/team${index + 1}.png`));
+var teamImages = Array.from({ length: 8 }, (_, index) => require(`../assets/team${index + 1}.png`));
 const TeamSection = () => {
   const swiperRef = useRef(null);
 
@@ -37,10 +37,6 @@ const TeamSection = () => {
     { name: 'Makar Zhukov', role: 'Разработчик программного обеспечения'},
     { name: 'Fyodor Klimov', role: 'Разработчик программного обеспечения' },
     { name: 'Leonid Kozlov', role: 'Разработчик программного обеспечения'},
-    { name: 'Leander Vogel', role: 'Разработчик программного обеспечения'  },
-    { name: 'Dierk Baumann', role: 'Руководитель команды трейдеров'},
-    { name: 'Lennart Vinter', role: 'Трейдер'},
-    { name: 'Gordey Bobrov', role: 'Трейдер'},
     { name: 'Yaroslav Zimin', role: 'Трейдер' },
   ];
 

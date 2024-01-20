@@ -10,7 +10,7 @@ const ConsSection = () => {
                 <div className="vertical-line"/>
                 <div className="con">          
                     <div className="con_title">01</div>
-                    <div className="con_subtitle">Сообщество трейдеров самого<br/> разного уровня: от новичков и до <br/>профессионалов с 6-ти летним <br/> опытом, которые каждый день <br/> общаются в закрытом чате,  <br/>разрабатывают стратегии и  <br/>обсуждают изменения на рынке.</div>
+                    <div className="con_subtitle">Сообщество трейдеров самого разного уровня: от новичков и до профессионалов с 6-летним опытом, которые каждый день общаются в закрытом чате, разрабатывают стратегии и обсуждают изменения на рынке.</div>
                 </div>
                 <div className="vertical-line"/>
                 <div className="con">         
@@ -36,7 +36,7 @@ const ConsSection = () => {
                 <div className="con">
                 
                     <div className="con_title">03</div>
-                    <div className="con_subtitle">Академия <span className='bold'>Profit Prime</span> - это <br/> больше, чем просто сильное  <br/>комьюнити. это полноценный  <br/>инструмент, основанный на  <br/>огромном опыте сотен  <br/>трейдеров и разработчиков из <br/> 12 стран мира. </div>
+                    <div className="con_subtitle">Академия <span className='bold'>Profit Prime</span> - это больше, чем просто сильное комьюнити. Это полноценный инструмент, основанный на огромном опыте сотен трейдеров и разработчиков из 12 стран мира. </div>
                 </div>
                 <div className="vertical-line"></div>
                 <div className="con">
