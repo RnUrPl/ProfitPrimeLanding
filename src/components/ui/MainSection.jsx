@@ -25,7 +25,7 @@ const MainSection = () => {
     };
 
 
-  });
+  },[]);
 
   var handleCircleClick = (value) => {
     setTransitioning(true);
