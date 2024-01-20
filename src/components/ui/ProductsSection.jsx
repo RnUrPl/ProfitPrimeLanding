@@ -45,7 +45,7 @@ const ProductsSection = () => {
 
   useEffect(() => {
     if (isModalOpen) {
-      scrollToSection();
+      scrollToSection('nm');
     }
   }, [isModalOpen, scrollToSection]);
 
@@ -53,7 +53,7 @@ const ProductsSection = () => {
 
   var openModal = () => {
     setIsModalOpen(true);
-    scrollToSection();
+    scrollToSection('nm');
   };
 
   var getContentForMenuItem = () => {
