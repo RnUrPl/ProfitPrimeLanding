@@ -38,7 +38,6 @@ const ProductsSection = () => {
     if (imgEl) {
       imgEl.onload = function() {
       };
-      // imgEl.src = imgEl.src;
     }
   };
 
@@ -139,7 +138,7 @@ Cистема специально обучена для анализа фина
 Через 1-2 секунды брокер увидит актуальную цену, и заплатит вам за верный прогноз. чистое превосходство алгоритмов над человеком и никакой магии.</div>
 <div className="kek"><div className="dop_text" onClick={openModal}>Ключевые особенности продукта</div>  </div>
 {isModalOpen && <BinaryModal  closeModal={() => setIsModalOpen(false)} />}
-<div className="products_btn"><span className='products_btn_txt'>Получить бесплатный ключ на 24 часа</span> </div>
+<div className="products_btn"><span className='products_btn_txt'>Получить бесплатный тестовый ключ </span> </div>
 
                   </div>
                 );
@@ -158,7 +157,7 @@ Cистема специально обучена для анализа фина
           </div>
           <div className="products_text">Суть в том, что система Binary проверяет, насколько раньше брокера вы узнаете о цене актива. Сделки всегда открываются в момент опережения.<br/><br/>
 Через 1-2 секунды брокер увидит актуальную цену, и заплатит вам за верный прогноз. чистое превосходство алгоритмов над человеком и никакой магии.</div>
-<div className="products_btn"><span className='products_btn_txt'>Получить бесплатный ключ на 24 часа</span> </div>
+<div className="products_btn"><span className='products_btn_txt'>Получить бесплатный тестовый ключ</span> </div>
         </div>
         );
     }
