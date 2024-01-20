@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import tg from '../assets/tg.png'
-import emailjs from "@emailjs/browser";
+import emailjs, { sendForm } from "@emailjs/browser";
 
 const ContacsSection = () => {
     var formRef = useRef();
@@ -21,19 +21,20 @@ const ContacsSection = () => {
       var handleSubmit = (e) => {
         e.preventDefault();
 
+        const templateParams =  {
+            from_name: form.name,
+            to_name: "ProfitPrime",
+            from_email: 'profitprimecontacs@gmail.com',
+            number: form.number,
+          }
     
     if(form.name !=='' && form.number !==''){
         emailjs
         .send(
           'service_tj7u6fd',
           'template_flm7myr',
-          {
-            from_name: form.name,
-            to_name: "ProfitPrime",
-            from_email: 'profitprimecontacs@gmail.com',
-            to_email: "support@profitprime.pro",
-            number: form.number,
-          },
+          templateParams
+         ,
           'xtTggU33fjQZ1fSJA'
         )
         .then(
@@ -42,8 +43,7 @@ const ContacsSection = () => {
       
             setForm({
               name: "",
-              email: "",
-              message: "",
+              number: "",
             });
           },
           (error) => {
@@ -80,6 +80,7 @@ const ContacsSection = () => {
          
            
                 <input placeholder='Телефон' className='contact_input'
+                type='number'
                               name='number'
                               value={form.number}
                               onChange={handleChange}
