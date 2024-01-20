@@ -148,10 +148,12 @@ letter-spacing: -0.2px;
   transform: translateY(-10px); /* Поднятие элемента на 10 пикселей при наведении */
 }
 
+a {
+  text-decoration: none;
+}
 .nav_contact{
   display: flex;
   width: 217px;
-
 height: 60px;
   border-radius: 54px;
   background: #C6DA4B;
