@@ -2,12 +2,27 @@ import React, { useRef, useState } from 'react'
 import tg from '../assets/tg.png'
 import emailjs from "@emailjs/browser";
 
+var forbiddenWords = ['лох', 'пиздюк', 'хуй', 'пизда', 'говно', 'залупа', 'пенис', 'еблан', 'пидор', 'шлюха', 'говноед', 'блядь', 'блядина'];
+
 const ContacsSection = () => {
     var formRef = useRef();
     var [form, setForm] = useState({
       name: "",
       number: "",
     });
+    function validateForm() {
+      var inputValue = form.name.toLowerCase();
+      var hasForbiddenWord = forbiddenWords.some(word => inputValue.includes(word));
+      if (hasForbiddenWord) {
+          alert('Обнаружено матерное слово. Пожалуйста, исправьте ввод.');
+          return false; 
+      }
+      else if(form.name !=='' || form.number !==''){
+        alert("Заполните пустые поля");
+        return false; 
+      }
+      return true;
+  }
 
     var handleChange = (e) => {
         var { target } = e;
@@ -21,6 +36,14 @@ const ContacsSection = () => {
       var handleSubmit = (e) => {
         e.preventDefault();
 
+        if (!validateForm()) {
+          setForm({
+            name: "",
+            number: "",
+          });
+          return; 
+      }
+
         const templateParams =  {
             from_name: form.name,
             to_name: "ProfitPrime",
@@ -28,7 +51,7 @@ const ContacsSection = () => {
             number: form.number,
           }
     
-    if(form.name !=='' && form.number !==''){
+
         emailjs
         .send(
           'service_tj7u6fd',
@@ -52,9 +75,6 @@ const ContacsSection = () => {
             alert("Упс, что-то пошло не так..");
           }
         );
-    }else{
-        alert("Заполните пустые поля");
-      }
     
     }
 
@@ -81,7 +101,7 @@ const ContacsSection = () => {
                 ></input>
          
            
-                <input placeholder='Телефон' className='contact_input disabled_scroll'
+                <input placeholder='Телефон' className='contact_input disabled_scroll sc'
                 type='number'
                               name='number'
                               value={form.number}
