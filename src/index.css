@@ -573,7 +573,7 @@ padding-bottom: 20px;
 
 .con_subtitle{
   color: #D1D1D1;
-
+max-width: 320px;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
@@ -603,11 +603,12 @@ letter-spacing: -0.6px;
 .const_list{
   display: flex;
   flex-direction: column;
+
 }
 
 .const_txt{
   color: #D1D1D1;
-
+max-width: 235px;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
@@ -1478,7 +1479,7 @@ margin-bottom: 20px;
 .contact_btn_group{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
 }
 
 .contact_btn{

@@ -15,7 +15,7 @@ const ConsSection = () => {
                 <div className="vertical-line"/>
                 <div className="con">         
                     <div className="con_title">02</div>
-                    <div className="con_subtitle">Участники академии получают<br/> подробное обучение по таким <br/>важным темам, как: </div>
+                    <div className="con_subtitle">Участники академии получают подробное обучение по таким важным темам, как: </div>
                     <div className="con_li">
                         <img src={barPng} className='bar_png' alt='barPng'/>
                         <div className="const_list">
@@ -42,7 +42,7 @@ const ConsSection = () => {
                 <div className="con">
         
                     <div className="con_title">04</div>
-                    <div className="con_subtitle">Вам не нужно тратить время на <br/> анализ и ошибки, если вы  <br/>можете задать вопрос в чате <br/> тому, кто уже проходил через  <br/>эти трудности. В этом и  <br/>заключается главная ценность  <br/><span className='bold'>PROFIT PRIME ACADEMY</span>.</div>
+                    <div className="con_subtitle">Вам не нужно тратить время на  анализ и ошибки, если вы можете задать вопрос в чате  тому, кто уже проходил через эти трудности. В этом и заключается главная ценность <span className='bold'>PROFIT PRIME ACADEMY</span>.</div>
                 </div>
             </div>
             
