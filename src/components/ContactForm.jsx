@@ -17,7 +17,7 @@ const ContactForm = () => {
           alert('Обнаружено матерное слово. Пожалуйста, исправьте ввод.');
           return false; 
       }
-      else if(form.name !=='' || form.number !==''){
+      else if(form.name ==='' || form.number ===''){
         alert("Заполните пустые поля");
         return false; 
       }
