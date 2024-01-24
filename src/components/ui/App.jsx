@@ -11,6 +11,7 @@ import ConsSection from './ConsSection';
 import TradersSection from './TradersSection';
 import Section from '../Section';
 import Animation from '../Anmation';
+import { useEffect, useState } from 'react';
 
 
 
@@ -18,7 +19,16 @@ import Animation from '../Anmation';
 
 
 function App() {
+  const [showMainSection, setShowMainSection] = useState(false);
 
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setShowMainSection(true);
+    }, 1000);
+
+    // Очистка таймера при размонтировании компонента или при изменении зависимостей, если необходимо
+    return () => clearTimeout(timerId);
+  }, []); 
 
   return (
     <div className="App">
@@ -26,7 +36,7 @@ function App() {
         <div className='app1'>
 
           <Navbar/>
-          <MainSection/>
+          {showMainSection && <MainSection />}
       
         
        

@@ -80,12 +80,43 @@ code {
 .srt{
   position: absolute;
 }
+.info {
+  flex: 1;
+  animation: slideInRight 1s ease-out;
+}
+
+.earth {
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 .app2{
   background-size: 100% 100%; /* Растягиваем изображение на 100% по ширине и высоте контейнера */
   background-position: center;
   background-repeat: no-repeat;
-
+  min-height: 792px;
   background-image: url('./components/assets/back.png');
 }
 .app1{
@@ -565,7 +596,7 @@ font-family: Righteous;
 font-size: 114.861px;
 font-style: normal;
 font-weight: 400;
-line-height: 80%; /* 91.889px */
+line-height: 80%; 
 letter-spacing: -2.297px;
 text-transform: uppercase;
 padding-bottom: 20px;
