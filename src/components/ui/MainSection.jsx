@@ -8,17 +8,17 @@ const MainSection = () => {
     <section className='main' >
     
       <div className='info'>
-        <div className="info_title">
+        <h1>
           получите стабильный источник
           валютного дохода с помощью
           торговых систем profit prime
-        </div>
-        <div className="info_subtit">
+        </h1>
+        <h2>
           Воспользуйтесь бесплатной консультацией профессиональных трейдеров, чтобы подобрать
           наиболее подходящий продукт для ваших целей
-        </div>
+        </h2>
         <div className="qwer">
-        <a href='https://t.me/LossRecoveryProfitPrime' rel="noreferrer" className="moreinfo_btn" target="_blank"><span className='moreifo_txt' >Узнать подробности</span></a>
+        <a href='https://t.me/LossRecoveryProfitPrime' rel="noreferrer" target="_blank"><span className='moreifo_txt' >Узнать подробности</span></a>
         </div>
        
       </div>

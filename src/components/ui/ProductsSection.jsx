@@ -6,7 +6,7 @@ const ProductsSection = () => {
 
   return (
     <section id="products" className="products">
-      <span className="second_title">О продуктах PROFIT PRIME</span>
+      <span >О продуктах PROFIT PRIME</span>
       <ProductsMenu/>
 
     </section>

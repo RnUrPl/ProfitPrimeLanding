@@ -25,8 +25,6 @@ function App() {
     const timerId = setTimeout(() => {
       setShowMainSection(true);
     }, 1000);
-
-    // Очистка таймера при размонтировании компонента или при изменении зависимостей, если необходимо
     return () => clearTimeout(timerId);
   }, []); 
 
