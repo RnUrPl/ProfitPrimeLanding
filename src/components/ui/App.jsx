@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <LanguageSelector changeLanguage={changeLanguage} /> */}
+
       <div className='app2'>
         <div className='app1'>
 
