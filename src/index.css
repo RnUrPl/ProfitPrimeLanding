@@ -178,7 +178,7 @@ code {
 }
 .nav-list_el{
   color: #FFF;
-  transition: all 0.3s ease; /* Добавляем переход ко всем свойствам с продолжительностью 0.3 секунды и функцией ускорения */
+  transition: all 0.1s ease; /* Добавляем переход ко всем свойствам с продолжительностью 0.3 секунды и функцией ускорения */
 
 font-family: Inter;
 font-size: 20px;
@@ -199,7 +199,8 @@ a {
 }
 .nav_contact{
   display: flex;
-  width: 217px;
+  max-width: 217px;
+  min-width: 170px;
 height: 60px;
   border-radius: 54px;
   background: #C6DA4B;
@@ -221,7 +222,7 @@ transition: gap 0.5s ease;
 
   text-align: center;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 17px;
   font-style: normal;
   font-weight: bold;
   line-height: 115%; /* 23px */
@@ -1986,7 +1987,7 @@ line-height: normal;
 
  .nav_container{
   gap: 0;
-  transition: gap 0.5s ease; /* анимация для свойства gap */
+  transition: gap 0.1s ease; /* анимация для свойства gap */
   display: flex;
  
  }
@@ -2083,6 +2084,12 @@ line-height: normal;
  }
 
  @media only screen and (max-width: 1050px) {
+  
+  .nav-list {
+    opacity: 0;
+    visibility: hidden;
+
+  }
 .swiper-wrapper{
 
   margin-right:10% ;
@@ -2091,6 +2098,7 @@ line-height: normal;
 }
 
 @media only screen and (max-width: 990px) {
+ 
 
   .contact_form{
     max-width: 290px;
@@ -2131,11 +2139,7 @@ line-height: normal;
   }
 
  
-  .nav-list {
-    opacity: 0;
-    visibility: hidden;
-
-  }
+  
 .trade_titile{
   justify-content: center;
 }
