@@ -18,7 +18,7 @@ const CompanySection = ({t,currentlanguage}) => {
                     <span className='box1_num'>5</span>
                     <div className="box1_group">
                         <span className="box1_title">{t("boxtit" )}</span>
-                        <span className="box1_subtitle custom_scroll2">{t("boxtxt1" )} <span className='bold'>Roboforex</span> и <span className='bold'>Quotex</span>.{t("boxtxt1" )}  </span>
+                        <span className="box1_subtitle custom_scroll2">{t("boxtxt1" )} <span className='bold'>Roboforex</span>, <span className='bold'>Quotex</span>. {t("boxtxt2" )}  </span>
                     </div>
                 </div>
                 <div className="abcomp_box2">
