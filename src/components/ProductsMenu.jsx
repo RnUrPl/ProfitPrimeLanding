@@ -165,7 +165,7 @@ const ProductsMenu = ({t}) => {
   {t("bintxt3")}</div>
   <div className="kek"><div className="dop_text" onClick={openModal}>{t("frxtxt6")}</div>  </div>
   {isModalOpen && <PlusModal t={t}  closeModal={() => setIsModalOpen(false)} />}
-  <a className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("globtest")}</span> </a>
+  <a href='https://t.me/NDR_PROFIT' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("globtest")}</span> </a>
   
                     </div>
                   );
