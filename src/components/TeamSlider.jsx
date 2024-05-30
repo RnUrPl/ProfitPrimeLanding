@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 var teamImages = Array.from({ length: 8 }, (_, index) => require(`./assets/team${index + 1}.png`));
 
-const TeamSlider = () => {
+const TeamSlider = ({t}) => {
     const swiperRef = useRef(null);
 
     useEffect(() => {
@@ -28,14 +28,14 @@ const TeamSlider = () => {
       }
     }, []);
     const teamData = [
-        { name: 'Matvey Polozkov', role: 'Основатель и генеральный директор' },
-        { name: 'Viktor Sysoev', role: 'Технический директор'},
-        { name: 'Amelia Nowak', role: 'Руководитель отдела маркетинга' },
-        { name: 'Nina Zhdanova', role: 'Дизайнер продуктов'},
-        { name: 'Makar Zhukov', role: 'Разработчик программного обеспечения'},
-        { name: 'Fyodor Klimov', role: 'Разработчик программного обеспечения' },
-        { name: 'Leonid Kozlov', role: 'Разработчик программного обеспечения'},
-        { name: 'Yaroslav Zimin', role: 'Трейдер' },
+        { name: 'Matvey Polozkov', role: t("t1") },
+        { name: 'Viktor Sysoev', role: t("t2")},
+        { name: 'Amelia Nowak', role: t("t3") },
+        { name: 'Nina Zhdanova', role: t("t3") },
+        { name: 'Makar Zhukov', role: t("t5") },
+        { name: 'Fyodor Klimov', role: t("t6") },
+        { name: 'Leonid Kozlov', role:  t("t6")},
+        { name: 'Yaroslav Zimin', role:  t("t7") },
       ];
     
   return (

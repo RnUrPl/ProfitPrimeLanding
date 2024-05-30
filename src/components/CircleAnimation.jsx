@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import elipse from './assets/ELIPSE.png'
 
-const CircleAnimation = () => {
+const CircleAnimation = ({t}) => {
     var [qwertContent, setQwertContent] = useState("1"); 
     var [transitioning, setTransitioning] = useState(false);
     var [selectedCircle, setSelectedCircle] = useState('1')
@@ -115,10 +115,9 @@ const CircleAnimation = () => {
                           <div className="qwert_title">PROFIT PRIME AI</div>
                           <div className="qwert_subtitile">
                           {isMobile
-              ?  'Торговая система, использующая алгоритмическую торговлю и искусственный интеллект, оптимизирует анализ и минимизирует риски, адаптируясь к неожиданным изменениям, вызванным корпоративными отчетами, стихийными бедствиями и политическими решениями.'
-              :<div className='qwert_subtitile'>Инновационная торговая система сочетает в себе алгоритмическую торговлю с искусственным интеллектом для проведения и оптимизации комплексного исследования рынка по критериям фундаментального, индикаторного и технического анализа.
-              <br/><br/>
-              Алгоритм не только минимизирует риски при входе в сделку, но и мгновенно адаптируется под внезапные изменения рынка, связанные с такими событиями, как корпоративные отчеты, стихийные бедствия и политические решения.</div> }
+              ?  t("cric1mob" )
+              :<div className='qwert_subtitile'>{t("circ1")}<br/><br/>
+              {t("cir2")}</div> }
                           </div>
                          
           </div>
@@ -127,11 +126,11 @@ const CircleAnimation = () => {
           case '2':
             return (
               <div className="qwertInfo">
-                          <div className="qwert_title">PROFIT PRIME GLOBAL </div>
+                          <div className="qwert_title">PROFIT PRIME PLUS </div>
                           <div className="qwert_subtitile">
                           {isMobile
-              ? 'Уникальный инструмент, расширяющий возможности торговли за счёт обхода систем безопасности брокеров. Алгоритм устраняет задержку и минимизирует проскальзывание при открытии ордеров, значительно повышая процент успешных сделок.'
-              : <div className='qwert_subtitile'>Уникальный инструмент, расширяющий возможности для торговли  за счёт обхода систем безопасности брокеров. <br/><br/> Алгоритм убирает задержку и минимизирует проскальзывание при открытии ордеров, что в разы повышает процент успешных сделок.</div>}
+              ? t("cric2mob")
+              : <div className='qwert_subtitile'>{t("cric3")}<br/><br/>{t("cric4")} </div>}
                           </div>
                 
               </div>
@@ -143,10 +142,10 @@ const CircleAnimation = () => {
                             <div className="qwert_title">PROFIT PRIME FOREX</div>
                             <div className="qwert_subtitile">
                             {isMobile
-              ? 'Продвинутое автоматизированное решение для торговли на Forex и крипто-биржах, использующее алгоритмы для арбитража и анализа данных без участия пользователя, с возможностью одновременного открытия множества ордеров.'
-              : <div className='qwert_subtitile'>Продвинутое решение, объединяющее в себе различные стратегии для полностью автоматизированной торговли не только на Forex-брокерах, но и на крипто-биржах.
+              ? t("cric3mob" )
+              : <div className='qwert_subtitile'>{t("cric5" )}
               <br/><br/>
-              Революционные алгоритмы используют задержки в передаче данных между брокером и поставщиком котировок, проводят арбитраж между несколькими счетами, а также анализируют исторические корреляции без вашего участия.</div>}
+              {t("cric6")} </div>}
                             </div>
               
                 </div>
@@ -155,13 +154,13 @@ const CircleAnimation = () => {
                 case '4':
                   return (
                     <div className="qwertInfo">
-                                <div className="qwert_title">PROFIT PRIME BINARY</div>
+                                <div className="qwert_title">PROFIT PRIME BASIC</div>
                                 <div className="qwert_subtitile">
                             {isMobile
-              ? 'Автоматизированная система быстро и точно анализирует котировки, предвидя изменения курса актива на 1-2 секунды раньше брокера. Это позволяет трейдерам одновременно открывать выгодные сделки для максимальной прибыли и уверенности в решениях.'
-              : <div className='qwert_subtitile'>Автоматизированная торговая система, алгоритм которой анализирует поставщиков котировок на сторонах брокера и трейдера, определяя выгодный для трейдера разрыв между ними перед открытием сделки.
+              ?   t("cric4mob")
+              : <div className='qwert_subtitile'>  {t("cric7")} 
               <br/><br/>
-              Система всегда знает курс актива на 1-2 секунды раньше, чем брокер, что позволяет ей вовремя открывать сделки, получая максимальную прибыль.</div>}
+              {t("cric8")} </div>}
                             </div>
                     </div>
           
@@ -173,8 +172,8 @@ const CircleAnimation = () => {
                                   <div className="qwert_title">PROFIT PRIME AI</div>
                                   <div className="qwert_subtitile">
                           {isMobile
-              ?  'Торговая система, использующая алгоритмическую торговлю и искусственный интеллект, оптимизирует анализ и минимизирует риски, адаптируясь к неожиданным изменениям, вызванным корпоративными отчетами, стихийными бедствиями и политическими решениями.'
-              :<div className='qwert_subtitile'>Инновационная торговая система сочетает в себе алгоритмическую торговлю с искусственным интеллектом для проведения и оптимизации комплексного исследования рынка по критериям фундаментального, индикаторного и технического анализа.<br/><br/>Алгоритм не только минимизирует риски при входе в сделку, но и мгновенно адаптируется под внезапные изменения рынка, связанные с такими событиями, как Корпоративные отчеты, стихийные бедствия и Политические решения.</div> }
+              ?  t("cric4mob" )
+              :<div className='qwert_subtitile'>{t("cric7")}<br/><br/>{t("cric8" )}</div> }
                           </div>
                       </div>
             
@@ -196,13 +195,13 @@ const CircleAnimation = () => {
       <span className='circle_txt1'>AI</span>
     </div>
         <div className={`circle ${selectedCircle === '2' ? 'greneed' : ''}`} id="circle2" onClick={() => handleCircleClick('2')}>
-        <span className='circle_txt'>GLOBAL</span>
+        <span className='circle_txt'>PLUS</span>
         </div>
         <div className={`circle ${selectedCircle === '3' ? 'greneed' : ''}`} id="circle3" onClick={() => handleCircleClick('3')}>
         <span className='circle_txt'>FOREX</span>
         </div>
         <div className={`circle ${selectedCircle === '4' ? 'greneed' : ''}`} id="circle4" onClick={() => handleCircleClick('4')}>
-        <span className='circle_txt'>BINARY</span>
+        <span className='circle_txt'>BASIC</span>
         </div>
   </div>
     

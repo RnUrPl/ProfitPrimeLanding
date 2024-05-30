@@ -2,12 +2,16 @@ import React from 'react';
 import vector1 from '../assets/vector1.png'
 import vector2 from '../assets/vaector2.png'
 import TeamSlider from '../TeamSlider';
+import { LANGUAGE_STYLES } from '../constants';
 
 
-const TeamSection = () => {
+const TeamSection = ({t,currentlanguage}) => {
+  const getTextClass = (language) => LANGUAGE_STYLES[language] || 'default-text';
+
+  const txtClass = getTextClass(currentlanguage);
   return (
     <section className='team'>
-      <span className='team_title'>НАША КОМАНДА</span>
+      <span className={`team_title ${txtClass}`}>{t("teamtit" )}</span>
       <div className="rg">
         <div></div>
         <div className="team_rg">
@@ -15,7 +19,7 @@ const TeamSection = () => {
           <img src={vector2} className='nxt1 custom-next1' alt='Next'/>
         </div>
       </div>
-    <TeamSlider/>
+    <TeamSlider t={t}/>
     </section>
   );
 };

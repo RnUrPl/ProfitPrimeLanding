@@ -1,29 +1,31 @@
 import React from 'react'
 import CircleAnimation from '../CircleAnimation'
+import { LANGUAGE_STYLES } from '../constants';
 
 
-const MainSection = () => {
+const MainSection = ({t,currentLanguage}) => {
+  const getTextClass = (language) => LANGUAGE_STYLES[language] || 'default-text';
+
+  const txtClass = getTextClass(currentLanguage);
+
 
   return (
     <section className='main' >
     
       <div className='info'>
-        <h1>
-          получите стабильный источник
-          валютного дохода с помощью
-          торговых систем profit prime
+        <h1  className={`infoh1 ${txtClass}`}>
+          {t("maintxt1")}
         </h1>
         <h2>
-          Воспользуйтесь бесплатной консультацией профессиональных трейдеров, чтобы подобрать
-          наиболее подходящий продукт для ваших целей
+          {t("maintxt2")}
         </h2>
         <div className="qwer">
-        <a href='https://t.me/LossRecoveryProfitPrime' rel="noreferrer" target="_blank"><span className='moreifo_txt' >Узнать подробности</span></a>
+        <a href='https://t.me/NDR_PROFIT' rel="noreferrer" target="_blank"><span className='moreifo_txt' >{t("maintxt3")}</span></a>
         </div>
        
       </div>
       <div className="earth">
-      <CircleAnimation/>
+      <CircleAnimation t={t}/>
       </div>
 
     </section>

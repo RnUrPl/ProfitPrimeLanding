@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 
 var forbiddenWords = ['лох', 'пиздюк', 'хуй', 'пизда', 'говно', 'залупа', 'пенис', 'еблан', 'пидор', 'шлюха', 'говноед', 'блядь', 'блядина'];
 
-const ContactForm = () => {
+const ContactForm = ({t}) => {
     var formRef = useRef();
     var [form, setForm] = useState({
       name: "",
@@ -14,11 +14,11 @@ const ContactForm = () => {
       var inputValue = form.name.toLowerCase();
       var hasForbiddenWord = forbiddenWords.some(word => inputValue.includes(word));
       if (hasForbiddenWord) {
-          alert('Обнаружено матерное слово. Пожалуйста, исправьте ввод.');
+          alert(t("alert1"));
           return false; 
       }
       else if(form.name ==='' || form.number ===''){
-        alert("Заполните пустые поля");
+        alert(t("alert2"));
         return false; 
       }
       return true;
@@ -62,7 +62,7 @@ const ContactForm = () => {
         )
         .then(
           () => {
-            alert("Спасибо, мы скоро с вами свяжемся!");
+            alert(t("alert3"));
       
             setForm({
               name: "",
@@ -72,7 +72,7 @@ const ContactForm = () => {
           (error) => {
         
   
-            alert("Упс, что-то пошло не так..");
+            alert(t("alert4"));
           }
         );
     
@@ -84,14 +84,14 @@ const ContactForm = () => {
     ref={formRef}
    >
    
-         <input placeholder='Имя' className='contact_input'
+         <input placeholder={t("name")} className='contact_input'
                        name='name'
                        value={form.name}
                        onChange={handleChange}
          ></input>
   
     
-         <input placeholder='Телефон' className='contact_input disabled_scroll sc'
+         <input placeholder={t("telef")} className='contact_input disabled_scroll sc'
          type='number'
                        name='number'
                        value={form.number}
@@ -102,9 +102,9 @@ const ContactForm = () => {
      
      <div className="contact_btn_group">
          <div className="contact_btn"type="submit"  onClick={handleSubmit}>
-             <span className='contact_btn_txt'>Получить консультацию</span>
+             <span className='contact_btn_txt'>{t("consalt")}</span>
          </div>
-         <a href='https://t.me/LossRecoveryProfitPrime' className="contact_tg" rel="noreferrer" target="_blank">
+         <a href='https://t.me/NDR_PROFIT' className="contact_tg" rel="noreferrer" target="_blank">
              <img src={tg} alt='tg_png'/>
          </a>
      </div>

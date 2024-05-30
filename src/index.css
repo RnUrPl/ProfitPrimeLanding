@@ -26,6 +26,13 @@
   src: url('./fonts/Righteous-Regular.ttf') 
 
 }
+@font-face {
+  font-family: 'Cairo';
+  src: url('./fonts/Cairo-Regular.ttf') 
+
+}
+
+
 
 body {
   margin: 0;
@@ -39,6 +46,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.log_g{
+  display: flex;
+  flex-direction: row;
 }
 
 .App {
@@ -79,6 +91,10 @@ code {
 }
 .srt{
   position: absolute;
+}
+
+.box_title_g{
+  margin-left: 15px;
 }
 .info {
   flex: 1;
@@ -136,6 +152,7 @@ code {
   gap: 150px;
 }
 .logo{
+  width: 200px;
   transition: 0.5s ease;
 }
 
@@ -190,7 +207,7 @@ height: 60px;
   background: #C6DA4B;
   justify-content: center;
 align-items: center;
-transition: all 0.3s ease;
+transition: gap 0.5s ease;
 
 
 }
@@ -208,7 +225,7 @@ transition: all 0.3s ease;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 115%; /* 23px */
   letter-spacing: -0.2px;
 }
@@ -226,7 +243,7 @@ h1 ,h2{
   margin: 0;
 }
 
-.info h1{
+.infoh1{
   color: #FFF;
   display: flex;
 text-align: left;
@@ -286,7 +303,7 @@ text-align: center;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
-font-weight: 400;
+font-weight: bold;
 line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 }
@@ -300,7 +317,7 @@ letter-spacing: -0.2px;
   
 }
 
-.products>span{
+.oprod{
   color: #FFF;
 
 font-family: Saar SP Demo;
@@ -502,7 +519,7 @@ text-align: center;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
-font-weight: 400;
+font-weight: bold;
 line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 
@@ -680,7 +697,7 @@ text-align: center;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
-font-weight: 400;
+font-weight: bold;
 line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 }
@@ -736,8 +753,8 @@ max-width: 453px;
   border-radius: 13.097px;
   width: 79px;
 height: 79px;
-padding-bottom: 12px;
-padding-right: 14px;
+
+
 
 }
 
@@ -797,6 +814,7 @@ line-height: 115%; /* 23px */
 letter-spacing: -0.4px;
 padding-right: 14px;
 max-width: 416px;
+margin-top: 12px;
 
 
 }
@@ -855,7 +873,7 @@ max-width: 416px;
 .abcomp_group{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
 }
 
 .abcomp_chunk{
@@ -1555,7 +1573,7 @@ text-align: center;
 font-family: Inter;
 font-size: 18px;
 font-style: normal;
-font-weight: 400;
+font-weight: bold;
 line-height: 115%; /* 20.7px */
 letter-spacing: -0.18px;
 }
@@ -1627,6 +1645,17 @@ transition: 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 3px;
+
+
+}
+
+.vietnamese-text{
+
+   
+  font-family: Cairo;
+  font-size: 40px;
+  letter-spacing: -1.5px;
+  font-weight: bold;
 
 
 }
@@ -1727,12 +1756,12 @@ justify-content: start;
 .circle_txt1{
   color: #FFF;
 display: flex;
-
+margin-top: 26px;
 justify-content: center;
 align-items: center;
 text-align: center;
 font-family: Alata;
-font-size: 60.489px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -1828,6 +1857,10 @@ font-weight: 400;
 line-height: normal;
 }
 
+.info h2{
+  font-size: 20px;
+}
+
 
 
 @media only screen and (max-width: 1400px) {
@@ -1840,7 +1873,7 @@ line-height: normal;
     align-items: center;
   }
   
-  .info h1{
+  .infoh1{
     text-align: center;
   }
 
@@ -2102,7 +2135,7 @@ line-height: normal;
 
 
  }
- @media only screen and (max-width: 930px) {
+ @media only screen and (max-width:975px) {
 
   .team_img {
     max-width: 260px;
@@ -2274,7 +2307,7 @@ line-height: normal;
     .info{
       margin-bottom: 50px;
     }
-    .info h1{
+    .infoh1{
       font-size: 40px;
   }
   .info h2 {
@@ -2353,6 +2386,12 @@ line-height: normal;
 
 
   @media only screen and (max-width: 613px) {
+
+   
+
+    .qwer a {
+      width: 300px;
+    }
 
     .team_img {
       max-width: 165px;
@@ -2435,6 +2474,18 @@ line-height: normal;
 
   @media only screen and (max-width: 530px) {
 
+    .nav_contact{
+      display: NONE;
+    }
+
+    .log_g{
+      display: flex;
+      gap: 150px;
+      justify-content: space-between;
+    }
+
+   
+
     .team_sub{
       font-size: 10px;
     }
@@ -2470,9 +2521,9 @@ line-height: normal;
     .trade_titile{
       font-size: 40px;
     }
-    .info h1{
+    .vietnamese-text{
    
-     font-size: 40px;
+     font-size: 30px;
     }
 
     .info h2{
@@ -2490,7 +2541,7 @@ line-height: normal;
 
 
 
-
+   
 
 
     .nav_container{
@@ -2618,7 +2669,11 @@ line-height: normal;
 
 @media only screen and (max-width: 450px) {
 
+  .log_g{
 
+    gap: 60px;
+
+  }
 
 
 
@@ -2700,6 +2755,7 @@ line-height: normal;
  }
 
  @media only screen and (max-width: 420px) {
+ 
 
   .newModal_txt {
     font-size: 12px;
@@ -2778,9 +2834,16 @@ line-height: normal;
 
   @media only screen and (max-width: 360px) {
 
+    .log_g{
+
+      gap: 20px;
+  
+    }
     .newModal_txt {
       font-size: 10px;
   }
+
+  
 
 }
 

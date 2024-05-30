@@ -12,6 +12,8 @@ import TradersSection from './TradersSection';
 import Section from '../Section';
 import Animation from '../Anmation';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../DropDownMenu';
 
 
 
@@ -19,6 +21,17 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
+ 
+
+  const { t, i18n } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState("en");
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+    setCurrentLanguage(language);
+ 
+  };
+  
   const [showMainSection, setShowMainSection] = useState(false);
 
   useEffect(() => {
@@ -30,11 +43,12 @@ function App() {
 
   return (
     <div className="App">
+      {/* <LanguageSelector changeLanguage={changeLanguage} /> */}
       <div className='app2'>
         <div className='app1'>
 
-          <Navbar/>
-          {showMainSection && <MainSection />}
+          <Navbar t={t} changeLanguage={changeLanguage}/>
+          {showMainSection && <MainSection t={t} currentLanguage={currentLanguage}/>}
       
         
        
@@ -42,34 +56,34 @@ function App() {
       </div>
       <div className='app1'>
         <Animation>
-         <ProductsSection/>
+         <ProductsSection t={t} currentlanguage={currentLanguage}/>
         </Animation>
         <Section>
-            <ConsSection />
+            <ConsSection t={t} currentlanguage={currentLanguage}/>
             </Section>
             <Animation>
-            <TradersSection />
+            <TradersSection t={t}  currentlanguage={currentLanguage}/>
             </Animation>
       </div>
       <div className="app3">
         <div className="app1">
           <Section>
-            <CompanySection/>
+            <CompanySection t={t} currentlanguage={currentLanguage}/>
             </Section>
         </div>
       </div>
       <div className="app1">
         <Section>
-          <TeamSection/>
+          <TeamSection t={t} currentlanguage={currentLanguage}/>
         </Section>
         <Section>
-        <AccordionMenu/>
+        <AccordionMenu t={t} currentlanguage={currentLanguage}/>
         </Section>
         <Section>
-        <ContacsSection/>
+        <ContacsSection t={t} currentlanguage={currentLanguage}/>
         </Section>
-        <Animation>
-        <Footer/>
+        <Animation t={t}>
+        <Footer t={t}/>
         </Animation>
       </div>
 
