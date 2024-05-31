@@ -429,7 +429,7 @@ letter-spacing: -0.4px;
 .qwert_subtitile{
   color: #2F2B2B;
   font-family: Inter;
-  font-size: 18px;
+  font-size: 16px;
   max-width: 380px;
   font-style: normal;
   font-weight: 400;
@@ -2202,7 +2202,7 @@ line-height: normal;
 }
 
 .qwert_subtitile{
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .circle{
