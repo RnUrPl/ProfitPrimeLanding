@@ -1,15 +1,15 @@
 import React, { useEffect, useState,useCallback, useMemo } from 'react'
 import elipse from './assets/ELIPSE.png'
 
-var useIsMobile = (threshold = 660) => {
-  var [isMobile, setIsMobile] = useState(window.innerWidth < threshold);
+const useIsMobile = (threshold = 660) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < threshold);
 
-  var handleResize = useCallback(() => {
+  const handleResize = useCallback(() => {
     setIsMobile(window.innerWidth < threshold);
   }, [threshold]);
 
   useEffect(() => {
-    var debouncedResize = debounce(handleResize, 150);
+    const debouncedResize = debounce(handleResize, 150);
     window.addEventListener('resize', debouncedResize);
     return () => {
       window.removeEventListener('resize', debouncedResize);
@@ -18,6 +18,7 @@ var useIsMobile = (threshold = 660) => {
 
   return isMobile;
 };
+
 
 var debounce = (func, wait) => {
   let timeout;
@@ -33,52 +34,52 @@ var calculatePosition = (angle, width, height, centerX, centerY) => {
   return { x, y };
 };
 
-var animateCircles = (isMac) => {
-  let centerX, centerY, width, height;
-
-  var updateValues = () => {
-    if (window.innerWidth > 840 && isMac) {
-      centerX = 320;
-      centerY = 250;
-      width = 350;
-      height = 140;
-    } else if (window.innerWidth > 660 && window.innerWidth < 840 && isMac) {
-      centerX = 250;
-      centerY = 200;
-      width = 270;
-      height = 110;
-    } else if (window.innerWidth < 660 && isMac) {
-      centerX = 150;
-      centerY = 120;
-      width = 160;
-      height = 50;
-    } else if (window.innerWidth > 840) {
-      centerX = 320;
-      centerY = 260;
-      width = 355;
-      height = 140;
-    } else if (window.innerWidth > 660 && window.innerWidth < 840) {
-      centerX = 250;
-      centerY = 200;
-      width = 285;
-      height = 110;
+const getValuesForDesktop = (isMac, isMobile) => {
+  if (isMobile) {
+    return { centerX: 150, centerY: 120, width: 160, height: 50 };
+  }
+  if (isMac) {
+    if (window.innerWidth > 840) {
+      return { centerX: 320, centerY: 250, width: 350, height: 140 };
+    } else if (window.innerWidth > 660) {
+      return { centerX: 250, centerY: 200, width: 270, height: 110 };
     } else {
-      centerX = 150;
-      centerY = 120;
-      width = 160;
-      height = 50;
+      return { centerX: 150, centerY: 120, width: 160, height: 50 };
     }
+  } else {
+    if (window.innerWidth > 840) {
+      return { centerX: 320, centerY: 260, width: 355, height: 140 };
+    } else if (window.innerWidth > 660) {
+      return { centerX: 250, centerY: 200, width: 285, height: 110 };
+    } else {
+      return { centerX: 150, centerY: 120, width: 160, height: 50 };
+    }
+  }
+};
+
+
+
+const animateCircles = (isMac, isMobile) => {
+  let { centerX, centerY, width, height } = getValuesForDesktop(isMac, isMobile);
+
+  const updateValues = () => {
+    const values = getValuesForDesktop(isMac, isMobile);
+    centerX = values.centerX;
+    centerY = values.centerY;
+    width = values.width;
+    height = values.height;
+    console.log('Updated values:', { centerX, centerY, width, height });
   };
 
-  var circles = document.querySelectorAll('.circle');
-  var numCircles = circles.length;
-  var angleIncrement = (2 * Math.PI) / numCircles;
+  const circles = document.querySelectorAll('.circle');
+  const numCircles = circles.length;
+  const angleIncrement = (2 * Math.PI) / numCircles;
 
-  var angle = 0;
-  var animate = () => {
+  let angle = 0;
+  const animate = () => {
     circles.forEach((circle, index) => {
-      var currentAngle = angle + index * angleIncrement;
-      var { x, y } = calculatePosition(currentAngle, width, height, centerX, centerY);
+      const currentAngle = angle + index * angleIncrement;
+      const { x, y } = calculatePosition(currentAngle, width, height, centerX, centerY);
       circle.style.transform = `translate(${x}px, ${y}px)`;
     });
 
@@ -86,11 +87,21 @@ var animateCircles = (isMac) => {
     requestAnimationFrame(animate);
   };
 
-  updateValues();
-  animate();
+  const startAnimation = () => {
+    updateValues();
+    animate();
+  };
 
-  window.addEventListener('resize', debounce(updateValues, 150));
+  window.addEventListener('resize', debounce(() => {
+    updateValues();
+    animate(); // Restart animation on resize
+  }, 150));
+
+  return startAnimation;
 };
+
+
+
 
 const CircleAnimation = ({t}) => {
     var [qwertContent, setQwertContent] = useState("1"); 
@@ -100,9 +111,11 @@ const CircleAnimation = ({t}) => {
 
     var isMobile = useIsMobile();
 
-  useEffect(() => {
-    animateCircles(isMac);
-  }, [isMac, isMobile]);
+    useEffect(() => {
+      const startAnimation = animateCircles(isMac, isMobile);
+      startAnimation();
+    }, [isMac, isMobile]);
+    
 
   var handleCircleClick = (value) => {
     setTransitioning(true);
