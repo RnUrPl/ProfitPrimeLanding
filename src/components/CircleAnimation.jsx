@@ -1,15 +1,15 @@
 import React, { useEffect, useState,useCallback, useMemo } from 'react'
 import elipse from './assets/ELIPSE.png'
 
-const useIsMobile = (threshold = 660) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < threshold);
+var useIsMobile = (threshold = 660) => {
+  var [isMobile, setIsMobile] = useState(window.innerWidth < threshold);
 
-  const handleResize = useCallback(() => {
+  var handleResize = useCallback(() => {
     setIsMobile(window.innerWidth < threshold);
   }, [threshold]);
 
   useEffect(() => {
-    const debouncedResize = debounce(handleResize, 150);
+    var debouncedResize = debounce(handleResize, 150);
     window.addEventListener('resize', debouncedResize);
     return () => {
       window.removeEventListener('resize', debouncedResize);
@@ -19,7 +19,7 @@ const useIsMobile = (threshold = 660) => {
   return isMobile;
 };
 
-const debounce = (func, wait) => {
+var debounce = (func, wait) => {
   let timeout;
   return (...args) => {
     clearTimeout(timeout);
@@ -27,16 +27,16 @@ const debounce = (func, wait) => {
   };
 };
 
-const calculatePosition = (angle, width, height, centerX, centerY) => {
-  const x = centerX + width * Math.cos(angle);
-  const y = centerY + height * Math.sin(angle);
+var calculatePosition = (angle, width, height, centerX, centerY) => {
+  var x = centerX + width * Math.cos(angle);
+  var y = centerY + height * Math.sin(angle);
   return { x, y };
 };
 
-const animateCircles = (isMac) => {
+var animateCircles = (isMac) => {
   let centerX, centerY, width, height;
 
-  const updateValues = () => {
+  var updateValues = () => {
     if (window.innerWidth > 840 && isMac) {
       centerX = 320;
       centerY = 250;
@@ -70,15 +70,15 @@ const animateCircles = (isMac) => {
     }
   };
 
-  const circles = document.querySelectorAll('.circle');
-  const numCircles = circles.length;
-  const angleIncrement = (2 * Math.PI) / numCircles;
+  var circles = document.querySelectorAll('.circle');
+  var numCircles = circles.length;
+  var angleIncrement = (2 * Math.PI) / numCircles;
 
-  let angle = 0;
-  const animate = () => {
+  var angle = 0;
+  var animate = () => {
     circles.forEach((circle, index) => {
-      const currentAngle = angle + index * angleIncrement;
-      const { x, y } = calculatePosition(currentAngle, width, height, centerX, centerY);
+      var currentAngle = angle + index * angleIncrement;
+      var { x, y } = calculatePosition(currentAngle, width, height, centerX, centerY);
       circle.style.transform = `translate(${x}px, ${y}px)`;
     });
 
@@ -98,13 +98,13 @@ const CircleAnimation = ({t}) => {
     var [selectedCircle, setSelectedCircle] = useState('1')
     var isMac = /Mac/.test(navigator.userAgent);
 
-    const isMobile = useIsMobile();
+    var isMobile = useIsMobile();
 
   useEffect(() => {
     animateCircles(isMac);
   }, [isMac, isMobile]);
 
-  const handleCircleClick = (value) => {
+  var handleCircleClick = (value) => {
     setTransitioning(true);
     setTimeout(() => {
       setQwertContent(value);
