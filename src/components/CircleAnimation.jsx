@@ -58,7 +58,6 @@ const getValuesForDesktop = (isMac, isMobile) => {
 };
 
 
-
 const animateCircles = (isMac, isMobile) => {
   let { centerX, centerY, width, height } = getValuesForDesktop(isMac, isMobile);
 
@@ -68,7 +67,6 @@ const animateCircles = (isMac, isMobile) => {
     centerY = values.centerY;
     width = values.width;
     height = values.height;
-    console.log('Updated values:', { centerX, centerY, width, height });
   };
 
   const circles = document.querySelectorAll('.circle');
@@ -77,6 +75,7 @@ const animateCircles = (isMac, isMobile) => {
 
   let angle = 0;
   const animate = () => {
+    updateValues();
     circles.forEach((circle, index) => {
       const currentAngle = angle + index * angleIncrement;
       const { x, y } = calculatePosition(currentAngle, width, height, centerX, centerY);
@@ -87,18 +86,15 @@ const animateCircles = (isMac, isMobile) => {
     requestAnimationFrame(animate);
   };
 
-  const startAnimation = () => {
-    updateValues();
-    animate();
-  };
-
   window.addEventListener('resize', debounce(() => {
     updateValues();
-    animate(); // Restart animation on resize
   }, 150));
 
-  return startAnimation;
+  return animate;
 };
+
+
+
 
 
 
