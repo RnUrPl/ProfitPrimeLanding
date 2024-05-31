@@ -56,6 +56,7 @@ const LanguageSelector = ({ changeLanguage }) => {
         onChange={handleChange}
         placeholder="Select Language"
         defaultValue={options.find(option => option.value === 'ru')}
+        isSearchable={false}
     />
     );
 };
