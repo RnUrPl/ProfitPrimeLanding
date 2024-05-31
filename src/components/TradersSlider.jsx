@@ -90,6 +90,7 @@ const TradersSlider = ({t}) => {
         },
           0:{
           slidesPerView:1,
+          slidesPerGroup:1,
 
           }
       }}

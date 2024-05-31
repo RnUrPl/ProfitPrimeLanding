@@ -178,7 +178,7 @@ code {
 }
 .nav-list_el{
   color: #FFF;
-  transition: all 0.1s ease; /* Добавляем переход ко всем свойствам с продолжительностью 0.3 секунды и функцией ускорения */
+  transition: all 0.3s ease; /* Добавляем переход ко всем свойствам с продолжительностью 0.3 секунды и функцией ускорения */
 
 font-family: Inter;
 font-size: 20px;
@@ -2624,7 +2624,7 @@ line-height: normal;
       }
 
       .products_btn_txt{
-        font-size: 14px;
+        font-size: 13px;
       }
     
       .products_btn{
