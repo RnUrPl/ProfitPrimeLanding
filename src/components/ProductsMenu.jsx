@@ -160,9 +160,9 @@ const ProductsMenu = ({t}) => {
                         
               <iframe className='video_mp' src="https://www.youtube.com/embed/vzpH8s8LVFI?si=tWP9tuN7LSB_qm1F"  title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                       </div>
-                      <div className="products_text">{t("bintxt31")}<span className='bold'>Plus</span> {t("bintxt41")}
+                      <div className="products_text">{t("bintxt31")}<br/><br/>{t("bintxt41")}
   <br/><br/>
-  {t("bintxt3")}</div>
+  </div>
   <div className="kek"><div className="dop_text" onClick={openModal}>{t("frxtxt6")}</div>  </div>
   {isModalOpen && <PlusModal t={t}  closeModal={() => setIsModalOpen(false)} />}
   <a href='https://t.me/NDR_PROFIT' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("globtest")}</span> </a>

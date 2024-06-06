@@ -13,7 +13,7 @@ import Section from '../Section';
 import Animation from '../Anmation';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import LanguageSelector from '../DropDownMenu';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -24,14 +24,15 @@ function App() {
  
 
   const { t, i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState("en");
+  const [currentLanguage, setCurrentLanguage] = useState("ru");
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
     setCurrentLanguage(language);
- 
+    // Обновляем URL с учетом нового языка
+    window.history.pushState({}, '', `/${language}`);
   };
-  
+ 
   const [showMainSection, setShowMainSection] = useState(false);
 
   useEffect(() => {

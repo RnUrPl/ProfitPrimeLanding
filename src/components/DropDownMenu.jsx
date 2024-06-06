@@ -5,6 +5,7 @@ import  FaFlagBrazil  from './assets/Flag_of_Portugal.svg';
 import  FaFlagRussia  from './assets/Flag_of_Russia.svg.webp';
 import  FaFlagIndonesia  from './assets/Flag_of_Indonesia.svg.png';
 import FaFlagVietnma  from './assets/Flag_of_Vietnam.svg.png';
+import SpanishFlag  from './assets/spain-flag-free-png.webp';
 
 const options = [
     { value: 'en', label: <><img src={FaFlagUsa} alt="USA" style={{ width: '20px', marginRight: '8px' }} /> EN</> },
@@ -12,6 +13,7 @@ const options = [
     { value: 'vi', label: <><img src={FaFlagVietnma} alt="Vietnam" style={{ width: '20px', marginRight: '8px' }} /> VN</> },
     { value: 'in', label: <><img src={FaFlagIndonesia} alt="Indonesia" style={{ width: '20px', marginRight: '8px' }} /> RI</> },
     { value: 'pr', label: <><img src={FaFlagBrazil} alt="Portugal" style={{ width: '20px', marginRight: '8px' }} /> PT</> },
+    { value: 'pr', label: <><img src={SpanishFlag} alt="Portugal" style={{ width: '20px', marginRight: '8px' }} /> SP</> },
 ];
 
 const customStyles = {
