@@ -20,7 +20,7 @@ const MainSection = ({t,currentLanguage}) => {
           {t("maintxt2")}
         </h2>
         <div className="qwer">
-        <a href='https://t.me/NDR_PROFIT' rel="noreferrer" target="_blank"><span className='moreifo_txt' >{t("maintxt3")}</span></a>
+        <a href='https://t.me/ProfitPrime_support'rel="noreferrer" target="_blank"><span className='moreifo_txt' >{t("maintxt3")}</span></a>
         </div>
        
       </div>

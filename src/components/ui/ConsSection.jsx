@@ -51,7 +51,7 @@ const ConsSection = ({t,currentlanguage}) => {
             </div>
             
         </div>
-        <a href='https://t.me/NDR_PROFIT'  target='_blank'rel="noreferrer" className="about_btn"><span className="aboutbtn_txt">{t("abbtn")}</span></a>
+        <a href='https://t.me/ProfitPrime_support'  target='_blank'rel="noreferrer" className="about_btn"><span className="aboutbtn_txt">{t("abbtn")}</span></a>
     </section>
   )
 }

@@ -158,6 +158,7 @@ const CircleAnimation = ({t}) => {
             <div className="qwert_subtitile">
               {isMobile ? t("cric3mob") : (
                 <div className='qwert_subtitile'>
+                  {t("cric5_1")}<br/><br/>
                   {t("cric5")}<br/><br/>
                   {t("cric6")}
                 </div>

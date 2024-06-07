@@ -29,8 +29,7 @@ function App() {
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
     setCurrentLanguage(language);
-    // Обновляем URL с учетом нового языка
-    window.history.pushState({}, '', `/${language}`);
+  
   };
  
   const [showMainSection, setShowMainSection] = useState(false);

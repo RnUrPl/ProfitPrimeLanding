@@ -2556,6 +2556,14 @@ line-height: normal;
 
 
   @media only screen and (max-width: 510px) {
+    .contact_sub {
+      font-size: 14px;
+  }
+
+
+  .contact_email {
+    font-size: 15px;
+}
 
 
 
@@ -2642,10 +2650,7 @@ line-height: normal;
       max-width: 360px;
     }
 
-      .contact_sub {
-    font-size: 13px;
-}
-
+  
 .contact_email{
   font-size: 13px;
 }
@@ -2716,6 +2721,9 @@ line-height: normal;
   .contact_sub {
     min-width: 178px;
     font-size: 10px;
+}
+.contact_email{
+  font-size: 10px;
 }
 
   .swiper-wrapper{
@@ -2850,7 +2858,11 @@ line-height: normal;
 
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 365px) {
+    .contact_sub {
+      min-width: 178px;
+      font-size: 10px;
+  }
 
     .log_g{
 

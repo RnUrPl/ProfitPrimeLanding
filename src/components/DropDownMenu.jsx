@@ -13,7 +13,7 @@ const options = [
     { value: 'vi', label: <><img src={FaFlagVietnma} alt="Vietnam" style={{ width: '20px', marginRight: '8px' }} /> VN</> },
     { value: 'in', label: <><img src={FaFlagIndonesia} alt="Indonesia" style={{ width: '20px', marginRight: '8px' }} /> RI</> },
     { value: 'pr', label: <><img src={FaFlagBrazil} alt="Portugal" style={{ width: '20px', marginRight: '8px' }} /> PT</> },
-    { value: 'pr', label: <><img src={SpanishFlag} alt="Portugal" style={{ width: '20px', marginRight: '8px' }} /> SP</> },
+    { value: 'sp', label: <><img src={SpanishFlag} alt="Spain" style={{ width: '20px', marginRight: '8px' }} /> SP</> },
 ];
 
 const customStyles = {

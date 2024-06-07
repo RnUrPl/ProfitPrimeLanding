@@ -17,7 +17,7 @@ import GU from './assets/gu.png'
 import LA from './assets/la.png'
 import LM from './assets/Lm.png'
 import RS from './assets/RS.png'
-import SP from './assets/sa.png';
+import SP from './assets/sp.png';
 import SD from './assets/sd.png'
 var traderImages = Array.from({ length: 15}, (_, index) => require(`./assets/trader${index + 1}.png`));
 var starImages = Array.from({ length: 15 }, (_, index) => require(`./assets/stars${index + 1}.png`));
@@ -31,10 +31,10 @@ const TradersSlider = ({t}) => {
       var tradersData = [
         { name:  t("gu"), sub: 'Plus + Аcademy', starsAlt: '4.5 stars' , text: t("gutxt"),modal:GU},
         { name: t("la"), sub: 'Plus', starsAlt: '5 stars',text:t("latxt"),modal :LA },
-        { name: t("lm"), sub: 'Binary + Global', starsAlt: '4 stars' ,text: t("lmtxt"), modal: LM},
-        { name: t("rs"), sub: 'Binary + Global + Аcademy', starsAlt: '4 stars',text: t("rstxt") , modal: RS},
-        { name: t("sa"), sub: 'Forex + Аcademy', starsAlt: '4 stars',text:t("satxt"), video: SP },
-        { name: t("sd"), sub: 'Forex + Аcademy', starsAlt: '4 stars',text:t("sdtxt"), video: SD},
+        { name: t("lm"), sub: 'Plus + Academy', starsAlt: '4 stars' ,text: t("lmtxt"), modal: LM},
+        { name: t("rs"), sub: 'Plus', starsAlt: '4 stars',text: t("rstxt") , modal: RS},
+        { name: t("sa"), sub: 'Plus + Аcademy', starsAlt: '4 stars',text:t("satxt"), modal: SP },
+        { name: t("sd"), sub: 'Plus', starsAlt: '4 stars',text:t("sdtxt"), modal: SD},
         { name: t("rm"), sub: 'Forex + Аcademy', starsAlt: '5 stars' , text: t("rmtxt"),video:RM},
         { name: t("ma"), sub: 'Binary + Global + Аcademy', starsAlt: '4.5 stars',text:t("matxt"),modal :MA },
         { name: t("av"), sub: 'Binary + Global', starsAlt: '4 stars' ,text:t("avtxt"), modal: AV},
