@@ -347,7 +347,7 @@ letter-spacing: -0.2px;
 
 .oprod{
   color: #FFF;
-
+max-width: 500px;
 font-family: Saar SP Demo;
 font-size: 55px;
 font-style: normal;
