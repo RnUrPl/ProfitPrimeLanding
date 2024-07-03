@@ -99,7 +99,7 @@ const ProductsMenu = ({t}) => {
  {t("frxtxt4")} <span className='bold'>PROFIT PRIME FOREX</span>{t("frxtxt5")}</div>
   <div className="kek"><div className="dop_text" onClick={() => {  setIsModalOpen(true);}}>{t("frxtxt6")} </div> </div>
               {isModalOpen && <BinaryModal t={t}  closeModal={() => setIsModalOpen(false)} /> }
-  <a href='https://t.me/ProfitPrime_support'  className="products_btn" target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("globtest")}</span> </a>
+  <a href='https://t.me/Profit_Prime'  className="products_btn" target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("globtest")}</span> </a>
             </div>
           );
           case '5':
@@ -119,11 +119,15 @@ const ProductsMenu = ({t}) => {
   {t("aitxt2")}<br/><br/>
   
   {t("aitxt3")}<br/><br/>
+
+  {t("aitxt3_1")}<br/><br/>
+  
+
   
   <span className='bold'>PROFIT PRIME AI</span> {t("aitxt4")}
   </div>
   
-  <a href='https://t.me/ProfitPrime_support' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("aibut")}</span> </a>
+  <a href='https://t.me/Profit_Prime' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("aibut")}</span> </a>
   
                 </div>
               );
@@ -144,7 +148,7 @@ const ProductsMenu = ({t}) => {
   {t("bintxt3")}</div>
   <div className="kek"><div className="dop_text" onClick={openModal}>{t("frxtxt6")}</div>  </div>
   {isModalOpen && <ForexModal t={t}  closeModal={() => setIsModalOpen(false)} />}
-  <a href='https://t.me/ProfitPrime_support' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("globtest")}</span> </a>
+  <a href='https://t.me/Profit_Prime' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("globtest")}</span> </a>
   
                     </div>
                   );
@@ -160,11 +164,11 @@ const ProductsMenu = ({t}) => {
                         
               <iframe className='video_mp' src="https://www.youtube.com/embed/vzpH8s8LVFI?si=tWP9tuN7LSB_qm1F"  title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                       </div>
-                      <div className="products_text">{t("bintxt31")}<br/><br/>{t("bintxt41")}
+                      <div className="products_text">{t("bintxt31")}<br/><br/>{t("bintxt32")}<br/><br/>{t("bintxt41")}
   </div>
   <div className="kek"><div className="dop_text" onClick={openModal}>{t("frxtxt6")}</div>  </div>
   {isModalOpen && <PlusModal t={t}  closeModal={() => setIsModalOpen(false)} />}
-  <a href='https://t.me/ProfitPrime_support' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("globtest")}</span> </a>
+  <a href='https://t.me/Profit_Prime' className="products_btn"target='_blank'rel="noreferrer"><span className='products_btn_txt'>{t("globtest")}</span> </a>
   
                     </div>
                   );

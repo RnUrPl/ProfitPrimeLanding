@@ -211,6 +211,8 @@ transition: gap 0.5s ease;
 
 }
 
+
+
 .nav_contact:hover{
   cursor: pointer;
   filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
@@ -266,6 +268,33 @@ font-weight: 500;
 line-height: 115%; /* 28.75px */
 letter-spacing: -1px;
 text-align: left;
+}
+
+.qwer_gr{
+  align-items: center ;
+  justify-content: center;
+  padding-right:80px ;
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+}
+.yut{
+  background: #c4320b !important;
+}
+.tgb{
+  background: #1DC7D5 !important;
+}
+.qwer_gr a{
+  border-radius: 54px;
+  background: #C6DA4B;
+  display: flex;
+  width: 180px;
+  height: 70px;
+  
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .qwer a{
@@ -568,7 +597,7 @@ letter-spacing: -0.2px;
 }
 
 .products{
-  padding-bottom: 120px;
+  padding-bottom: 60px;
 }
 
 .about{
@@ -819,7 +848,7 @@ margin-top: 12px;
 }
 .custom-scroll {
   overflow-y: auto; 
-  max-height: 185px; 
+  height: 185px; 
   
 
 }
@@ -1372,6 +1401,9 @@ padding-bottom: 20px;
   justify-content: space-between;
 }
 
+.yt_btn{
+  height: 60px;
+}
 .icon{
   display: flex;
   align-items: flex-start;
@@ -1491,7 +1523,12 @@ text-transform: uppercase;
   top: 25px;
 }
 
+
+
 .contact_email{
+  align-items: center;
+  gap: 20px;
+  display: flex;
   color: #C5C5C5;
 font-family: Inter;
 font-size: 20px;
@@ -1499,7 +1536,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 120%; /* 24px */
 letter-spacing: -0.6px;
-align-items: flex-start;
+
 }
 
 .sample-slider {
@@ -1509,6 +1546,8 @@ align-items: flex-start;
 
 .swiper-container {
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .swiper-slide {
@@ -1537,6 +1576,8 @@ background: #FFF;
 margin-bottom: 20px;
 }
 
+
+
 .bold{
   font-weight: bold;
 }
@@ -1559,6 +1600,18 @@ transition: 0.3s ease;
 
 }
 
+.swipercont{
+  width: 100%;
+  overflow: hidden !;
+  padding-bottom: 100px;
+ 
+}
+
+.swiper-wrapper{
+  
+  transition-timing-function: linear !important;
+}
+
 .contact_btn:hover{
   cursor: pointer;
   filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
@@ -1575,6 +1628,8 @@ display: flex;
 transition: 0.3s ease;
 }
 
+
+
 .contact_tg:hover{
   cursor: pointer;
   filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
@@ -1585,7 +1640,7 @@ transition: 0.3s ease;
 
 text-align: center;
 font-family: Inter;
-font-size: 18px;
+font-size: 14px;
 font-style: normal;
 font-weight: bold;
 line-height: 115%; /* 20.7px */
@@ -1598,6 +1653,7 @@ letter-spacing: -0.18px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 
 .footer_txt{
@@ -1750,6 +1806,8 @@ input[type="number"] {
 
 
 .swiper-wrapper{
+  display: flex;
+  align-items: center;
   max-width: 1400px;
 }
 
@@ -1781,8 +1839,21 @@ font-weight: 400;
 line-height: normal;
 }
 
+.modal-overlayd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Make sure it's on top of everything */
+}
+
 .modal-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -2202,7 +2273,7 @@ line-height: normal;
 }
 
 .qwert_subtitile{
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .circle{
@@ -2405,10 +2476,16 @@ line-height: normal;
 
   @media only screen and (max-width: 613px) {
 
+    .qwer_gr a{
+      width: 140px;
+      height: 55px;
+    }
+
    
 
     .qwer a {
       width: 300px;
+      height: 55px;
     }
 
     .team_img {
@@ -2598,6 +2675,14 @@ line-height: normal;
 
     @media only screen and (max-width: 490px) {
 
+      .yt_btn{
+        height: 50px;
+      }
+
+      .box1_subtitle{
+        font-size: 17px;
+      }
+
       .abcomp_box4{
         background-image: none;
       }
@@ -2641,7 +2726,7 @@ line-height: normal;
       }
     
       .video_mp {
-        max-width: 360px;
+        max-width: 350px;
         max-height: 220px;
     }
     
@@ -2843,7 +2928,7 @@ line-height: normal;
    }
 
    .question{
-    font-size: 12px;
+    font-size: 11px;
   }
 
 
@@ -2861,7 +2946,7 @@ line-height: normal;
   @media only screen and (max-width: 365px) {
     .contact_sub {
       min-width: 178px;
-      font-size: 10px;
+      font-size: 9px;
   }
 
     .log_g{

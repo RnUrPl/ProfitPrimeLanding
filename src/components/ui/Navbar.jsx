@@ -12,7 +12,7 @@ const Navbar = ({t,changeLanguage}) => {
     <LanguageSelector changeLanguage={changeLanguage} />
     </div>
       <NavElementGroup t={t}/>
-    <a href='https://t.me/ProfitPrime_support'className="nav_contact" target="_blank" rel="noreferrer" ><span className='nav_txt'>{t('nav_txt')}</span></a>
+    <a href='https://t.me/Profit_Prime'className="nav_contact" target="_blank" rel="noreferrer" ><span className='nav_txt'>{t('nav_txt')}</span></a>
    </div>
   )
 }

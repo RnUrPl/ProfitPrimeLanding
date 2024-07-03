@@ -14,6 +14,7 @@ import Animation from '../Anmation';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import PartnerLogosCarousel from '../PartnersSlider';
 
 
 
@@ -58,6 +59,9 @@ function App() {
         <Animation>
          <ProductsSection t={t} currentlanguage={currentLanguage}/>
         </Animation>
+       </div>
+       <PartnerLogosCarousel/>
+       <div className='app1'>
         <Section>
             <ConsSection t={t} currentlanguage={currentLanguage}/>
             </Section>

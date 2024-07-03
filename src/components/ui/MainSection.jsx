@@ -1,7 +1,8 @@
 import React from 'react'
 import CircleAnimation from '../CircleAnimation'
 import { LANGUAGE_STYLES } from '../constants';
-
+import tg from '../assets/tg.png'
+import yt from '../assets/yut.png'
 
 const MainSection = ({t,currentLanguage}) => {
   const getTextClass = (language) => LANGUAGE_STYLES[language] || 'default-text';
@@ -20,8 +21,9 @@ const MainSection = ({t,currentLanguage}) => {
           {t("maintxt2")}
         </h2>
         <div className="qwer">
-        <a href='https://t.me/ProfitPrime_support'rel="noreferrer" target="_blank"><span className='moreifo_txt' >{t("maintxt3")}</span></a>
+        <a href='https://t.me/Profit_Prime'rel="noreferrer" target="_blank"><span className='moreifo_txt' >{t("maintxt3")}</span></a>
         </div>
+  
        
       </div>
       <div className="earth">

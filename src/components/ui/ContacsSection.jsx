@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactForm from '../ContactForm'
+import yt from '../assets/yut.png'
 import { LANGUAGE_STYLES } from '../constants';
 
 const ContacsSection = ({t,currentlanguage}) => {
@@ -14,8 +15,14 @@ const ContacsSection = ({t,currentlanguage}) => {
             <div className="contact_sub">
             {t("mb9")} <br/>{t("mb10")}<br/> {t("mb11")}
             </div>
-            <div className="contact_email">support@profitprime.pro</div>
-       
+            <div className="contact_email">
+            support@profitprime.pro
+            <a href='https://youtube.com/@profitprimeofficial?si=_LjeRt1nLu5l0tgu' rel="noreferrer" target="_blank">
+             <img  className='yt_btn' src={yt} alt='tg_png'/>
+         </a>
+              
+              </div>
+            
         </div>
         <ContactForm t={t}/>
     </section>

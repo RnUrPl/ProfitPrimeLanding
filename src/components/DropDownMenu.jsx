@@ -6,6 +6,9 @@ import  FaFlagRussia  from './assets/Flag_of_Russia.svg.webp';
 import  FaFlagIndonesia  from './assets/Flag_of_Indonesia.svg.png';
 import FaFlagVietnma  from './assets/Flag_of_Vietnam.svg.png';
 import SpanishFlag  from './assets/spain-flag-free-png.webp';
+import Grfalg  from './assets/germany_falg.png';
+import Itflag  from './assets/italy_flag.png';
+import Chflag  from './assets/ch_flag.png';
 
 const options = [
     { value: 'en', label: <><img src={FaFlagUsa} alt="USA" style={{ width: '20px', marginRight: '8px' }} /> EN</> },
@@ -13,6 +16,9 @@ const options = [
     { value: 'vi', label: <><img src={FaFlagVietnma} alt="Vietnam" style={{ width: '20px', marginRight: '8px' }} /> VN</> },
     { value: 'in', label: <><img src={FaFlagIndonesia} alt="Indonesia" style={{ width: '20px', marginRight: '8px' }} /> RI</> },
     { value: 'pr', label: <><img src={FaFlagBrazil} alt="Portugal" style={{ width: '20px', marginRight: '8px' }} /> PT</> },
+    { value: 'gr', label: <><img src={Grfalg} alt="Germany" style={{ width: '20px', marginRight: '8px' }} /> GR</> },
+    { value: 'it', label: <><img src={Itflag} alt="Italy" style={{ width: '20px', marginRight: '8px' }} /> IT</> },
+    { value: 'ch', label: <><img src={Chflag} alt="Chinese" style={{ width: '20px', marginRight: '8px' }} /> СN</> },
     { value: 'sp', label: <><img src={SpanishFlag} alt="Spain" style={{ width: '20px', marginRight: '8px' }} /> SP</> },
 ];
 

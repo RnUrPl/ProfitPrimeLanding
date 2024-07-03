@@ -104,9 +104,11 @@ const ContactForm = ({t}) => {
          <div className="contact_btn"type="submit"  onClick={handleSubmit}>
              <span className='contact_btn_txt'>{t("consalt")}</span>
          </div>
-         <a href='https://t.me/ProfitPrime_support' className="contact_tg" rel="noreferrer" target="_blank">
+         
+         <a href='https://t.me/Profit_Prime' className="contact_tg" rel="noreferrer" target="_blank">
              <img src={tg} alt='tg_png'/>
          </a>
+    
      </div>
  </form>
   )

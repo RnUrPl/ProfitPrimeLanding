@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FooterElementGroup from '../FooterElementGroup'
+import Disclaimer from '../Modals/Disclaimer';
 
 
 const Footer = ({t}) => {
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section className='footer'>
@@ -12,8 +13,9 @@ const Footer = ({t}) => {
         <FooterElementGroup t={t}/>
       </div>
          
-       <span className='footer_txt2'>Public offer contract <br/>
+       <span className='footer_txt2' onClick={() => {setIsModalOpen(true);}}>Public offer contract <br/>
 Privacy Policy</span>
+{isModalOpen && <Disclaimer closeModal={() => setIsModalOpen(false)} />}
     </section>
   )
 }

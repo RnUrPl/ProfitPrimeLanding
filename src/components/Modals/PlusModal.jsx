@@ -14,7 +14,10 @@ const PlusModal = ({  closeModal ,t}) => {
 
         {t("p1")}
 <br/><br/>
-
+<span className='bold'>{t("p1_1")}
+</span><br/><br/>
+{t("p1_2")}
+<br/><br/>
 <span className='bold'>{t("p2")}
 </span><br/><br/>
 {t("p3")}
