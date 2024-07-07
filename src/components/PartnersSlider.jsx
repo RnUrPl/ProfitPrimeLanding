@@ -18,9 +18,9 @@ const PartnerLogosCarousel = () => {
       
  
       loop={true}
-      speed={10000}
-      slidesPerView={1}
-      spaceBetween={40}
+      speed={5000}
+      slidesPerView={2}
+      spaceBetween={300}
 
    
       autoplay={{
@@ -34,23 +34,29 @@ const PartnerLogosCarousel = () => {
 
         520:{
           slidesPerView: 2,
+          spaceBetween:40,
         },
 
         850:{
           slidesPerView: 3,
+          spaceBetween:40,
         },
       
         1200: {
           slidesPerView: 4,
+          spaceBetween:40,
 
         },
   
 
         1600:{
           slidesPerView: 5,
+          spaceBetween:40,
         },
         2000:{
-          slidesPerView: 6.
+          slidesPerView: 6,
+          spaceBetween:40,
+          
         }
       }}
       modules={[Autoplay]}

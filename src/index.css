@@ -226,7 +226,7 @@ transition: gap 0.5s ease;
   font-family: Inter;
   font-size: 17px;
   font-style: normal;
-  font-weight: bold;
+
   line-height: 115%; /* 23px */
   letter-spacing: -0.2px;
 }
@@ -236,7 +236,7 @@ transition: gap 0.5s ease;
   flex-direction: column;
   max-width: 623px;
   height: 274px;
-  gap: 21px;
+  gap: 35px;
   padding-bottom: 120px;
 }
 
@@ -331,7 +331,7 @@ text-align: center;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
-font-weight: bold;
+
 line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 }
@@ -547,7 +547,7 @@ text-align: center;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
-font-weight: bold;
+
 line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 
@@ -725,7 +725,6 @@ text-align: center;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
-font-weight: bold;
 line-height: 115%; /* 23px */
 letter-spacing: -0.2px;
 }
@@ -1642,7 +1641,7 @@ text-align: center;
 font-family: Inter;
 font-size: 14px;
 font-style: normal;
-font-weight: bold;
+
 line-height: 115%; /* 20.7px */
 letter-spacing: -0.18px;
 }
@@ -1942,9 +1941,7 @@ font-weight: 400;
 line-height: normal;
 }
 
-.info h2{
-  font-size: 20px;
-}
+
 
 
 
@@ -2394,7 +2391,7 @@ line-height: normal;
    
 
     .info{
-      margin-bottom: 50px;
+      margin-bottom: 70px;
     }
     .infoh1{
       font-size: 40px;
@@ -2779,7 +2776,7 @@ line-height: normal;
 
   .log_g{
 
-    gap: 60px;
+    gap: 100px;
 
   }
 
@@ -2865,7 +2862,17 @@ line-height: normal;
    } */
  }
 
+ 
+
  @media only screen and (max-width: 420px) {
+
+
+  .log_g{
+
+    gap: 70px;
+
+  }
+  
  
 
   .newModal_txt {
@@ -2943,6 +2950,20 @@ line-height: normal;
 
   }
 
+  @media only screen and (max-width: 380px) {
+
+    .log_g{
+
+      gap: 50px;
+  
+    }
+    
+
+  
+
+}
+
+
   @media only screen and (max-width: 365px) {
     .contact_sub {
       min-width: 178px;
@@ -2951,7 +2972,7 @@ line-height: normal;
 
     .log_g{
 
-      gap: 20px;
+      gap: 30px;
   
     }
     .newModal_txt {
