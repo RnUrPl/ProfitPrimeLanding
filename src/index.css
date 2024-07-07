@@ -387,7 +387,7 @@ font-weight: 700;
 line-height: 115%; /* 23px */
 letter-spacing: -0.8px;
 text-transform: uppercase;
-transition:  0.5s ease-in-out;
+transition:  1.5s ease-in-out;
 }
 
 .menu_item:not(.selected):hover {
