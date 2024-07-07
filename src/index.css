@@ -390,6 +390,14 @@ text-transform: uppercase;
 transition:  1.5s ease-in-out;
 }
 
+.menu-item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.products_img {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 .menu_item:not(.selected):hover {
   cursor: pointer;
   filter: brightness(0.8); /* Затемнение элемента при наведении (80% яркости) */
