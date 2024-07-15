@@ -68,7 +68,7 @@ const ProductsMenu = ({t}) => {
                
               </img>
               <span className='plaq_txt1'>67$</span>
-              <iframe className='video_mp' src="https://www.youtube.com/embed/HZY4A5HiFcc?si=rIj7j1yokfQktejW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe className='video_mp' src="https://www.youtube.com/embed/HZY4A5HiFcc?si=rIj7j1yokfQktejW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading='lazy'></iframe>
                          
               </div>
               <div className="products_text"> {t("globtxt1")}<br/><br/>{t("globtxt2")}<br/><br/>{t("globtxt3")} <br/><br/>{t("globtxt4")}<span className='bold'>PROFIT PRIME GLOBAL</span>.</div>
@@ -141,7 +141,7 @@ const ProductsMenu = ({t}) => {
                </img>
               <span className='plaq_txt'>147$</span>
                         
-              <iframe className='video_mp' src="https://www.youtube.com/embed/6zOKG1uPRMs?si=esffDDEU3FO8vyhq" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe loading='lazy' className='video_mp' src="https://www.youtube.com/embed/6zOKG1uPRMs?si=esffDDEU3FO8vyhq" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                       </div>
                       <div className="products_text">{t("bintxt1")}<span className='bold'>Basic</span> {t("bintxt2")}
   <br/><br/>
@@ -162,7 +162,7 @@ const ProductsMenu = ({t}) => {
                </img>
               <span className='plaq_txt'>247$</span>
                         
-              <iframe className='video_mp' src="https://www.youtube.com/embed/vzpH8s8LVFI?si=tWP9tuN7LSB_qm1F"  title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe loading='lazy' className='video_mp' src="https://www.youtube.com/embed/vzpH8s8LVFI?si=tWP9tuN7LSB_qm1F"  title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                       </div>
                       <div className="products_text">{t("bintxt31")}<br/><br/>{t("bintxt32")}<br/><br/>{t("bintxt41")}
   </div>
